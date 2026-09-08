@@ -29,35 +29,84 @@ export function msUntilTomorrow(now = new Date()) {
   return next - now;
 }
 
+// Upper bound on the forward walk in buildPuzzle, so a clock set absurdly far
+// in the future cannot make page load spin. Any real number of days is tiny
+// next to this; the held-out set from one day only affects the next.
+const HOLDOUT_CAP = 4000;
+
 /**
  * Build the day's round: one player from each edition of the game, so every
  * round spans all five years. Deterministic from the puzzle number.
  *
  * Each edition carries its own rotation - the full list of players who appear
  * in that edition, shuffled once from a stable seed, then walked one step per
- * day. An edition's slot therefore will not repeat a player for ~100+ days,
- * and consecutive days share no players.
+ * day, so an edition's slot will not repeat a player for ~100+ days. On top of
+ * that, the whole of yesterday's line-up is held out of today's, so the same
+ * name never lands two days running.
  */
 export function buildPuzzle(data, puzzleNo) {
   assertOnePerEdition(data);
-  const rand = rngFrom(`fifa-wordle:day:${puzzleNo}`);
+
+  // Roster shuffles depend only on the edition, so build them once and reuse
+  // them across the walk below.
+  const rosters = data.editions.map((edition) => ({
+    edition,
+    roster: shuffle(rosterFor(data, edition), rngFrom(`fifa-wordle:roster:${edition.id}`)),
+  }));
+
+  // Before the epoch there is no "yesterday" to hold out.
+  if (puzzleNo < 1) {
+    return shuffle(pickForDay(rosters, puzzleNo, new Set()), rngFrom(`fifa-wordle:day:${puzzleNo}`));
+  }
+
+  // Walk from puzzle 1 up to today, each day holding out the day before's
+  // actual line-up. buildPuzzle(N-1) is an exact prefix of this walk, so the
+  // two never disagree about what yesterday was.
+  let held = new Set();
+  let items;
+  for (let d = Math.max(1, puzzleNo - HOLDOUT_CAP); d <= puzzleNo; d++) {
+    items = pickForDay(rosters, d, held);
+    held = new Set(items.map((it) => it.playerId));
+  }
+
+  // Shuffle so the five are not shown in edition order.
+  return shuffle(items, rngFrom(`fifa-wordle:day:${puzzleNo}`));
+}
+
+/**
+ * One player per edition for a single day, in edition order. `avoid` is a set
+ * of player ids to hold out (yesterday's line-up); it is relaxed only if it
+ * would leave a slot unfillable, which the roster sizes make impossible in
+ * practice.
+ */
+function pickForDay(rosters, puzzleNo, avoid) {
   const index = puzzleNo - 1;
   const used = new Set();
 
-  const items = data.editions.map((edition) => {
-    const roster = shuffle(rosterFor(data, edition), rngFrom(`fifa-wordle:roster:${edition.id}`));
+  return rosters.map(({ edition, roster }) => {
     // Negative index (a clock set before the epoch) still lands in range.
-    let cursor = ((index % roster.length) + roster.length) % roster.length;
-    // Skip anyone already taken by an earlier edition this day.
-    for (let n = 0; n < roster.length && used.has(roster[cursor].id); n++) {
-      cursor = (cursor + 1) % roster.length;
-    }
-    used.add(roster[cursor].id);
-    return toItem(roster[cursor], edition);
-  });
+    const start = ((index % roster.length) + roster.length) % roster.length;
+    const at = (offset) => roster[(start + offset) % roster.length];
 
-  // Shuffle so the five are not shown in edition order.
-  return shuffle(items, rand);
+    let chosen = null;
+    for (let n = 0; n < roster.length; n++) {
+      if (!used.has(at(n).id) && !avoid.has(at(n).id)) {
+        chosen = at(n);
+        break;
+      }
+    }
+    if (!chosen) {
+      for (let n = 0; n < roster.length; n++) {
+        if (!used.has(at(n).id)) {
+          chosen = at(n);
+          break;
+        }
+      }
+    }
+
+    used.add(chosen.id);
+    return toItem(chosen, edition);
+  });
 }
 
 /**
