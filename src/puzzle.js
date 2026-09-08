@@ -52,7 +52,30 @@ export function buildPuzzle(data, puzzleNo) {
   const chosen = order.slice(offset * PLAYERS_PER_PUZZLE, offset * PLAYERS_PER_PUZZLE + PLAYERS_PER_PUZZLE);
 
   const rand = rngFrom(`fifa-wordle:day:${puzzleNo}`);
-  const items = chosen.map((player) => {
+
+  // Shuffle again so the five are not ordered by anything guessable.
+  return shuffle(toItems(data, chosen, rand), rand);
+}
+
+/**
+ * Pick five players for a one-off practice round. Not tied to the calendar: the
+ * seed is whatever the caller passes (a timestamp, a counter), so every round is
+ * fresh but still reproducible from that seed for save/resume.
+ */
+export function buildPracticePuzzle(data, seed) {
+  const pool = data.players.filter((p) => editionsFor(data, p).length > 0);
+  if (pool.length < PLAYERS_PER_PUZZLE) {
+    throw new Error(`Need at least ${PLAYERS_PER_PUZZLE} players, have ${pool.length}`);
+  }
+
+  const rand = rngFrom(`fifa-wordle:practice:${seed}`);
+  const chosen = shuffle(pool.slice(), rand).slice(0, PLAYERS_PER_PUZZLE);
+  return shuffle(toItems(data, chosen, rand), rand);
+}
+
+/** Turn a set of players into puzzle items, choosing one edition each. */
+function toItems(data, players, rand) {
+  return players.map((player) => {
     const edition = pick(editionsFor(data, player), rand);
     const entry = player.ratings[edition.id];
     return {
@@ -66,9 +89,6 @@ export function buildPuzzle(data, puzzleNo) {
       answer: entry.ovr,
     };
   });
-
-  // Shuffle again so the five are not ordered by anything guessable.
-  return shuffle(items, rand);
 }
 
 function editionsFor(data, player) {

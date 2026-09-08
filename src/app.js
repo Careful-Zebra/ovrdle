@@ -1,6 +1,25 @@
-import { buildPuzzle, dateKey, puzzleNumber, msUntilTomorrow, MAX_TRIES, PLAYERS_PER_PUZZLE } from './puzzle.js';
-import { loadProgress, saveProgress, loadStats, recordResult } from './storage.js';
+import {
+  buildPuzzle,
+  buildPracticePuzzle,
+  dateKey,
+  puzzleNumber,
+  msUntilTomorrow,
+  MAX_TRIES,
+  PLAYERS_PER_PUZZLE,
+} from './puzzle.js';
+import {
+  loadProgress,
+  saveProgress,
+  loadStats,
+  recordResult,
+  loadPractice,
+  savePractice,
+  loadPracticeStats,
+  recordPracticeResult,
+} from './storage.js';
 import { buildShareText, share } from './share.js';
+
+const MODE_KEY = 'fifa-wordle:mode';
 
 const MIN_RATING = 40;
 const MAX_RATING = 99;
@@ -15,15 +34,20 @@ const el = {
   modalClose: document.getElementById('modal-close'),
   help: document.getElementById('btn-help'),
   stats: document.getElementById('btn-stats'),
+  modes: document.getElementById('modes'),
 };
 
 const state = {
+  mode: 'daily', // 'daily' | 'practice'
+  data: null,
   items: [],
   slots: [],
   current: 0,
   typed: '',
   done: false,
-  puzzleNo: 0,
+  puzzleNo: 0, // daily
+  practiceSeed: null, // practice
+  practiceRound: 0, // practice
   countdownTimer: null,
 };
 
@@ -32,11 +56,10 @@ const state = {
 init();
 
 async function init() {
-  let data;
   try {
     const res = await fetch('./data/players.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    data = await res.json();
+    state.data = await res.json();
   } catch (err) {
     el.board.innerHTML =
       `<li class="card"><div class="card-name">Could not load player data</div>` +
@@ -45,23 +68,7 @@ async function init() {
     return;
   }
 
-  const key = dateKey();
-  state.puzzleNo = puzzleNumber(key);
-  state.items = buildPuzzle(data, state.puzzleNo);
-
-  const saved = loadProgress(state.puzzleNo);
-  if (saved) {
-    state.slots = saved.slots;
-    state.current = saved.current;
-    state.done = saved.done;
-  } else {
-    state.slots = state.items.map(() => ({ guesses: [], solved: false, failed: false }));
-  }
-
-  el.meta.textContent = `Puzzle #${state.puzzleNo} · ${formatDate(key)}`;
-
   renderKeypad();
-  render();
 
   el.help.addEventListener('click', showHelp);
   el.stats.addEventListener('click', () => (state.done ? showResults() : showStats()));
@@ -69,12 +76,119 @@ async function init() {
   el.scrim.addEventListener('click', (e) => {
     if (e.target === el.scrim) closeModal();
   });
+  el.modes.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-mode]');
+    if (btn) switchMode(btn.dataset.mode);
+  });
   document.addEventListener('keydown', onKeydown);
 
+  enterMode(loadMode(), { firstLoad: true });
+}
+
+// ---------------------------------------------------------------- modes
+
+function switchMode(mode) {
+  if (mode === state.mode) return;
+  closeModal();
+  enterMode(mode, {});
+}
+
+function enterMode(mode, { firstLoad = false } = {}) {
+  state.mode = mode;
+  saveMode(mode);
+  state.typed = '';
+
+  if (mode === 'practice') enterPractice();
+  else enterDaily();
+
+  renderModes();
+  render();
+
   if (state.done) showResults();
-  else if (!hasSeenHelp()) {
+  else if (firstLoad && mode === 'daily' && !hasSeenHelp()) {
     markHelpSeen();
     showHelp();
+  }
+}
+
+function enterDaily() {
+  const key = dateKey();
+  state.puzzleNo = puzzleNumber(key);
+  state.items = buildPuzzle(state.data, state.puzzleNo);
+
+  const saved = loadProgress(state.puzzleNo);
+  if (saved) {
+    state.slots = saved.slots;
+    state.current = saved.current;
+    state.done = saved.done;
+  } else {
+    state.slots = freshSlots();
+    state.current = 0;
+    state.done = false;
+  }
+
+  el.meta.textContent = `Puzzle #${state.puzzleNo} · ${formatDate(key)}`;
+}
+
+function enterPractice() {
+  const saved = loadPractice();
+  if (saved && saved.seed) {
+    state.practiceSeed = saved.seed;
+    state.practiceRound = saved.round || 1;
+    state.items = buildPracticePuzzle(state.data, saved.seed);
+    state.slots = saved.slots;
+    state.current = saved.current;
+    state.done = saved.done;
+    setPracticeMeta();
+  } else {
+    startPracticeRound();
+  }
+}
+
+function startPracticeRound() {
+  state.practiceRound = (state.practiceRound || 0) + 1;
+  state.practiceSeed = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+  state.items = buildPracticePuzzle(state.data, state.practiceSeed);
+  state.slots = freshSlots();
+  state.current = 0;
+  state.done = false;
+  state.typed = '';
+  setPracticeMeta();
+  persist();
+}
+
+function setPracticeMeta() {
+  const st = loadPracticeStats();
+  el.meta.textContent = st.rounds
+    ? `Practice · Round ${state.practiceRound} · ${st.rounds} done`
+    : `Practice · Round ${state.practiceRound}`;
+}
+
+function freshSlots() {
+  return state.items.map(() => ({ guesses: [], solved: false, failed: false }));
+}
+
+function renderModes() {
+  el.modes.querySelectorAll('[data-mode]').forEach((b) => {
+    const on = b.dataset.mode === state.mode;
+    b.classList.toggle('is-on', on);
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+}
+
+function loadMode() {
+  try {
+    return localStorage.getItem(MODE_KEY) === 'practice' ? 'practice' : 'daily';
+  } catch {
+    return 'daily';
+  }
+}
+
+function saveMode(mode) {
+  try {
+    localStorage.setItem(MODE_KEY, mode);
+  } catch {
+    /* ignore */
   }
 }
 
@@ -141,16 +255,28 @@ function submit() {
 
 function finish() {
   state.done = true;
-  recordResult(state.puzzleNo, state.slots.filter((s) => s.solved).length);
+  const solved = state.slots.filter((s) => s.solved).length;
+  if (state.mode === 'practice') recordPracticeResult(solved);
+  else recordResult(state.puzzleNo, solved);
 }
 
 function persist() {
-  saveProgress({
-    puzzleNo: state.puzzleNo,
-    slots: state.slots,
-    current: state.current,
-    done: state.done,
-  });
+  if (state.mode === 'practice') {
+    savePractice({
+      seed: state.practiceSeed,
+      round: state.practiceRound,
+      slots: state.slots,
+      current: state.current,
+      done: state.done,
+    });
+  } else {
+    saveProgress({
+      puzzleNo: state.puzzleNo,
+      slots: state.slots,
+      current: state.current,
+      done: state.done,
+    });
+  }
 }
 
 // ---------------------------------------------------------------- render
@@ -306,6 +432,7 @@ function showHelp() {
       `<li><strong>Three tries</strong> per player.</li>` +
       `<li>After each miss you are told only <strong>higher</strong> or <strong>lower</strong>.</li>` +
       `<li>Players unlock one at a time. A new set every day.</li>` +
+      `<li>Want more? Switch to <strong>Practice</strong> for endless rounds.</li>` +
       `</ul>` +
       `<h3>Reading a guess</h3>` +
       `<div class="example">${tileHtml('84', 'is-miss', '▲')}<span>Too low &mdash; go higher.</span></div>` +
@@ -317,14 +444,20 @@ function showHelp() {
 }
 
 function showStats() {
-  openModal(`<h2 id="modal-title">Statistics</h2>${statsHtml(loadStats(), null)}`);
+  if (state.mode === 'practice') {
+    openModal(`<h2 id="modal-title">Practice</h2>${practiceStatsHtml(loadPracticeStats())}`);
+  } else {
+    openModal(`<h2 id="modal-title">Statistics</h2>${statsHtml(loadStats(), null)}`);
+  }
 }
 
 function showResults() {
-  const stats = loadStats();
-  const solved = state.slots.filter((s) => s.solved).length;
+  if (state.mode === 'practice') return showPracticeResults();
+  return showDailyResults();
+}
 
-  const recap = state.items
+function recapHtml() {
+  return state.items
     .map((item, i) => {
       const slot = state.slots[i];
       const mark = slot.solved
@@ -333,10 +466,61 @@ function showResults() {
       return `<li><span>${escapeHtml(item.name)} <span class="note">${escapeHtml(item.edition.label)}</span></span>${mark}</li>`;
     })
     .join('');
+}
+
+function showPracticeResults() {
+  const solved = state.slots.filter((s) => s.solved).length;
 
   openModal(
     `<h2 id="modal-title">${solved}/5 correct</h2>` +
-      `<ul class="recap">${recap}</ul>` +
+      `<ul class="recap">${recapHtml()}</ul>` +
+      practiceStatsHtml(loadPracticeStats()) +
+      `<button class="btn" id="btn-next">NEXT ROUND</button>` +
+      `<button class="btn btn-ghost" id="btn-to-daily">BACK TO DAILY</button>`
+  );
+
+  document.getElementById('btn-next').addEventListener('click', () => {
+    closeModal();
+    startPracticeRound();
+    render();
+  });
+  document.getElementById('btn-to-daily').addEventListener('click', () => switchMode('daily'));
+}
+
+function practiceStatsHtml(stats) {
+  const avg = stats.rounds ? (stats.solvedTotal / stats.rounds).toFixed(1) : '0.0';
+  const max = Math.max(1, ...stats.distribution);
+
+  const rows = stats.distribution
+    .map((count, solved) => {
+      const width = Math.max(8, Math.round((count / max) * 100));
+      return (
+        `<div class="dist-row"><span>${solved}</span>` +
+        `<span class="dist-bar" style="width:${width}%">${count}</span></div>`
+      );
+    })
+    .join('');
+
+  return (
+    `<h3>Practice record</h3>` +
+    `<div class="stat-grid">` +
+    `<div class="stat"><b>${stats.rounds}</b><span>Rounds</span></div>` +
+    `<div class="stat"><b>${avg}</b><span>Avg /5</span></div>` +
+    `<div class="stat"><b>${stats.perfect}</b><span>Perfect</span></div>` +
+    `<div class="stat"><b>${stats.best}</b><span>Best</span></div>` +
+    `</div>` +
+    `<h3>Players solved per round</h3>` +
+    `<div class="dist">${rows}</div>`
+  );
+}
+
+function showDailyResults() {
+  const stats = loadStats();
+  const solved = state.slots.filter((s) => s.solved).length;
+
+  openModal(
+    `<h2 id="modal-title">${solved}/5 correct</h2>` +
+      `<ul class="recap">${recapHtml()}</ul>` +
       statsHtml(stats, solved) +
       `<button class="btn" id="btn-share">SHARE RESULT</button>` +
       `<div class="countdown">Next puzzle in <b id="countdown">--:--:--</b></div>`

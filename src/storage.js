@@ -3,6 +3,8 @@
 
 const PROGRESS_KEY = 'fifa-wordle:progress';
 const STATS_KEY = 'fifa-wordle:stats';
+const PRACTICE_KEY = 'fifa-wordle:practice';
+const PRACTICE_STATS_KEY = 'fifa-wordle:practice-stats';
 
 function read(key, fallback) {
   try {
@@ -62,5 +64,48 @@ export function recordResult(puzzleNo, solvedCount) {
   stats.lastPuzzle = puzzleNo;
 
   write(STATS_KEY, stats);
+  return stats;
+}
+
+// ---------------------------------------------------------------- practice
+
+/** The in-progress practice round, so a refresh does not lose it. */
+export function loadPractice() {
+  return read(PRACTICE_KEY, null);
+}
+
+export function savePractice(round) {
+  write(PRACTICE_KEY, round);
+}
+
+export function clearPractice() {
+  try {
+    localStorage.removeItem(PRACTICE_KEY);
+  } catch {
+    /* ignore */
+  }
+}
+
+export const emptyPracticeStats = () => ({
+  rounds: 0,
+  solvedTotal: 0,
+  best: 0,
+  perfect: 0,
+  distribution: [0, 0, 0, 0, 0, 0], // index = players solved that round (0-5)
+});
+
+export function loadPracticeStats() {
+  return { ...emptyPracticeStats(), ...read(PRACTICE_STATS_KEY, {}) };
+}
+
+/** Tally a finished practice round. Every round counts - there is no "same day" guard. */
+export function recordPracticeResult(solvedCount) {
+  const stats = loadPracticeStats();
+  stats.rounds += 1;
+  stats.solvedTotal += solvedCount;
+  stats.best = Math.max(stats.best, solvedCount);
+  stats.distribution[solvedCount] = (stats.distribution[solvedCount] || 0) + 1;
+  if (solvedCount === 5) stats.perfect += 1;
+  write(PRACTICE_STATS_KEY, stats);
   return stats;
 }

@@ -84,6 +84,35 @@ body {
   padding: 12px 14px 8px;
 }
 
+.modes {
+  display: flex;
+  gap: 4px;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto 10px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.mode-btn {
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+.mode-btn:hover:not(.is-on) { color: var(--text); }
+.mode-btn.is-on { background: var(--surface-2); color: var(--text); }
+
 .meta {
   margin: 0 0 12px;
   text-align: center;
@@ -422,6 +451,15 @@ body {
 }
 
 .btn:hover { filter: brightness(1.08); }
+
+.btn.btn-ghost {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.btn.btn-ghost:hover { filter: none; color: var(--text); border-color: var(--faint); }
 
 .countdown {
   margin-top: 12px;
