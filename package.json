@@ -1,0 +1,12 @@
+{
+  "name": "fifa-wordle",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Guess the FIFA ratings of five footballers. A new challenge every day.",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 5173",
+    "validate": "node scripts/validate-data.mjs",
+    "import": "node scripts/import-csv.mjs"
+  }
+}
