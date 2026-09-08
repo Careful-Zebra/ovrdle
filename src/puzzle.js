@@ -30,67 +30,87 @@ export function msUntilTomorrow(now = new Date()) {
 }
 
 /**
- * Pick the day's five players.
+ * Build the day's round: one player from each edition of the game, so every
+ * round spans all five years. Deterministic from the puzzle number.
  *
- * The pool is shuffled once per "cycle" and consumed five at a time, so a player
- * cannot reappear until every other player has been used. Each cycle reshuffles
- * with a new seed, so the order does not repeat either.
+ * Each edition carries its own rotation - the full list of players who appear
+ * in that edition, shuffled once from a stable seed, then walked one step per
+ * day. An edition's slot therefore will not repeat a player for ~100+ days,
+ * and consecutive days share no players.
  */
 export function buildPuzzle(data, puzzleNo) {
-  const pool = data.players.filter((p) => editionsFor(data, p).length > 0);
-  if (pool.length < PLAYERS_PER_PUZZLE) {
-    throw new Error(`Need at least ${PLAYERS_PER_PUZZLE} players, have ${pool.length}`);
-  }
-
-  const perCycle = Math.floor(pool.length / PLAYERS_PER_PUZZLE);
-  const index = puzzleNo - 1;
-  // Negative index (someone's clock is before the epoch) still lands somewhere valid.
-  const cycle = Math.floor(index / perCycle);
-  const offset = ((index % perCycle) + perCycle) % perCycle;
-
-  const order = shuffle(pool.slice(), rngFrom(`fifa-wordle:cycle:${cycle}`));
-  const chosen = order.slice(offset * PLAYERS_PER_PUZZLE, offset * PLAYERS_PER_PUZZLE + PLAYERS_PER_PUZZLE);
-
+  assertOnePerEdition(data);
   const rand = rngFrom(`fifa-wordle:day:${puzzleNo}`);
+  const index = puzzleNo - 1;
+  const used = new Set();
 
-  // Shuffle again so the five are not ordered by anything guessable.
-  return shuffle(toItems(data, chosen, rand), rand);
+  const items = data.editions.map((edition) => {
+    const roster = shuffle(rosterFor(data, edition), rngFrom(`fifa-wordle:roster:${edition.id}`));
+    // Negative index (a clock set before the epoch) still lands in range.
+    let cursor = ((index % roster.length) + roster.length) % roster.length;
+    // Skip anyone already taken by an earlier edition this day.
+    for (let n = 0; n < roster.length && used.has(roster[cursor].id); n++) {
+      cursor = (cursor + 1) % roster.length;
+    }
+    used.add(roster[cursor].id);
+    return toItem(roster[cursor], edition);
+  });
+
+  // Shuffle so the five are not shown in edition order.
+  return shuffle(items, rand);
 }
 
 /**
- * Pick five players for a one-off practice round. Not tied to the calendar: the
- * seed is whatever the caller passes (a timestamp, a counter), so every round is
- * fresh but still reproducible from that seed for save/resume.
+ * A one-off practice round: still one player per edition, but drawn at random
+ * instead of by rotation. Reproducible from the seed for save/resume.
  */
 export function buildPracticePuzzle(data, seed) {
-  const pool = data.players.filter((p) => editionsFor(data, p).length > 0);
-  if (pool.length < PLAYERS_PER_PUZZLE) {
-    throw new Error(`Need at least ${PLAYERS_PER_PUZZLE} players, have ${pool.length}`);
-  }
-
+  assertOnePerEdition(data);
   const rand = rngFrom(`fifa-wordle:practice:${seed}`);
-  const chosen = shuffle(pool.slice(), rand).slice(0, PLAYERS_PER_PUZZLE);
-  return shuffle(toItems(data, chosen, rand), rand);
-}
+  const used = new Set();
 
-/** Turn a set of players into puzzle items, choosing one edition each. */
-function toItems(data, players, rand) {
-  return players.map((player) => {
-    const edition = pick(editionsFor(data, player), rand);
-    const entry = player.ratings[edition.id];
-    return {
-      playerId: player.id,
-      name: player.name,
-      nation: player.nation,
-      position: entry.pos || player.pos,
-      club: entry.club,
-      age: player.born ? edition.year - player.born : null,
-      edition,
-      answer: entry.ovr,
-    };
+  const items = shuffle(data.editions.slice(), rand).map((edition) => {
+    const player = pick(rosterFor(data, edition).filter((p) => !used.has(p.id)), rand);
+    used.add(player.id);
+    return toItem(player, edition);
   });
+
+  return shuffle(items, rand);
 }
 
-function editionsFor(data, player) {
-  return data.editions.filter((e) => player.ratings && player.ratings[e.id]);
+/** Players who appear in a given edition. */
+function rosterFor(data, edition) {
+  return data.players.filter((p) => p.ratings && p.ratings[edition.id]);
+}
+
+/** One puzzle item: a player pinned to a specific edition. */
+function toItem(player, edition) {
+  const entry = player.ratings[edition.id];
+  return {
+    playerId: player.id,
+    name: player.name,
+    nation: player.nation,
+    position: entry.pos || player.pos,
+    club: entry.club,
+    age: player.born ? edition.year - player.born : null,
+    edition,
+    answer: entry.ovr,
+  };
+}
+
+/**
+ * The round is one player per edition, so the edition count must match the
+ * round size and every edition needs enough players to fill its slot after the
+ * others have taken theirs.
+ */
+function assertOnePerEdition(data) {
+  if (data.editions.length !== PLAYERS_PER_PUZZLE) {
+    throw new Error(
+      `Round is ${PLAYERS_PER_PUZZLE} players, one per edition, but data has ${data.editions.length} editions`
+    );
+  }
+  for (const edition of data.editions) {
+    const n = rosterFor(data, edition).length;
+    if (n < PLAYERS_PER_PUZZLE) throw new Error(`Edition ${edition.id} has only ${n} players`);
+  }
 }

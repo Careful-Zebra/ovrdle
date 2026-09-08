@@ -427,7 +427,7 @@ function closeModal() {
 function showHelp() {
   openModal(
     `<h2 id="modal-title">How to play</h2>` +
-      `<p>Five footballers, each pinned to one edition of the game. Guess that player's <strong>overall rating</strong> in that edition.</p>` +
+      `<p>Five footballers &mdash; one from each of the last five games, FIFA 22 through EA FC 26. Guess that player's <strong>overall rating</strong> in that edition.</p>` +
       `<ul>` +
       `<li><strong>Three tries</strong> per player.</li>` +
       `<li>After each miss you are told only <strong>higher</strong> or <strong>lower</strong>.</li>` +

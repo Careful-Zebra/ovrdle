@@ -6,6 +6,10 @@ const STATS_KEY = 'fifa-wordle:stats';
 const PRACTICE_KEY = 'fifa-wordle:practice';
 const PRACTICE_STATS_KEY = 'fifa-wordle:practice-stats';
 
+// Bump when puzzle generation changes so a saved in-progress round whose
+// players no longer match the new layout is dropped rather than shown stale.
+const SCHEMA = 2;
+
 function read(key, fallback) {
   try {
     const raw = localStorage.getItem(key);
@@ -25,11 +29,11 @@ function write(key, value) {
 
 export function loadProgress(puzzleNo) {
   const saved = read(PROGRESS_KEY, null);
-  return saved && saved.puzzleNo === puzzleNo ? saved : null;
+  return saved && saved.puzzleNo === puzzleNo && saved.schema === SCHEMA ? saved : null;
 }
 
 export function saveProgress(progress) {
-  write(PROGRESS_KEY, progress);
+  write(PROGRESS_KEY, { ...progress, schema: SCHEMA });
 }
 
 export const emptyStats = () => ({
@@ -71,11 +75,12 @@ export function recordResult(puzzleNo, solvedCount) {
 
 /** The in-progress practice round, so a refresh does not lose it. */
 export function loadPractice() {
-  return read(PRACTICE_KEY, null);
+  const saved = read(PRACTICE_KEY, null);
+  return saved && saved.schema === SCHEMA ? saved : null;
 }
 
 export function savePractice(round) {
-  write(PRACTICE_KEY, round);
+  write(PRACTICE_KEY, { ...round, schema: SCHEMA });
 }
 
 export function clearPractice() {

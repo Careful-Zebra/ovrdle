@@ -54,12 +54,27 @@ for (const p of data.players) {
 }
 
 const cells = data.players.reduce((n, p) => n + Object.keys(p.ratings || {}).length, 0);
-const cycleDays = Math.floor(data.players.length / PLAYERS_PER_PUZZLE);
+
+// A round is one player per edition, so each edition needs its own roster and
+// that roster's size sets how long before that slot can repeat a player.
+const rosters = editionIds.map((id) => ({
+  id,
+  count: data.players.filter((p) => p.ratings && p.ratings[id]).length,
+}));
+for (const r of rosters) {
+  if (r.count < PLAYERS_PER_PUZZLE) {
+    errors.push(`edition ${r.id}: only ${r.count} players, need >= ${PLAYERS_PER_PUZZLE}`);
+  }
+}
+if (editionIds.length !== PLAYERS_PER_PUZZLE) {
+  errors.push(`round is ${PLAYERS_PER_PUZZLE} players, one per edition, but there are ${editionIds.length} editions`);
+}
 
 console.log(`players    ${data.players.length}`);
 console.log(`editions   ${editionIds.length} (${editionIds.join(', ')})`);
 console.log(`cells      ${cells} player-edition ratings`);
-console.log(`rotation   ${cycleDays} days before a player can repeat`);
+console.log(`rosters    ${rosters.map((r) => `${r.id}:${r.count}`).join('  ')}`);
+console.log(`rotation   one per edition; ~${Math.min(...rosters.map((r) => r.count))} rounds before a slot repeats`);
 
 if (review.length) {
   console.log(`\nreview (${review.length}) - large year-over-year swings, verify these:`);
