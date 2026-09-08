@@ -15,7 +15,7 @@ export function buildShareText(puzzleNo, slots) {
     return WRONG.repeat(misses) + RIGHT + BLANK.repeat(MAX_TRIES - misses - 1);
   });
 
-  return [`FIFA Wordle #${puzzleNo} — ${solved}/5`, '', ...rows].join('\n');
+  return [`OVRdle #${puzzleNo} — ${solved}/5`, '', ...rows].join('\n');
 }
 
 /** Native share sheet where available, clipboard otherwise. Returns a status word. */

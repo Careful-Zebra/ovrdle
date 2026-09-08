@@ -1,8 +1,8 @@
 {
-  "name": "fifa-wordle",
+  "name": "ovrdle",
   "version": "0.1.0",
   "private": true,
-  "description": "Guess the FIFA ratings of five footballers. A new challenge every day.",
+  "description": "Guess the overall ratings of five footballers, one from each of the last five games. A new challenge every day.",
   "type": "module",
   "scripts": {
     "dev": "python -m http.server 5173",

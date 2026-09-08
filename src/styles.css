@@ -51,9 +51,10 @@ body {
   font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: 0.14em;
-  display: flex;
-  gap: 0.45em;
 }
+
+/* Trailing letter-spacing pushes the wordmark left of centre; pull it back. */
+.brand h1 { margin-right: -0.14em; }
 
 .brand h1 span { color: var(--accent); }
 

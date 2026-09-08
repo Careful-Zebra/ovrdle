@@ -19,7 +19,7 @@ import {
 } from './storage.js';
 import { buildShareText, share } from './share.js';
 
-const MODE_KEY = 'fifa-wordle:mode';
+const MODE_KEY = 'ovrdle:mode';
 
 const MIN_RATING = 40;
 const MAX_RATING = 99;
@@ -635,7 +635,7 @@ function escapeHtml(s) {
 
 function hasSeenHelp() {
   try {
-    return localStorage.getItem('fifa-wordle:seen-help') === '1';
+    return localStorage.getItem('ovrdle:seen-help') === '1';
   } catch {
     return true;
   }
@@ -643,7 +643,7 @@ function hasSeenHelp() {
 
 function markHelpSeen() {
   try {
-    localStorage.setItem('fifa-wordle:seen-help', '1');
+    localStorage.setItem('ovrdle:seen-help', '1');
   } catch {
     /* ignore */
   }

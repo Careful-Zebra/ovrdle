@@ -1,10 +1,10 @@
 // All persistence is per-browser localStorage. Wrapped because private-mode and
 // blocked-cookie browsers throw on access rather than returning null.
 
-const PROGRESS_KEY = 'fifa-wordle:progress';
-const STATS_KEY = 'fifa-wordle:stats';
-const PRACTICE_KEY = 'fifa-wordle:practice';
-const PRACTICE_STATS_KEY = 'fifa-wordle:practice-stats';
+const PROGRESS_KEY = 'ovrdle:progress';
+const STATS_KEY = 'ovrdle:stats';
+const PRACTICE_KEY = 'ovrdle:practice';
+const PRACTICE_STATS_KEY = 'ovrdle:practice-stats';
 
 // Bump when puzzle generation changes so a saved in-progress round whose
 // players no longer match the new layout is dropped rather than shown stale.
