@@ -148,10 +148,11 @@ body {
   transition: border-color 0.15s, background 0.15s, opacity 0.15s;
 }
 
-.card.is-locked { opacity: 0.42; }
 .card.is-active { border-color: var(--faint); background: var(--surface-2); }
 .card.is-solved { border-left: 3px solid var(--green); }
 .card.is-failed { border-left: 3px solid var(--red); }
+.card.is-focusable { cursor: pointer; }
+.card.is-focusable:hover { border-color: var(--faint); }
 
 .card-head {
   display: flex;

@@ -119,8 +119,8 @@ function enterDaily() {
   const saved = loadProgress(state.puzzleNo);
   if (saved) {
     state.slots = saved.slots;
-    state.current = saved.current;
     state.done = saved.done;
+    state.current = firstOpenSlot(saved.current);
   } else {
     state.slots = freshSlots();
     state.current = 0;
@@ -137,8 +137,8 @@ function enterPractice() {
     state.practiceRound = saved.round || 1;
     state.items = buildPracticePuzzle(state.data, saved.seed);
     state.slots = saved.slots;
-    state.current = saved.current;
     state.done = saved.done;
+    state.current = firstOpenSlot(saved.current);
     setPracticeMeta();
   } else {
     startPracticeRound();
@@ -166,6 +166,34 @@ function setPracticeMeta() {
 
 function freshSlots() {
   return state.items.map(() => ({ guesses: [], solved: false, failed: false }));
+}
+
+/** Index of an open (unsolved, unfailed) slot, preferring `prefer`, else the first. */
+function firstOpenSlot(prefer = 0) {
+  const open = (i) => state.slots[i] && !state.slots[i].solved && !state.slots[i].failed;
+  if (open(prefer)) return prefer;
+  const i = state.slots.findIndex((_, n) => open(n));
+  return i === -1 ? 0 : i;
+}
+
+/** Next open slot after `from`, wrapping; -1 when every slot is done. */
+function nextOpenSlot(from) {
+  for (let n = 1; n <= state.slots.length; n++) {
+    const i = (from + n) % state.slots.length;
+    const s = state.slots[i];
+    if (!s.solved && !s.failed) return i;
+  }
+  return -1;
+}
+
+/** Make a card the keyboard target. Ignored for solved/failed cards. */
+function focusCard(i) {
+  const s = state.slots[i];
+  if (state.done || !s || s.solved || s.failed || i === state.current) return;
+  state.current = i;
+  state.typed = '';
+  persist();
+  render();
 }
 
 function renderModes() {
@@ -243,8 +271,9 @@ function submit() {
   else if (slot.guesses.length >= MAX_TRIES) slot.failed = true;
 
   if (slot.solved || slot.failed) {
-    if (state.current >= state.items.length - 1) finish();
-    else state.current += 1;
+    const next = nextOpenSlot(state.current);
+    if (next === -1) finish();
+    else state.current = next;
   }
 
   persist();
@@ -300,21 +329,12 @@ function render() {
 function renderCard(item, slot, i) {
   const li = document.createElement('li');
   const isActive = !state.done && i === state.current;
-  const isLocked = !state.done && i > state.current;
+  const isOpen = !state.done && !slot.solved && !slot.failed;
 
   li.className = 'card';
   if (isActive) li.classList.add('is-active');
-  if (isLocked) li.classList.add('is-locked');
   if (slot.solved) li.classList.add('is-solved');
   if (slot.failed) li.classList.add('is-failed');
-
-  if (isLocked) {
-    li.innerHTML =
-      `<div class="card-head"><div class="card-name">— — —</div>` +
-      `<div class="card-index">${i + 1}/${PLAYERS_PER_PUZZLE}</div></div>` +
-      `<div class="card-sub">Locked</div>`;
-    return li;
-  }
 
   const facts = [item.position, item.club, item.nation];
   if (item.age) facts.push(`age ${item.age}`);
@@ -329,6 +349,11 @@ function renderCard(item, slot, i) {
     `</div>`;
 
   li.appendChild(renderGuesses(item, slot, isActive));
+
+  if (isOpen && !isActive) {
+    li.classList.add('is-focusable');
+    li.addEventListener('click', () => focusCard(i));
+  }
   return li;
 }
 
@@ -343,17 +368,20 @@ function renderGuesses(item, slot, isActive) {
     );
   });
 
-  if (isActive && !slot.solved && !slot.failed) {
+  const isOpen = !slot.solved && !slot.failed && !state.done;
+  if (isOpen) {
     const used = slot.guesses.length;
-    row.appendChild(tile(state.typed.padEnd(2, ' '), 'is-typing'));
-    for (let i = used + 1; i < MAX_TRIES; i++) row.appendChild(tile('', ''));
+    if (isActive) row.appendChild(tile(state.typed.padEnd(2, ' '), 'is-typing'));
+    for (let i = used + (isActive ? 1 : 0); i < MAX_TRIES; i++) row.appendChild(tile('', ''));
 
     const last = slot.guesses[slot.guesses.length - 1];
     const hint = document.createElement('span');
     hint.className = 'hint';
     hint.innerHTML = last
       ? `<strong>${last < item.answer ? 'Higher' : 'Lower'}</strong> · ${MAX_TRIES - used} left`
-      : `${MAX_TRIES} tries`;
+      : isActive
+        ? `${MAX_TRIES} tries`
+        : `Tap to guess`;
     row.appendChild(hint);
   }
 
@@ -431,7 +459,7 @@ function showHelp() {
       `<ul>` +
       `<li><strong>Three tries</strong> per player.</li>` +
       `<li>After each miss you are told only <strong>higher</strong> or <strong>lower</strong>.</li>` +
-      `<li>Players unlock one at a time. A new set every day.</li>` +
+      `<li>All five are shown at once &mdash; guess them in any order. A new set every day.</li>` +
       `<li>Want more? Switch to <strong>Practice</strong> for endless rounds.</li>` +
       `</ul>` +
       `<h3>Reading a guess</h3>` +
