@@ -1,0 +1,12 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands: []
+  artifacts:
+    # No build step — serve the repo as-is (index.html at root).
+    baseDirectory: /
+    files:
+      - '**/*'
+  cache:
+    paths: []
