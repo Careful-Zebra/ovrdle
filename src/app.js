@@ -62,9 +62,9 @@ async function init() {
     state.data = await res.json();
   } catch (err) {
     el.board.innerHTML =
-      `<li class="card"><div class="card-name">Could not load player data</div>` +
+      `<li class="card"><div class="card-name">Couldn't load the players</div>` +
       `<div class="card-sub">${escapeHtml(String(err.message || err))}. ` +
-      `Open the site over http:// rather than file:// &mdash; run <code>npm run dev</code>.</div></li>`;
+      `Open the site over http://, not file://. Run <code>npm run dev</code> and reload.</div></li>`;
     return;
   }
 
@@ -258,11 +258,11 @@ function submit() {
   const slot = state.slots[state.current];
   const item = state.items[state.current];
 
-  if (state.typed.length < 2) return toast('Enter a two-digit rating');
+  if (state.typed.length < 2) return toast('Give me two digits');
 
   const guess = Number(state.typed);
-  if (guess < MIN_RATING) return toast(`Ratings run ${MIN_RATING}–${MAX_RATING}`);
-  if (slot.guesses.includes(guess)) return toast('Already guessed');
+  if (guess < MIN_RATING) return toast(`Ratings go from ${MIN_RATING} to ${MAX_RATING}`);
+  if (slot.guesses.includes(guess)) return toast('You already tried that one');
 
   slot.guesses.push(guess);
   state.typed = '';
@@ -455,19 +455,19 @@ function closeModal() {
 function showHelp() {
   openModal(
     `<h2 id="modal-title">How to play</h2>` +
-      `<p>Five footballers &mdash; one from each of the last five games, FIFA 22 through EA FC 26. Guess that player's <strong>overall rating</strong> in that edition.</p>` +
+      `<p>Five footballers, one from each of the last five games (FIFA 22 up to EA FC 26). Your job is to guess each one's <strong>overall rating</strong> in that edition.</p>` +
       `<ul>` +
-      `<li><strong>Three tries</strong> per player.</li>` +
-      `<li>After each miss you are told only <strong>higher</strong> or <strong>lower</strong>.</li>` +
-      `<li>All five are shown at once &mdash; guess them in any order. A new set every day.</li>` +
-      `<li>Want more? Switch to <strong>Practice</strong> for endless rounds.</li>` +
+      `<li><strong>Three tries</strong> each.</li>` +
+      `<li>Miss, and I'll only tell you <strong>higher</strong> or <strong>lower</strong>.</li>` +
+      `<li>All five sit on the board at once, so take them in whatever order you like. Fresh five every day.</li>` +
+      `<li>Can't get enough? Hit <strong>Practice</strong> for endless rounds.</li>` +
       `</ul>` +
       `<h3>Reading a guess</h3>` +
-      `<div class="example">${tileHtml('84', 'is-miss', '▲')}<span>Too low &mdash; go higher.</span></div>` +
-      `<div class="example">${tileHtml('90', 'is-miss', '▼')}<span>Too high &mdash; go lower.</span></div>` +
-      `<div class="example">${tileHtml('89', 'is-hit')}<span>Exact. On to the next player.</span></div>` +
-      `<div class="example">${tileHtml('89', 'is-answer')}<span>Out of tries &mdash; the answer, revealed.</span></div>` +
-      `<p class="note">Ratings are overalls, not in-form or special cards.</p>`
+      `<div class="example">${tileHtml('84', 'is-miss', '▲')}<span>Too low, go higher.</span></div>` +
+      `<div class="example">${tileHtml('90', 'is-miss', '▼')}<span>Too high, go lower.</span></div>` +
+      `<div class="example">${tileHtml('89', 'is-hit')}<span>Nailed it. On to the next.</span></div>` +
+      `<div class="example">${tileHtml('89', 'is-answer')}<span>Out of tries, here's the answer.</span></div>` +
+      `<p class="note">These are base overalls, not in-form or special cards.</p>`
   );
 }
 
@@ -556,8 +556,8 @@ function showDailyResults() {
 
   document.getElementById('btn-share').addEventListener('click', async () => {
     const result = await share(buildShareText(state.puzzleNo, state.slots));
-    if (result === 'copied') toast('Copied to clipboard');
-    else if (result === 'failed') toast('Could not copy');
+    if (result === 'copied') toast('Copied, go paste it');
+    else if (result === 'failed') toast("Couldn't copy that");
   });
 
   startCountdown();
