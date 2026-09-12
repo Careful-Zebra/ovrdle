@@ -1,849 +1,4403 @@
 {
   "_comment": "Overall ratings at each edition's launch. Compiled by hand - see README for how to verify or replace with an imported dataset. A player may be missing an edition (transfer limbo, retirement, not yet in the game); the puzzle only ever picks editions that exist here.",
   "editions": [
-    { "id": "fifa22", "label": "FIFA 22", "year": 2021 },
-    { "id": "fifa23", "label": "FIFA 23", "year": 2022 },
-    { "id": "fc24", "label": "EA FC 24", "year": 2023 },
-    { "id": "fc25", "label": "EA FC 25", "year": 2024 },
-    { "id": "fc26", "label": "EA FC 26", "year": 2025 }
+    {
+      "id": "fifa22",
+      "label": "FIFA 22",
+      "year": 2021
+    },
+    {
+      "id": "fifa23",
+      "label": "FIFA 23",
+      "year": 2022
+    },
+    {
+      "id": "fc24",
+      "label": "EA FC 24",
+      "year": 2023
+    },
+    {
+      "id": "fc25",
+      "label": "EA FC 25",
+      "year": 2024
+    },
+    {
+      "id": "fc26",
+      "label": "EA FC 26",
+      "year": 2025
+    }
   ],
   "players": [
-    { "id": "messi", "name": "Lionel Messi", "pos": "RW", "nation": "Argentina", "born": 1987, "ratings": {
-      "fifa22": { "ovr": 93, "club": "Paris Saint-Germain" },
-      "fifa23": { "ovr": 91, "club": "Paris Saint-Germain" },
-      "fc24": { "ovr": 90, "club": "Inter Miami" },
-      "fc25": { "ovr": 88, "club": "Inter Miami" },
-      "fc26": { "ovr": 86, "club": "Inter Miami" } } },
-
-    { "id": "ronaldo", "name": "Cristiano Ronaldo", "pos": "ST", "nation": "Portugal", "born": 1985, "ratings": {
-      "fifa22": { "ovr": 91, "club": "Manchester United" },
-      "fifa23": { "ovr": 90, "club": "Manchester United" },
-      "fc24": { "ovr": 86, "club": "Al Nassr" },
-      "fc25": { "ovr": 85, "club": "Al Nassr" },
-      "fc26": { "ovr": 82, "club": "Al Nassr" } } },
-
-    { "id": "lewandowski", "name": "Robert Lewandowski", "pos": "ST", "nation": "Poland", "born": 1988, "ratings": {
-      "fifa22": { "ovr": 92, "club": "Bayern Munich" },
-      "fifa23": { "ovr": 91, "club": "Barcelona" },
-      "fc24": { "ovr": 90, "club": "Barcelona" },
-      "fc25": { "ovr": 88, "club": "Barcelona" },
-      "fc26": { "ovr": 86, "club": "Barcelona" } } },
-
-    { "id": "mbappe", "name": "Kylian Mbappé", "pos": "ST", "nation": "France", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 91, "club": "Paris Saint-Germain" },
-      "fifa23": { "ovr": 91, "club": "Paris Saint-Germain" },
-      "fc24": { "ovr": 91, "club": "Paris Saint-Germain" },
-      "fc25": { "ovr": 91, "club": "Real Madrid" },
-      "fc26": { "ovr": 91, "club": "Real Madrid" } } },
-
-    { "id": "haaland", "name": "Erling Haaland", "pos": "ST", "nation": "Norway", "born": 2000, "ratings": {
-      "fifa22": { "ovr": 88, "club": "Borussia Dortmund" },
-      "fifa23": { "ovr": 91, "club": "Manchester City" },
-      "fc24": { "ovr": 91, "club": "Manchester City" },
-      "fc25": { "ovr": 91, "club": "Manchester City" },
-      "fc26": { "ovr": 91, "club": "Manchester City" } } },
-
-    { "id": "benzema", "name": "Karim Benzema", "pos": "ST", "nation": "France", "born": 1987, "ratings": {
-      "fifa22": { "ovr": 89, "club": "Real Madrid" },
-      "fifa23": { "ovr": 91, "club": "Real Madrid" },
-      "fc24": { "ovr": 90, "club": "Al Ittihad" },
-      "fc25": { "ovr": 86, "club": "Al Ittihad" },
-      "fc26": { "ovr": 84, "club": "Al Ittihad" } } },
-
-    { "id": "neymar", "name": "Neymar Jr", "pos": "LW", "nation": "Brazil", "born": 1992, "ratings": {
-      "fifa22": { "ovr": 91, "club": "Paris Saint-Germain" },
-      "fifa23": { "ovr": 89, "club": "Paris Saint-Germain" },
-      "fc24": { "ovr": 89, "club": "Al Hilal" },
-      "fc25": { "ovr": 85, "club": "Al Hilal" },
-      "fc26": { "ovr": 83, "club": "Santos" } } },
-
-    { "id": "salah", "name": "Mohamed Salah", "pos": "RW", "nation": "Egypt", "born": 1992, "ratings": {
-      "fifa22": { "ovr": 89, "club": "Liverpool" },
-      "fifa23": { "ovr": 90, "club": "Liverpool" },
-      "fc24": { "ovr": 89, "club": "Liverpool" },
-      "fc25": { "ovr": 89, "club": "Liverpool" },
-      "fc26": { "ovr": 89, "club": "Liverpool" } } },
-
-    { "id": "kane", "name": "Harry Kane", "pos": "ST", "nation": "England", "born": 1993, "ratings": {
-      "fifa22": { "ovr": 90, "club": "Tottenham Hotspur" },
-      "fifa23": { "ovr": 89, "club": "Tottenham Hotspur" },
-      "fc24": { "ovr": 90, "club": "Bayern Munich" },
-      "fc25": { "ovr": 90, "club": "Bayern Munich" },
-      "fc26": { "ovr": 90, "club": "Bayern Munich" } } },
-
-    { "id": "vinicius", "name": "Vinícius Júnior", "pos": "LW", "nation": "Brazil", "born": 2000, "ratings": {
-      "fifa22": { "ovr": 80, "club": "Real Madrid" },
-      "fifa23": { "ovr": 86, "club": "Real Madrid" },
-      "fc24": { "ovr": 89, "club": "Real Madrid" },
-      "fc25": { "ovr": 90, "club": "Real Madrid" },
-      "fc26": { "ovr": 90, "club": "Real Madrid" } } },
-
-    { "id": "son", "name": "Son Heung-min", "pos": "LW", "nation": "South Korea", "born": 1992, "ratings": {
-      "fifa22": { "ovr": 89, "club": "Tottenham Hotspur" },
-      "fifa23": { "ovr": 89, "club": "Tottenham Hotspur" },
-      "fc24": { "ovr": 87, "club": "Tottenham Hotspur" },
-      "fc25": { "ovr": 86, "club": "Tottenham Hotspur" } } },
-
-    { "id": "lautaro", "name": "Lautaro Martínez", "pos": "ST", "nation": "Argentina", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Inter" },
-      "fifa23": { "ovr": 86, "club": "Inter" },
-      "fc24": { "ovr": 87, "club": "Inter" },
-      "fc25": { "ovr": 89, "club": "Inter" },
-      "fc26": { "ovr": 88, "club": "Inter" } } },
-
-    { "id": "osimhen", "name": "Victor Osimhen", "pos": "ST", "nation": "Nigeria", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 83, "club": "Napoli" },
-      "fifa23": { "ovr": 84, "club": "Napoli" },
-      "fc24": { "ovr": 88, "club": "Napoli" },
-      "fc25": { "ovr": 87, "club": "Napoli" },
-      "fc26": { "ovr": 87, "club": "Galatasaray" } } },
-
-    { "id": "leao", "name": "Rafael Leão", "pos": "LW", "nation": "Portugal", "born": 1999, "ratings": {
-      "fifa22": { "ovr": 80, "club": "AC Milan" },
-      "fifa23": { "ovr": 84, "club": "AC Milan" },
-      "fc24": { "ovr": 86, "club": "AC Milan" },
-      "fc25": { "ovr": 86, "club": "AC Milan" },
-      "fc26": { "ovr": 85, "club": "AC Milan" } } },
-
-    { "id": "saka", "name": "Bukayo Saka", "pos": "RW", "nation": "England", "born": 2001, "ratings": {
-      "fifa22": { "ovr": 80, "club": "Arsenal" },
-      "fifa23": { "ovr": 84, "club": "Arsenal" },
-      "fc24": { "ovr": 86, "club": "Arsenal" },
-      "fc25": { "ovr": 87, "club": "Arsenal" },
-      "fc26": { "ovr": 87, "club": "Arsenal" } } },
-
-    { "id": "foden", "name": "Phil Foden", "pos": "CAM", "nation": "England", "born": 2000, "ratings": {
-      "fifa22": { "ovr": 84, "club": "Manchester City" },
-      "fifa23": { "ovr": 85, "club": "Manchester City" },
-      "fc24": { "ovr": 86, "club": "Manchester City" },
-      "fc25": { "ovr": 88, "club": "Manchester City" },
-      "fc26": { "ovr": 87, "club": "Manchester City" } } },
-
-    { "id": "bellingham", "name": "Jude Bellingham", "pos": "CM", "nation": "England", "born": 2003, "ratings": {
-      "fifa22": { "ovr": 76, "club": "Borussia Dortmund" },
-      "fifa23": { "ovr": 84, "club": "Borussia Dortmund" },
-      "fc24": { "ovr": 86, "club": "Real Madrid" },
-      "fc25": { "ovr": 90, "club": "Real Madrid" },
-      "fc26": { "ovr": 90, "club": "Real Madrid" } } },
-
-    { "id": "musiala", "name": "Jamal Musiala", "pos": "CAM", "nation": "Germany", "born": 2003, "ratings": {
-      "fifa22": { "ovr": 76, "club": "Bayern Munich" },
-      "fifa23": { "ovr": 82, "club": "Bayern Munich" },
-      "fc24": { "ovr": 84, "club": "Bayern Munich" },
-      "fc25": { "ovr": 86, "club": "Bayern Munich" },
-      "fc26": { "ovr": 88, "club": "Bayern Munich" } } },
-
-    { "id": "wirtz", "name": "Florian Wirtz", "pos": "CAM", "nation": "Germany", "born": 2003, "ratings": {
-      "fifa22": { "ovr": 78, "club": "Bayer Leverkusen" },
-      "fifa23": { "ovr": 82, "club": "Bayer Leverkusen" },
-      "fc24": { "ovr": 85, "club": "Bayer Leverkusen" },
-      "fc25": { "ovr": 87, "club": "Bayer Leverkusen" },
-      "fc26": { "ovr": 89, "club": "Liverpool" } } },
-
-    { "id": "griezmann", "name": "Antoine Griezmann", "pos": "CF", "nation": "France", "born": 1991, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Atlético Madrid" },
-      "fifa23": { "ovr": 85, "club": "Atlético Madrid" },
-      "fc24": { "ovr": 86, "club": "Atlético Madrid" },
-      "fc25": { "ovr": 86, "club": "Atlético Madrid" },
-      "fc26": { "ovr": 85, "club": "Atlético Madrid" } } },
-
-    { "id": "debruyne", "name": "Kevin De Bruyne", "pos": "CM", "nation": "Belgium", "born": 1991, "ratings": {
-      "fifa22": { "ovr": 91, "club": "Manchester City" },
-      "fifa23": { "ovr": 91, "club": "Manchester City" },
-      "fc24": { "ovr": 91, "club": "Manchester City" },
-      "fc25": { "ovr": 88, "club": "Manchester City" },
-      "fc26": { "ovr": 86, "club": "Napoli" } } },
-
-    { "id": "rashford", "name": "Marcus Rashford", "pos": "LW", "nation": "England", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Manchester United" },
-      "fifa23": { "ovr": 84, "club": "Manchester United" },
-      "fc24": { "ovr": 85, "club": "Manchester United" },
-      "fc25": { "ovr": 84, "club": "Manchester United" },
-      "fc26": { "ovr": 82, "club": "Barcelona" } } },
-
-    { "id": "nunez", "name": "Darwin Núñez", "pos": "ST", "nation": "Uruguay", "born": 1999, "ratings": {
-      "fifa22": { "ovr": 78, "club": "Benfica" },
-      "fifa23": { "ovr": 82, "club": "Liverpool" },
-      "fc24": { "ovr": 82, "club": "Liverpool" },
-      "fc25": { "ovr": 82, "club": "Liverpool" },
-      "fc26": { "ovr": 81, "club": "Al Hilal" } } },
-
-    { "id": "kvaratskhelia", "name": "Khvicha Kvaratskhelia", "pos": "LW", "nation": "Georgia", "born": 2001, "ratings": {
-      "fifa23": { "ovr": 78, "club": "Napoli" },
-      "fc24": { "ovr": 86, "club": "Napoli" },
-      "fc25": { "ovr": 86, "club": "Napoli" },
-      "fc26": { "ovr": 86, "club": "Paris Saint-Germain" } } },
-
-    { "id": "dembele", "name": "Ousmane Dembélé", "pos": "RW", "nation": "France", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 83, "club": "Barcelona" },
-      "fifa23": { "ovr": 84, "club": "Barcelona" },
-      "fc24": { "ovr": 86, "club": "Paris Saint-Germain" },
-      "fc25": { "ovr": 85, "club": "Paris Saint-Germain" },
-      "fc26": { "ovr": 88, "club": "Paris Saint-Germain" } } },
-
-    { "id": "julian-alvarez", "name": "Julián Álvarez", "pos": "ST", "nation": "Argentina", "born": 2000, "ratings": {
-      "fifa22": { "ovr": 75, "club": "River Plate" },
-      "fifa23": { "ovr": 79, "club": "Manchester City" },
-      "fc24": { "ovr": 83, "club": "Manchester City" },
-      "fc25": { "ovr": 85, "club": "Atlético Madrid" },
-      "fc26": { "ovr": 86, "club": "Atlético Madrid" } } },
-
-    { "id": "vlahovic", "name": "Dušan Vlahović", "pos": "ST", "nation": "Serbia", "born": 2000, "ratings": {
-      "fifa22": { "ovr": 79, "club": "Fiorentina" },
-      "fifa23": { "ovr": 84, "club": "Juventus" },
-      "fc24": { "ovr": 84, "club": "Juventus" },
-      "fc25": { "ovr": 83, "club": "Juventus" },
-      "fc26": { "ovr": 82, "club": "Juventus" } } },
-
-    { "id": "dybala", "name": "Paulo Dybala", "pos": "CAM", "nation": "Argentina", "born": 1993, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Juventus" },
-      "fifa23": { "ovr": 86, "club": "Roma" },
-      "fc24": { "ovr": 86, "club": "Roma" },
-      "fc25": { "ovr": 85, "club": "Roma" },
-      "fc26": { "ovr": 84, "club": "Roma" } } },
-
-    { "id": "sterling", "name": "Raheem Sterling", "pos": "LW", "nation": "England", "born": 1994, "ratings": {
-      "fifa22": { "ovr": 88, "club": "Manchester City" },
-      "fifa23": { "ovr": 86, "club": "Chelsea" },
-      "fc24": { "ovr": 84, "club": "Chelsea" },
-      "fc25": { "ovr": 83, "club": "Chelsea" },
-      "fc26": { "ovr": 80, "club": "Chelsea" } } },
-
-    { "id": "havertz", "name": "Kai Havertz", "pos": "ST", "nation": "Germany", "born": 1999, "ratings": {
-      "fifa22": { "ovr": 84, "club": "Chelsea" },
-      "fifa23": { "ovr": 84, "club": "Chelsea" },
-      "fc24": { "ovr": 84, "club": "Arsenal" },
-      "fc25": { "ovr": 84, "club": "Arsenal" },
-      "fc26": { "ovr": 85, "club": "Arsenal" } } },
-
-    { "id": "rodri", "name": "Rodri", "pos": "CDM", "nation": "Spain", "born": 1996, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Manchester City" },
-      "fifa23": { "ovr": 86, "club": "Manchester City" },
-      "fc24": { "ovr": 89, "club": "Manchester City" },
-      "fc25": { "ovr": 91, "club": "Manchester City" },
-      "fc26": { "ovr": 90, "club": "Manchester City" } } },
-
-    { "id": "modric", "name": "Luka Modrić", "pos": "CM", "nation": "Croatia", "born": 1985, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Real Madrid" },
-      "fifa23": { "ovr": 88, "club": "Real Madrid" },
-      "fc24": { "ovr": 87, "club": "Real Madrid" },
-      "fc25": { "ovr": 85, "club": "Real Madrid" },
-      "fc26": { "ovr": 82, "club": "AC Milan" } } },
-
-    { "id": "kroos", "name": "Toni Kroos", "pos": "CM", "nation": "Germany", "born": 1990, "ratings": {
-      "fifa22": { "ovr": 88, "club": "Real Madrid" },
-      "fifa23": { "ovr": 88, "club": "Real Madrid" },
-      "fc24": { "ovr": 87, "club": "Real Madrid" } } },
-
-    { "id": "bruno-fernandes", "name": "Bruno Fernandes", "pos": "CAM", "nation": "Portugal", "born": 1994, "ratings": {
-      "fifa22": { "ovr": 88, "club": "Manchester United" },
-      "fifa23": { "ovr": 86, "club": "Manchester United" },
-      "fc24": { "ovr": 88, "club": "Manchester United" },
-      "fc25": { "ovr": 88, "club": "Manchester United" },
-      "fc26": { "ovr": 88, "club": "Manchester United" } } },
-
-    { "id": "kimmich", "name": "Joshua Kimmich", "pos": "CDM", "nation": "Germany", "born": 1995, "ratings": {
-      "fifa22": { "ovr": 89, "club": "Bayern Munich" },
-      "fifa23": { "ovr": 89, "club": "Bayern Munich" },
-      "fc24": { "ovr": 88, "club": "Bayern Munich" },
-      "fc25": { "ovr": 87, "club": "Bayern Munich" },
-      "fc26": { "ovr": 87, "club": "Bayern Munich" } } },
-
-    { "id": "pedri", "name": "Pedri", "pos": "CM", "nation": "Spain", "born": 2002, "ratings": {
-      "fifa22": { "ovr": 81, "club": "Barcelona" },
-      "fifa23": { "ovr": 85, "club": "Barcelona" },
-      "fc24": { "ovr": 86, "club": "Barcelona" },
-      "fc25": { "ovr": 86, "club": "Barcelona" },
-      "fc26": { "ovr": 88, "club": "Barcelona" } } },
-
-    { "id": "gavi", "name": "Gavi", "pos": "CM", "nation": "Spain", "born": 2004, "ratings": {
-      "fifa22": { "ovr": 71, "club": "Barcelona" },
-      "fifa23": { "ovr": 79, "club": "Barcelona" },
-      "fc24": { "ovr": 82, "club": "Barcelona" },
-      "fc25": { "ovr": 83, "club": "Barcelona" },
-      "fc26": { "ovr": 82, "club": "Barcelona" } } },
-
-    { "id": "valverde", "name": "Federico Valverde", "pos": "CM", "nation": "Uruguay", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 82, "club": "Real Madrid" },
-      "fifa23": { "ovr": 85, "club": "Real Madrid" },
-      "fc24": { "ovr": 87, "club": "Real Madrid" },
-      "fc25": { "ovr": 88, "club": "Real Madrid" },
-      "fc26": { "ovr": 89, "club": "Real Madrid" } } },
-
-    { "id": "camavinga", "name": "Eduardo Camavinga", "pos": "CM", "nation": "France", "born": 2002, "ratings": {
-      "fifa22": { "ovr": 76, "club": "Real Madrid" },
-      "fifa23": { "ovr": 81, "club": "Real Madrid" },
-      "fc24": { "ovr": 84, "club": "Real Madrid" },
-      "fc25": { "ovr": 85, "club": "Real Madrid" },
-      "fc26": { "ovr": 85, "club": "Real Madrid" } } },
-
-    { "id": "tchouameni", "name": "Aurélien Tchouaméni", "pos": "CDM", "nation": "France", "born": 2000, "ratings": {
-      "fifa22": { "ovr": 79, "club": "Monaco" },
-      "fifa23": { "ovr": 84, "club": "Real Madrid" },
-      "fc24": { "ovr": 85, "club": "Real Madrid" },
-      "fc25": { "ovr": 85, "club": "Real Madrid" },
-      "fc26": { "ovr": 85, "club": "Real Madrid" } } },
-
-    { "id": "rice", "name": "Declan Rice", "pos": "CDM", "nation": "England", "born": 1999, "ratings": {
-      "fifa22": { "ovr": 82, "club": "West Ham United" },
-      "fifa23": { "ovr": 84, "club": "West Ham United" },
-      "fc24": { "ovr": 85, "club": "Arsenal" },
-      "fc25": { "ovr": 87, "club": "Arsenal" },
-      "fc26": { "ovr": 87, "club": "Arsenal" } } },
-
-    { "id": "odegaard", "name": "Martin Ødegaard", "pos": "CAM", "nation": "Norway", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 81, "club": "Arsenal" },
-      "fifa23": { "ovr": 84, "club": "Arsenal" },
-      "fc24": { "ovr": 87, "club": "Arsenal" },
-      "fc25": { "ovr": 88, "club": "Arsenal" },
-      "fc26": { "ovr": 87, "club": "Arsenal" } } },
-
-    { "id": "bernardo-silva", "name": "Bernardo Silva", "pos": "CAM", "nation": "Portugal", "born": 1994, "ratings": {
-      "fifa22": { "ovr": 86, "club": "Manchester City" },
-      "fifa23": { "ovr": 87, "club": "Manchester City" },
-      "fc24": { "ovr": 88, "club": "Manchester City" },
-      "fc25": { "ovr": 87, "club": "Manchester City" },
-      "fc26": { "ovr": 86, "club": "Manchester City" } } },
-
-    { "id": "gundogan", "name": "İlkay Gündoğan", "pos": "CM", "nation": "Germany", "born": 1990, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Manchester City" },
-      "fifa23": { "ovr": 84, "club": "Manchester City" },
-      "fc24": { "ovr": 86, "club": "Barcelona" },
-      "fc25": { "ovr": 85, "club": "Manchester City" } } },
-
-    { "id": "casemiro", "name": "Casemiro", "pos": "CDM", "nation": "Brazil", "born": 1992, "ratings": {
-      "fifa22": { "ovr": 89, "club": "Real Madrid" },
-      "fifa23": { "ovr": 89, "club": "Manchester United" },
-      "fc24": { "ovr": 87, "club": "Manchester United" },
-      "fc25": { "ovr": 84, "club": "Manchester United" },
-      "fc26": { "ovr": 82, "club": "Manchester United" } } },
-
-    { "id": "barella", "name": "Nicolò Barella", "pos": "CM", "nation": "Italy", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Inter" },
-      "fifa23": { "ovr": 86, "club": "Inter" },
-      "fc24": { "ovr": 86, "club": "Inter" },
-      "fc25": { "ovr": 86, "club": "Inter" },
-      "fc26": { "ovr": 85, "club": "Inter" } } },
-
-    { "id": "de-jong", "name": "Frenkie de Jong", "pos": "CM", "nation": "Netherlands", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Barcelona" },
-      "fifa23": { "ovr": 87, "club": "Barcelona" },
-      "fc24": { "ovr": 87, "club": "Barcelona" },
-      "fc25": { "ovr": 85, "club": "Barcelona" },
-      "fc26": { "ovr": 85, "club": "Barcelona" } } },
-
-    { "id": "grealish", "name": "Jack Grealish", "pos": "LW", "nation": "England", "born": 1995, "ratings": {
-      "fifa22": { "ovr": 82, "club": "Manchester City" },
-      "fifa23": { "ovr": 84, "club": "Manchester City" },
-      "fc24": { "ovr": 85, "club": "Manchester City" },
-      "fc25": { "ovr": 83, "club": "Manchester City" },
-      "fc26": { "ovr": 81, "club": "Everton" } } },
-
-    { "id": "verratti", "name": "Marco Verratti", "pos": "CM", "nation": "Italy", "born": 1992, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Paris Saint-Germain" },
-      "fifa23": { "ovr": 87, "club": "Paris Saint-Germain" },
-      "fc24": { "ovr": 86, "club": "Al Arabi" },
-      "fc25": { "ovr": 84, "club": "Al Arabi" } } },
-
-    { "id": "milinkovic-savic", "name": "Sergej Milinković-Savić", "pos": "CM", "nation": "Serbia", "born": 1995, "ratings": {
-      "fifa22": { "ovr": 86, "club": "Lazio" },
-      "fifa23": { "ovr": 86, "club": "Lazio" },
-      "fc24": { "ovr": 85, "club": "Al Hilal" },
-      "fc25": { "ovr": 84, "club": "Al Hilal" } } },
-
-    { "id": "van-dijk", "name": "Virgil van Dijk", "pos": "CB", "nation": "Netherlands", "born": 1991, "ratings": {
-      "fifa22": { "ovr": 89, "club": "Liverpool" },
-      "fifa23": { "ovr": 90, "club": "Liverpool" },
-      "fc24": { "ovr": 89, "club": "Liverpool" },
-      "fc25": { "ovr": 89, "club": "Liverpool" },
-      "fc26": { "ovr": 88, "club": "Liverpool" } } },
-
-    { "id": "ruben-dias", "name": "Rúben Dias", "pos": "CB", "nation": "Portugal", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Manchester City" },
-      "fifa23": { "ovr": 88, "club": "Manchester City" },
-      "fc24": { "ovr": 89, "club": "Manchester City" },
-      "fc25": { "ovr": 89, "club": "Manchester City" },
-      "fc26": { "ovr": 88, "club": "Manchester City" } } },
-
-    { "id": "marquinhos", "name": "Marquinhos", "pos": "CB", "nation": "Brazil", "born": 1994, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Paris Saint-Germain" },
-      "fifa23": { "ovr": 88, "club": "Paris Saint-Germain" },
-      "fc24": { "ovr": 88, "club": "Paris Saint-Germain" },
-      "fc25": { "ovr": 87, "club": "Paris Saint-Germain" },
-      "fc26": { "ovr": 86, "club": "Paris Saint-Germain" } } },
-
-    { "id": "rudiger", "name": "Antonio Rüdiger", "pos": "CB", "nation": "Germany", "born": 1993, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Chelsea" },
-      "fifa23": { "ovr": 87, "club": "Real Madrid" },
-      "fc24": { "ovr": 87, "club": "Real Madrid" },
-      "fc25": { "ovr": 86, "club": "Real Madrid" },
-      "fc26": { "ovr": 85, "club": "Real Madrid" } } },
-
-    { "id": "saliba", "name": "William Saliba", "pos": "CB", "nation": "France", "born": 2001, "ratings": {
-      "fifa22": { "ovr": 75, "club": "Marseille" },
-      "fifa23": { "ovr": 79, "club": "Arsenal" },
-      "fc24": { "ovr": 85, "club": "Arsenal" },
-      "fc25": { "ovr": 87, "club": "Arsenal" },
-      "fc26": { "ovr": 87, "club": "Arsenal" } } },
-
-    { "id": "de-ligt", "name": "Matthijs de Ligt", "pos": "CB", "nation": "Netherlands", "born": 1999, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Juventus" },
-      "fifa23": { "ovr": 86, "club": "Bayern Munich" },
-      "fc24": { "ovr": 85, "club": "Bayern Munich" },
-      "fc25": { "ovr": 85, "club": "Manchester United" },
-      "fc26": { "ovr": 85, "club": "Manchester United" } } },
-
-    { "id": "militao", "name": "Éder Militão", "pos": "CB", "nation": "Brazil", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 84, "club": "Real Madrid" },
-      "fifa23": { "ovr": 85, "club": "Real Madrid" },
-      "fc24": { "ovr": 86, "club": "Real Madrid" },
-      "fc25": { "ovr": 85, "club": "Real Madrid" },
-      "fc26": { "ovr": 84, "club": "Real Madrid" } } },
-
-    { "id": "araujo", "name": "Ronald Araújo", "pos": "CB", "nation": "Uruguay", "born": 1999, "ratings": {
-      "fifa22": { "ovr": 77, "club": "Barcelona" },
-      "fifa23": { "ovr": 83, "club": "Barcelona" },
-      "fc24": { "ovr": 85, "club": "Barcelona" },
-      "fc25": { "ovr": 85, "club": "Barcelona" },
-      "fc26": { "ovr": 84, "club": "Barcelona" } } },
-
-    { "id": "gvardiol", "name": "Joško Gvardiol", "pos": "CB", "nation": "Croatia", "born": 2002, "ratings": {
-      "fifa22": { "ovr": 76, "club": "RB Leipzig" },
-      "fifa23": { "ovr": 81, "club": "RB Leipzig" },
-      "fc24": { "ovr": 84, "club": "Manchester City" },
-      "fc25": { "ovr": 85, "club": "Manchester City" },
-      "fc26": { "ovr": 86, "club": "Manchester City" } } },
-
-    { "id": "gabriel", "name": "Gabriel Magalhães", "pos": "CB", "nation": "Brazil", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 79, "club": "Arsenal" },
-      "fifa23": { "ovr": 81, "club": "Arsenal" },
-      "fc24": { "ovr": 84, "club": "Arsenal" },
-      "fc25": { "ovr": 86, "club": "Arsenal" },
-      "fc26": { "ovr": 87, "club": "Arsenal" } } },
-
-    { "id": "bastoni", "name": "Alessandro Bastoni", "pos": "CB", "nation": "Italy", "born": 1999, "ratings": {
-      "fifa22": { "ovr": 82, "club": "Inter" },
-      "fifa23": { "ovr": 84, "club": "Inter" },
-      "fc24": { "ovr": 86, "club": "Inter" },
-      "fc25": { "ovr": 86, "club": "Inter" },
-      "fc26": { "ovr": 86, "club": "Inter" } } },
-
-    { "id": "upamecano", "name": "Dayot Upamecano", "pos": "CB", "nation": "France", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 82, "club": "Bayern Munich" },
-      "fifa23": { "ovr": 84, "club": "Bayern Munich" },
-      "fc24": { "ovr": 84, "club": "Bayern Munich" },
-      "fc25": { "ovr": 84, "club": "Bayern Munich" },
-      "fc26": { "ovr": 85, "club": "Bayern Munich" } } },
-
-    { "id": "kounde", "name": "Jules Koundé", "pos": "CB", "nation": "France", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 84, "club": "Sevilla" },
-      "fifa23": { "ovr": 85, "club": "Barcelona" },
-      "fc24": { "ovr": 85, "club": "Barcelona" },
-      "fc25": { "ovr": 84, "club": "Barcelona" },
-      "fc26": { "ovr": 85, "club": "Barcelona" } } },
-
-    { "id": "thiago-silva", "name": "Thiago Silva", "pos": "CB", "nation": "Brazil", "born": 1984, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Chelsea" },
-      "fifa23": { "ovr": 86, "club": "Chelsea" },
-      "fc24": { "ovr": 84, "club": "Chelsea" },
-      "fc25": { "ovr": 82, "club": "Fluminense" } } },
-
-    { "id": "sergio-ramos", "name": "Sergio Ramos", "pos": "CB", "nation": "Spain", "born": 1986, "ratings": {
-      "fifa22": { "ovr": 88, "club": "Paris Saint-Germain" },
-      "fifa23": { "ovr": 85, "club": "Paris Saint-Germain" },
-      "fc24": { "ovr": 84, "club": "Sevilla" } } },
-
-    { "id": "koulibaly", "name": "Kalidou Koulibaly", "pos": "CB", "nation": "Senegal", "born": 1991, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Napoli" },
-      "fifa23": { "ovr": 86, "club": "Chelsea" },
-      "fc24": { "ovr": 84, "club": "Al Hilal" },
-      "fc25": { "ovr": 83, "club": "Al Hilal" } } },
-
-    { "id": "cubarsi", "name": "Pau Cubarsí", "pos": "CB", "nation": "Spain", "born": 2007, "ratings": {
-      "fc25": { "ovr": 76, "club": "Barcelona" },
-      "fc26": { "ovr": 82, "club": "Barcelona" } } },
-
-    { "id": "trent", "name": "Trent Alexander-Arnold", "pos": "RB", "nation": "England", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Liverpool" },
-      "fifa23": { "ovr": 87, "club": "Liverpool" },
-      "fc24": { "ovr": 87, "club": "Liverpool" },
-      "fc25": { "ovr": 86, "club": "Liverpool" },
-      "fc26": { "ovr": 86, "club": "Real Madrid" } } },
-
-    { "id": "robertson", "name": "Andrew Robertson", "pos": "LB", "nation": "Scotland", "born": 1994, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Liverpool" },
-      "fifa23": { "ovr": 86, "club": "Liverpool" },
-      "fc24": { "ovr": 86, "club": "Liverpool" },
-      "fc25": { "ovr": 85, "club": "Liverpool" },
-      "fc26": { "ovr": 84, "club": "Liverpool" } } },
-
-    { "id": "theo", "name": "Theo Hernández", "pos": "LB", "nation": "France", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 84, "club": "AC Milan" },
-      "fifa23": { "ovr": 85, "club": "AC Milan" },
-      "fc24": { "ovr": 85, "club": "AC Milan" },
-      "fc25": { "ovr": 85, "club": "AC Milan" },
-      "fc26": { "ovr": 84, "club": "Al Hilal" } } },
-
-    { "id": "hakimi", "name": "Achraf Hakimi", "pos": "RB", "nation": "Morocco", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 84, "club": "Paris Saint-Germain" },
-      "fifa23": { "ovr": 85, "club": "Paris Saint-Germain" },
-      "fc24": { "ovr": 85, "club": "Paris Saint-Germain" },
-      "fc25": { "ovr": 85, "club": "Paris Saint-Germain" },
-      "fc26": { "ovr": 86, "club": "Paris Saint-Germain" } } },
-
-    { "id": "cancelo", "name": "João Cancelo", "pos": "RB", "nation": "Portugal", "born": 1994, "ratings": {
-      "fifa22": { "ovr": 86, "club": "Manchester City" },
-      "fifa23": { "ovr": 88, "club": "Manchester City" },
-      "fc24": { "ovr": 86, "club": "Barcelona" },
-      "fc25": { "ovr": 84, "club": "Al Hilal" },
-      "fc26": { "ovr": 83, "club": "Al Hilal" } } },
-
-    { "id": "davies", "name": "Alphonso Davies", "pos": "LB", "nation": "Canada", "born": 2000, "ratings": {
-      "fifa22": { "ovr": 81, "club": "Bayern Munich" },
-      "fifa23": { "ovr": 84, "club": "Bayern Munich" },
-      "fc24": { "ovr": 85, "club": "Bayern Munich" },
-      "fc25": { "ovr": 85, "club": "Bayern Munich" },
-      "fc26": { "ovr": 84, "club": "Bayern Munich" } } },
-
-    { "id": "kyle-walker", "name": "Kyle Walker", "pos": "RB", "nation": "England", "born": 1990, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Manchester City" },
-      "fifa23": { "ovr": 84, "club": "Manchester City" },
-      "fc24": { "ovr": 84, "club": "Manchester City" },
-      "fc25": { "ovr": 83, "club": "Manchester City" } } },
-
-    { "id": "nuno-mendes", "name": "Nuno Mendes", "pos": "LB", "nation": "Portugal", "born": 2002, "ratings": {
-      "fifa22": { "ovr": 78, "club": "Paris Saint-Germain" },
-      "fifa23": { "ovr": 82, "club": "Paris Saint-Germain" },
-      "fc24": { "ovr": 83, "club": "Paris Saint-Germain" },
-      "fc25": { "ovr": 84, "club": "Paris Saint-Germain" },
-      "fc26": { "ovr": 86, "club": "Paris Saint-Germain" } } },
-
-    { "id": "trippier", "name": "Kieran Trippier", "pos": "RB", "nation": "England", "born": 1990, "ratings": {
-      "fifa22": { "ovr": 84, "club": "Atlético Madrid" },
-      "fifa23": { "ovr": 84, "club": "Newcastle United" },
-      "fc24": { "ovr": 84, "club": "Newcastle United" },
-      "fc25": { "ovr": 83, "club": "Newcastle United" } } },
-
-    { "id": "courtois", "name": "Thibaut Courtois", "pos": "GK", "nation": "Belgium", "born": 1992, "ratings": {
-      "fifa22": { "ovr": 89, "club": "Real Madrid" },
-      "fifa23": { "ovr": 90, "club": "Real Madrid" },
-      "fc24": { "ovr": 90, "club": "Real Madrid" },
-      "fc25": { "ovr": 89, "club": "Real Madrid" },
-      "fc26": { "ovr": 88, "club": "Real Madrid" } } },
-
-    { "id": "alisson", "name": "Alisson", "pos": "GK", "nation": "Brazil", "born": 1992, "ratings": {
-      "fifa22": { "ovr": 89, "club": "Liverpool" },
-      "fifa23": { "ovr": 89, "club": "Liverpool" },
-      "fc24": { "ovr": 89, "club": "Liverpool" },
-      "fc25": { "ovr": 89, "club": "Liverpool" },
-      "fc26": { "ovr": 88, "club": "Liverpool" } } },
-
-    { "id": "neuer", "name": "Manuel Neuer", "pos": "GK", "nation": "Germany", "born": 1986, "ratings": {
-      "fifa22": { "ovr": 90, "club": "Bayern Munich" },
-      "fifa23": { "ovr": 90, "club": "Bayern Munich" },
-      "fc24": { "ovr": 87, "club": "Bayern Munich" },
-      "fc25": { "ovr": 87, "club": "Bayern Munich" },
-      "fc26": { "ovr": 85, "club": "Bayern Munich" } } },
-
-    { "id": "ter-stegen", "name": "Marc-André ter Stegen", "pos": "GK", "nation": "Germany", "born": 1992, "ratings": {
-      "fifa22": { "ovr": 90, "club": "Barcelona" },
-      "fifa23": { "ovr": 90, "club": "Barcelona" },
-      "fc24": { "ovr": 89, "club": "Barcelona" },
-      "fc25": { "ovr": 88, "club": "Barcelona" },
-      "fc26": { "ovr": 87, "club": "Barcelona" } } },
-
-    { "id": "ederson", "name": "Ederson", "pos": "GK", "nation": "Brazil", "born": 1993, "ratings": {
-      "fifa22": { "ovr": 89, "club": "Manchester City" },
-      "fifa23": { "ovr": 90, "club": "Manchester City" },
-      "fc24": { "ovr": 89, "club": "Manchester City" },
-      "fc25": { "ovr": 88, "club": "Manchester City" },
-      "fc26": { "ovr": 86, "club": "Fenerbahçe" } } },
-
-    { "id": "donnarumma", "name": "Gianluigi Donnarumma", "pos": "GK", "nation": "Italy", "born": 1999, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Paris Saint-Germain" },
-      "fifa23": { "ovr": 88, "club": "Paris Saint-Germain" },
-      "fc24": { "ovr": 89, "club": "Paris Saint-Germain" },
-      "fc25": { "ovr": 89, "club": "Paris Saint-Germain" },
-      "fc26": { "ovr": 89, "club": "Paris Saint-Germain" } } },
-
-    { "id": "oblak", "name": "Jan Oblak", "pos": "GK", "nation": "Slovenia", "born": 1993, "ratings": {
-      "fifa22": { "ovr": 91, "club": "Atlético Madrid" },
-      "fifa23": { "ovr": 91, "club": "Atlético Madrid" },
-      "fc24": { "ovr": 89, "club": "Atlético Madrid" },
-      "fc25": { "ovr": 87, "club": "Atlético Madrid" },
-      "fc26": { "ovr": 86, "club": "Atlético Madrid" } } },
-
-    { "id": "maignan", "name": "Mike Maignan", "pos": "GK", "nation": "France", "born": 1995, "ratings": {
-      "fifa22": { "ovr": 84, "club": "AC Milan" },
-      "fifa23": { "ovr": 87, "club": "AC Milan" },
-      "fc24": { "ovr": 88, "club": "AC Milan" },
-      "fc25": { "ovr": 87, "club": "AC Milan" },
-      "fc26": { "ovr": 86, "club": "AC Milan" } } },
-
-    { "id": "emi-martinez", "name": "Emiliano Martínez", "pos": "GK", "nation": "Argentina", "born": 1992, "ratings": {
-      "fifa22": { "ovr": 84, "club": "Aston Villa" },
-      "fifa23": { "ovr": 85, "club": "Aston Villa" },
-      "fc24": { "ovr": 85, "club": "Aston Villa" },
-      "fc25": { "ovr": 87, "club": "Aston Villa" },
-      "fc26": { "ovr": 86, "club": "Aston Villa" } } },
-
-    { "id": "de-gea", "name": "David de Gea", "pos": "GK", "nation": "Spain", "born": 1990, "ratings": {
-      "fifa22": { "ovr": 84, "club": "Manchester United" },
-      "fifa23": { "ovr": 86, "club": "Manchester United" },
-      "fc25": { "ovr": 84, "club": "Fiorentina" },
-      "fc26": { "ovr": 84, "club": "Fiorentina" } } },
-
-    { "id": "szczesny", "name": "Wojciech Szczęsny", "pos": "GK", "nation": "Poland", "born": 1990, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Juventus" },
-      "fifa23": { "ovr": 85, "club": "Juventus" },
-      "fc24": { "ovr": 85, "club": "Juventus" },
-      "fc26": { "ovr": 83, "club": "Barcelona" } } },
-
-    { "id": "mane", "name": "Sadio Mané", "pos": "LW", "nation": "Senegal", "born": 1992, "ratings": {
-      "fifa22": { "ovr": 89, "club": "Liverpool" },
-      "fifa23": { "ovr": 89, "club": "Bayern Munich" },
-      "fc24": { "ovr": 85, "club": "Al Nassr" },
-      "fc25": { "ovr": 84, "club": "Al Nassr" },
-      "fc26": { "ovr": 83, "club": "Al Nassr" } } },
-
-    { "id": "firmino", "name": "Roberto Firmino", "pos": "CF", "nation": "Brazil", "born": 1991, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Liverpool" },
-      "fifa23": { "ovr": 84, "club": "Liverpool" },
-      "fc24": { "ovr": 83, "club": "Al Ahli" },
-      "fc25": { "ovr": 81, "club": "Al Ahli" } } },
-
-    { "id": "di-maria", "name": "Ángel Di María", "pos": "RW", "nation": "Argentina", "born": 1988, "ratings": {
-      "fifa22": { "ovr": 86, "club": "Paris Saint-Germain" },
-      "fifa23": { "ovr": 85, "club": "Juventus" },
-      "fc24": { "ovr": 84, "club": "Benfica" },
-      "fc25": { "ovr": 82, "club": "Benfica" } } },
-
-    { "id": "mahrez", "name": "Riyad Mahrez", "pos": "RW", "nation": "Algeria", "born": 1991, "ratings": {
-      "fifa22": { "ovr": 86, "club": "Manchester City" },
-      "fifa23": { "ovr": 85, "club": "Manchester City" },
-      "fc24": { "ovr": 84, "club": "Al Ahli" },
-      "fc25": { "ovr": 83, "club": "Al Ahli" } } },
-
-    { "id": "immobile", "name": "Ciro Immobile", "pos": "ST", "nation": "Italy", "born": 1990, "ratings": {
-      "fifa22": { "ovr": 86, "club": "Lazio" },
-      "fifa23": { "ovr": 86, "club": "Lazio" },
-      "fc24": { "ovr": 84, "club": "Lazio" },
-      "fc25": { "ovr": 82, "club": "Beşiktaş" } } },
-
-    { "id": "insigne", "name": "Lorenzo Insigne", "pos": "LW", "nation": "Italy", "born": 1991, "ratings": {
-      "fifa22": { "ovr": 86, "club": "Napoli" },
-      "fifa23": { "ovr": 84, "club": "Toronto FC" },
-      "fc24": { "ovr": 82, "club": "Toronto FC" } } },
-
-    { "id": "nkunku", "name": "Christopher Nkunku", "pos": "CAM", "nation": "France", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 81, "club": "RB Leipzig" },
-      "fifa23": { "ovr": 86, "club": "RB Leipzig" },
-      "fc24": { "ovr": 86, "club": "Chelsea" },
-      "fc25": { "ovr": 85, "club": "Chelsea" },
-      "fc26": { "ovr": 83, "club": "AC Milan" } } },
-
-    { "id": "gnabry", "name": "Serge Gnabry", "pos": "RW", "nation": "Germany", "born": 1995, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Bayern Munich" },
-      "fifa23": { "ovr": 86, "club": "Bayern Munich" },
-      "fc24": { "ovr": 85, "club": "Bayern Munich" },
-      "fc25": { "ovr": 84, "club": "Bayern Munich" },
-      "fc26": { "ovr": 83, "club": "Bayern Munich" } } },
-
-    { "id": "sane", "name": "Leroy Sané", "pos": "RW", "nation": "Germany", "born": 1996, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Bayern Munich" },
-      "fifa23": { "ovr": 86, "club": "Bayern Munich" },
-      "fc24": { "ovr": 85, "club": "Bayern Munich" },
-      "fc25": { "ovr": 85, "club": "Bayern Munich" },
-      "fc26": { "ovr": 84, "club": "Galatasaray" } } },
-
-    { "id": "muller", "name": "Thomas Müller", "pos": "CAM", "nation": "Germany", "born": 1989, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Bayern Munich" },
-      "fifa23": { "ovr": 87, "club": "Bayern Munich" },
-      "fc24": { "ovr": 85, "club": "Bayern Munich" },
-      "fc25": { "ovr": 84, "club": "Bayern Munich" } } },
-
-    { "id": "pulisic", "name": "Christian Pulisic", "pos": "RW", "nation": "United States", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 82, "club": "Chelsea" },
-      "fifa23": { "ovr": 82, "club": "Chelsea" },
-      "fc24": { "ovr": 82, "club": "AC Milan" },
-      "fc25": { "ovr": 84, "club": "AC Milan" },
-      "fc26": { "ovr": 85, "club": "AC Milan" } } },
-
-    { "id": "mckennie", "name": "Weston McKennie", "pos": "CM", "nation": "United States", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 79, "club": "Juventus" },
-      "fifa23": { "ovr": 79, "club": "Juventus" },
-      "fc24": { "ovr": 79, "club": "Juventus" },
-      "fc25": { "ovr": 80, "club": "Juventus" } } },
-
-    { "id": "mac-allister", "name": "Alexis Mac Allister", "pos": "CM", "nation": "Argentina", "born": 1998, "ratings": {
-      "fifa22": { "ovr": 75, "club": "Brighton" },
-      "fifa23": { "ovr": 78, "club": "Brighton" },
-      "fc24": { "ovr": 84, "club": "Liverpool" },
-      "fc25": { "ovr": 85, "club": "Liverpool" },
-      "fc26": { "ovr": 86, "club": "Liverpool" } } },
-
-    { "id": "enzo", "name": "Enzo Fernández", "pos": "CM", "nation": "Argentina", "born": 2001, "ratings": {
-      "fifa23": { "ovr": 79, "club": "Benfica" },
-      "fc24": { "ovr": 84, "club": "Chelsea" },
-      "fc25": { "ovr": 84, "club": "Chelsea" },
-      "fc26": { "ovr": 85, "club": "Chelsea" } } },
-
-    { "id": "caicedo", "name": "Moisés Caicedo", "pos": "CDM", "nation": "Ecuador", "born": 2001, "ratings": {
-      "fifa22": { "ovr": 71, "club": "Brighton" },
-      "fifa23": { "ovr": 78, "club": "Brighton" },
-      "fc24": { "ovr": 84, "club": "Chelsea" },
-      "fc25": { "ovr": 84, "club": "Chelsea" },
-      "fc26": { "ovr": 86, "club": "Chelsea" } } },
-
-    { "id": "palmer", "name": "Cole Palmer", "pos": "CAM", "nation": "England", "born": 2002, "ratings": {
-      "fifa23": { "ovr": 71, "club": "Manchester City" },
-      "fc24": { "ovr": 76, "club": "Chelsea" },
-      "fc25": { "ovr": 84, "club": "Chelsea" },
-      "fc26": { "ovr": 86, "club": "Chelsea" } } },
-
-    { "id": "jackson", "name": "Nicolas Jackson", "pos": "ST", "nation": "Senegal", "born": 2001, "ratings": {
-      "fc24": { "ovr": 78, "club": "Chelsea" },
-      "fc25": { "ovr": 80, "club": "Chelsea" },
-      "fc26": { "ovr": 81, "club": "Chelsea" } } },
-
-    { "id": "rodrygo", "name": "Rodrygo", "pos": "RW", "nation": "Brazil", "born": 2001, "ratings": {
-      "fifa22": { "ovr": 80, "club": "Real Madrid" },
-      "fifa23": { "ovr": 83, "club": "Real Madrid" },
-      "fc24": { "ovr": 85, "club": "Real Madrid" },
-      "fc25": { "ovr": 86, "club": "Real Madrid" },
-      "fc26": { "ovr": 86, "club": "Real Madrid" } } },
-
-    { "id": "gabriel-jesus", "name": "Gabriel Jesus", "pos": "ST", "nation": "Brazil", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 83, "club": "Manchester City" },
-      "fifa23": { "ovr": 83, "club": "Arsenal" },
-      "fc24": { "ovr": 84, "club": "Arsenal" },
-      "fc25": { "ovr": 83, "club": "Arsenal" },
-      "fc26": { "ovr": 82, "club": "Arsenal" } } },
-
-    { "id": "szoboszlai", "name": "Dominik Szoboszlai", "pos": "CM", "nation": "Hungary", "born": 2000, "ratings": {
-      "fifa22": { "ovr": 80, "club": "RB Leipzig" },
-      "fifa23": { "ovr": 82, "club": "RB Leipzig" },
-      "fc24": { "ovr": 84, "club": "Liverpool" },
-      "fc25": { "ovr": 84, "club": "Liverpool" },
-      "fc26": { "ovr": 85, "club": "Liverpool" } } },
-
-    { "id": "ruben-neves", "name": "Rúben Neves", "pos": "CDM", "nation": "Portugal", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 83, "club": "Wolverhampton" },
-      "fifa23": { "ovr": 84, "club": "Wolverhampton" },
-      "fc24": { "ovr": 84, "club": "Al Hilal" },
-      "fc25": { "ovr": 84, "club": "Al Hilal" } } },
-
-    { "id": "bruno-guimaraes", "name": "Bruno Guimarães", "pos": "CM", "nation": "Brazil", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 79, "club": "Lyon" },
-      "fifa23": { "ovr": 82, "club": "Newcastle United" },
-      "fc24": { "ovr": 84, "club": "Newcastle United" },
-      "fc25": { "ovr": 85, "club": "Newcastle United" },
-      "fc26": { "ovr": 85, "club": "Newcastle United" } } },
-
-    { "id": "isak", "name": "Alexander Isak", "pos": "ST", "nation": "Sweden", "born": 1999, "ratings": {
-      "fifa22": { "ovr": 80, "club": "Real Sociedad" },
-      "fifa23": { "ovr": 81, "club": "Newcastle United" },
-      "fc24": { "ovr": 84, "club": "Newcastle United" },
-      "fc25": { "ovr": 85, "club": "Newcastle United" },
-      "fc26": { "ovr": 86, "club": "Liverpool" } } },
-
-    { "id": "watkins", "name": "Ollie Watkins", "pos": "ST", "nation": "England", "born": 1995, "ratings": {
-      "fifa22": { "ovr": 80, "club": "Aston Villa" },
-      "fifa23": { "ovr": 80, "club": "Aston Villa" },
-      "fc24": { "ovr": 82, "club": "Aston Villa" },
-      "fc25": { "ovr": 85, "club": "Aston Villa" },
-      "fc26": { "ovr": 84, "club": "Aston Villa" } } },
-
-    { "id": "maddison", "name": "James Maddison", "pos": "CAM", "nation": "England", "born": 1996, "ratings": {
-      "fifa22": { "ovr": 82, "club": "Leicester City" },
-      "fifa23": { "ovr": 83, "club": "Leicester City" },
-      "fc24": { "ovr": 84, "club": "Tottenham Hotspur" },
-      "fc25": { "ovr": 84, "club": "Tottenham Hotspur" } } },
-
-    { "id": "chiesa", "name": "Federico Chiesa", "pos": "RW", "nation": "Italy", "born": 1997, "ratings": {
-      "fifa22": { "ovr": 85, "club": "Juventus" },
-      "fifa23": { "ovr": 84, "club": "Juventus" },
-      "fc24": { "ovr": 84, "club": "Juventus" },
-      "fc25": { "ovr": 82, "club": "Liverpool" } } },
-
-    { "id": "nico-williams", "name": "Nico Williams", "pos": "LW", "nation": "Spain", "born": 2002, "ratings": {
-      "fifa23": { "ovr": 72, "club": "Athletic Club" },
-      "fc24": { "ovr": 79, "club": "Athletic Club" },
-      "fc25": { "ovr": 83, "club": "Athletic Club" },
-      "fc26": { "ovr": 85, "club": "Athletic Club" } } },
-
-    { "id": "yamal", "name": "Lamine Yamal", "pos": "RW", "nation": "Spain", "born": 2007, "ratings": {
-      "fc24": { "ovr": 68, "club": "Barcelona" },
-      "fc25": { "ovr": 81, "club": "Barcelona" },
-      "fc26": { "ovr": 87, "club": "Barcelona" } } },
-
-    { "id": "arda-guler", "name": "Arda Güler", "pos": "CAM", "nation": "Turkey", "born": 2005, "ratings": {
-      "fc24": { "ovr": 73, "club": "Real Madrid" },
-      "fc25": { "ovr": 76, "club": "Real Madrid" },
-      "fc26": { "ovr": 81, "club": "Real Madrid" } } },
-
-    { "id": "mainoo", "name": "Kobbie Mainoo", "pos": "CM", "nation": "England", "born": 2005, "ratings": {
-      "fc24": { "ovr": 66, "club": "Manchester United" },
-      "fc25": { "ovr": 78, "club": "Manchester United" },
-      "fc26": { "ovr": 79, "club": "Manchester United" } } },
-
-    { "id": "hojlund", "name": "Rasmus Højlund", "pos": "ST", "nation": "Denmark", "born": 2003, "ratings": {
-      "fifa23": { "ovr": 70, "club": "Atalanta" },
-      "fc24": { "ovr": 78, "club": "Manchester United" },
-      "fc25": { "ovr": 79, "club": "Manchester United" },
-      "fc26": { "ovr": 78, "club": "Napoli" } } },
-
-    { "id": "mount", "name": "Mason Mount", "pos": "CAM", "nation": "England", "born": 1999, "ratings": {
-      "fifa22": { "ovr": 82, "club": "Chelsea" },
-      "fifa23": { "ovr": 84, "club": "Chelsea" },
-      "fc24": { "ovr": 84, "club": "Manchester United" },
-      "fc25": { "ovr": 82, "club": "Manchester United" },
-      "fc26": { "ovr": 81, "club": "Manchester United" } } },
-
-    { "id": "sancho", "name": "Jadon Sancho", "pos": "LW", "nation": "England", "born": 2000, "ratings": {
-      "fifa22": { "ovr": 87, "club": "Manchester United" },
-      "fifa23": { "ovr": 84, "club": "Manchester United" },
-      "fc24": { "ovr": 83, "club": "Manchester United" },
-      "fc25": { "ovr": 81, "club": "Manchester United" } } },
-
-    { "id": "garnacho", "name": "Alejandro Garnacho", "pos": "LW", "nation": "Argentina", "born": 2004, "ratings": {
-      "fc24": { "ovr": 72, "club": "Manchester United" },
-      "fc25": { "ovr": 79, "club": "Manchester United" },
-      "fc26": { "ovr": 80, "club": "Chelsea" } } },
-
-    { "id": "olise", "name": "Michael Olise", "pos": "RW", "nation": "France", "born": 2001, "ratings": {
-      "fifa22": { "ovr": 73, "club": "Crystal Palace" },
-      "fifa23": { "ovr": 78, "club": "Crystal Palace" },
-      "fc24": { "ovr": 81, "club": "Crystal Palace" },
-      "fc25": { "ovr": 84, "club": "Bayern Munich" },
-      "fc26": { "ovr": 86, "club": "Bayern Munich" } } },
-
-    { "id": "barcola", "name": "Bradley Barcola", "pos": "LW", "nation": "France", "born": 2002, "ratings": {
-      "fc24": { "ovr": 76, "club": "Paris Saint-Germain" },
-      "fc25": { "ovr": 81, "club": "Paris Saint-Germain" },
-      "fc26": { "ovr": 84, "club": "Paris Saint-Germain" } } },
-
-    { "id": "vitinha", "name": "Vitinha", "pos": "CM", "nation": "Portugal", "born": 2000, "ratings": {
-      "fifa22": { "ovr": 76, "club": "Porto" },
-      "fifa23": { "ovr": 81, "club": "Paris Saint-Germain" },
-      "fc24": { "ovr": 83, "club": "Paris Saint-Germain" },
-      "fc25": { "ovr": 84, "club": "Paris Saint-Germain" },
-      "fc26": { "ovr": 87, "club": "Paris Saint-Germain" } } },
-
-    { "id": "doue", "name": "Désiré Doué", "pos": "CAM", "nation": "France", "born": 2005, "ratings": {
-      "fc25": { "ovr": 77, "club": "Paris Saint-Germain" },
-      "fc26": { "ovr": 84, "club": "Paris Saint-Germain" } } },
-
-    { "id": "joao-neves", "name": "João Neves", "pos": "CDM", "nation": "Portugal", "born": 2004, "ratings": {
-      "fc24": { "ovr": 74, "club": "Benfica" },
-      "fc25": { "ovr": 82, "club": "Paris Saint-Germain" },
-      "fc26": { "ovr": 85, "club": "Paris Saint-Germain" } } },
-
-    { "id": "mctominay", "name": "Scott McTominay", "pos": "CM", "nation": "Scotland", "born": 1996, "ratings": {
-      "fifa22": { "ovr": 79, "club": "Manchester United" },
-      "fifa23": { "ovr": 79, "club": "Manchester United" },
-      "fc24": { "ovr": 78, "club": "Manchester United" },
-      "fc25": { "ovr": 79, "club": "Napoli" },
-      "fc26": { "ovr": 84, "club": "Napoli" } } }
+    {
+      "id": "messi",
+      "name": "Lionel Messi",
+      "pos": "RW",
+      "nation": "Argentina",
+      "born": 1987,
+      "ratings": {
+        "fifa22": {
+          "ovr": 93,
+          "club": "Paris Saint-Germain"
+        },
+        "fifa23": {
+          "ovr": 91,
+          "club": "Paris Saint-Germain"
+        },
+        "fc24": {
+          "ovr": 90,
+          "club": "Inter Miami"
+        },
+        "fc25": {
+          "ovr": 88,
+          "club": "Inter Miami"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Inter Miami"
+        }
+      },
+      "photo": {
+        "file": "messi.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Lionel_Messi"
+      }
+    },
+    {
+      "id": "ronaldo",
+      "name": "Cristiano Ronaldo",
+      "pos": "ST",
+      "nation": "Portugal",
+      "born": 1985,
+      "ratings": {
+        "fifa22": {
+          "ovr": 91,
+          "club": "Manchester United"
+        },
+        "fifa23": {
+          "ovr": 90,
+          "club": "Manchester United"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Al Nassr"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Al Nassr"
+        },
+        "fc26": {
+          "ovr": 82,
+          "club": "Al Nassr"
+        }
+      },
+      "photo": {
+        "file": "ronaldo.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+      }
+    },
+    {
+      "id": "lewandowski",
+      "name": "Robert Lewandowski",
+      "pos": "ST",
+      "nation": "Poland",
+      "born": 1988,
+      "ratings": {
+        "fifa22": {
+          "ovr": 92,
+          "club": "Bayern Munich"
+        },
+        "fifa23": {
+          "ovr": 91,
+          "club": "Barcelona"
+        },
+        "fc24": {
+          "ovr": 90,
+          "club": "Barcelona"
+        },
+        "fc25": {
+          "ovr": 88,
+          "club": "Barcelona"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Barcelona"
+        }
+      },
+      "photo": {
+        "file": "lewandowski.jpg",
+        "by": "Sven Mandel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Robert_Lewandowski"
+      }
+    },
+    {
+      "id": "mbappe",
+      "name": "Kylian Mbappé",
+      "pos": "ST",
+      "nation": "France",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 91,
+          "club": "Paris Saint-Germain"
+        },
+        "fifa23": {
+          "ovr": 91,
+          "club": "Paris Saint-Germain"
+        },
+        "fc24": {
+          "ovr": 91,
+          "club": "Paris Saint-Germain"
+        },
+        "fc25": {
+          "ovr": 91,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 91,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "mbappe.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9"
+      }
+    },
+    {
+      "id": "haaland",
+      "name": "Erling Haaland",
+      "pos": "ST",
+      "nation": "Norway",
+      "born": 2000,
+      "ratings": {
+        "fifa22": {
+          "ovr": 88,
+          "club": "Borussia Dortmund"
+        },
+        "fifa23": {
+          "ovr": 91,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 91,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 91,
+          "club": "Manchester City"
+        },
+        "fc26": {
+          "ovr": 91,
+          "club": "Manchester City"
+        }
+      },
+      "photo": {
+        "file": "haaland.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Erling_Haaland"
+      }
+    },
+    {
+      "id": "benzema",
+      "name": "Karim Benzema",
+      "pos": "ST",
+      "nation": "France",
+      "born": 1987,
+      "ratings": {
+        "fifa22": {
+          "ovr": 89,
+          "club": "Real Madrid"
+        },
+        "fifa23": {
+          "ovr": 91,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 90,
+          "club": "Al Ittihad"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Al Ittihad"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Al Ittihad"
+        }
+      },
+      "photo": {
+        "file": "benzema.jpg",
+        "by": "Zack",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://en.wikipedia.org/wiki/Karim_Benzema"
+      }
+    },
+    {
+      "id": "neymar",
+      "name": "Neymar Jr",
+      "pos": "LW",
+      "nation": "Brazil",
+      "born": 1992,
+      "ratings": {
+        "fifa22": {
+          "ovr": 91,
+          "club": "Paris Saint-Germain"
+        },
+        "fifa23": {
+          "ovr": 89,
+          "club": "Paris Saint-Germain"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Al Hilal"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Al Hilal"
+        },
+        "fc26": {
+          "ovr": 83,
+          "club": "Santos"
+        }
+      },
+      "photo": {
+        "file": "neymar.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Neymar"
+      }
+    },
+    {
+      "id": "salah",
+      "name": "Mohamed Salah",
+      "pos": "RW",
+      "nation": "Egypt",
+      "born": 1992,
+      "ratings": {
+        "fifa22": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fifa23": {
+          "ovr": 90,
+          "club": "Liverpool"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fc25": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fc26": {
+          "ovr": 89,
+          "club": "Liverpool"
+        }
+      },
+      "photo": {
+        "file": "salah.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Mohamed_Salah"
+      }
+    },
+    {
+      "id": "kane",
+      "name": "Harry Kane",
+      "pos": "ST",
+      "nation": "England",
+      "born": 1993,
+      "ratings": {
+        "fifa22": {
+          "ovr": 90,
+          "club": "Tottenham Hotspur"
+        },
+        "fifa23": {
+          "ovr": 89,
+          "club": "Tottenham Hotspur"
+        },
+        "fc24": {
+          "ovr": 90,
+          "club": "Bayern Munich"
+        },
+        "fc25": {
+          "ovr": 90,
+          "club": "Bayern Munich"
+        },
+        "fc26": {
+          "ovr": 90,
+          "club": "Bayern Munich"
+        }
+      },
+      "photo": {
+        "file": "kane.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Harry_Kane"
+      }
+    },
+    {
+      "id": "vinicius",
+      "name": "Vinícius Júnior",
+      "pos": "LW",
+      "nation": "Brazil",
+      "born": 2000,
+      "ratings": {
+        "fifa22": {
+          "ovr": 80,
+          "club": "Real Madrid"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 90,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 90,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "vinicius.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Vin%C3%ADcius_J%C3%BAnior"
+      }
+    },
+    {
+      "id": "son",
+      "name": "Son Heung-min",
+      "pos": "LW",
+      "nation": "South Korea",
+      "born": 1992,
+      "ratings": {
+        "fifa22": {
+          "ovr": 89,
+          "club": "Tottenham Hotspur"
+        },
+        "fifa23": {
+          "ovr": 89,
+          "club": "Tottenham Hotspur"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Tottenham Hotspur"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Tottenham Hotspur"
+        }
+      },
+      "photo": {
+        "file": "son.jpg",
+        "by": "Ujishadow",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Son_Heung-min"
+      }
+    },
+    {
+      "id": "lautaro",
+      "name": "Lautaro Martínez",
+      "pos": "ST",
+      "nation": "Argentina",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Inter"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Inter"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Inter"
+        },
+        "fc25": {
+          "ovr": 89,
+          "club": "Inter"
+        },
+        "fc26": {
+          "ovr": 88,
+          "club": "Inter"
+        }
+      },
+      "photo": {
+        "file": "lautaro.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Lautaro_Mart%C3%ADnez"
+      }
+    },
+    {
+      "id": "osimhen",
+      "name": "Victor Osimhen",
+      "pos": "ST",
+      "nation": "Nigeria",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 83,
+          "club": "Napoli"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Napoli"
+        },
+        "fc24": {
+          "ovr": 88,
+          "club": "Napoli"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Napoli"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Galatasaray"
+        }
+      },
+      "photo": {
+        "file": "osimhen.jpg",
+        "by": "Fédération Guinéenne Football",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://en.wikipedia.org/wiki/Victor_Osimhen"
+      }
+    },
+    {
+      "id": "leao",
+      "name": "Rafael Leão",
+      "pos": "LW",
+      "nation": "Portugal",
+      "born": 1999,
+      "ratings": {
+        "fifa22": {
+          "ovr": 80,
+          "club": "AC Milan"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "AC Milan"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "AC Milan"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "AC Milan"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "AC Milan"
+        }
+      },
+      "photo": {
+        "file": "leao.jpg",
+        "by": "Agência Lusa",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://en.wikipedia.org/wiki/Rafael_Le%C3%A3o"
+      }
+    },
+    {
+      "id": "saka",
+      "name": "Bukayo Saka",
+      "pos": "RW",
+      "nation": "England",
+      "born": 2001,
+      "ratings": {
+        "fifa22": {
+          "ovr": 80,
+          "club": "Arsenal"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Arsenal"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Arsenal"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Arsenal"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Arsenal"
+        }
+      },
+      "photo": {
+        "file": "saka.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Bukayo_Saka"
+      }
+    },
+    {
+      "id": "foden",
+      "name": "Phil Foden",
+      "pos": "CAM",
+      "nation": "England",
+      "born": 2000,
+      "ratings": {
+        "fifa22": {
+          "ovr": 84,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 88,
+          "club": "Manchester City"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Manchester City"
+        }
+      },
+      "photo": {
+        "file": "foden.jpg",
+        "by": "Steffen Prößdorf",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Phil_Foden"
+      }
+    },
+    {
+      "id": "bellingham",
+      "name": "Jude Bellingham",
+      "pos": "CM",
+      "nation": "England",
+      "born": 2003,
+      "ratings": {
+        "fifa22": {
+          "ovr": 76,
+          "club": "Borussia Dortmund"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Borussia Dortmund"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 90,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 90,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "bellingham.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Jude_Bellingham"
+      }
+    },
+    {
+      "id": "musiala",
+      "name": "Jamal Musiala",
+      "pos": "CAM",
+      "nation": "Germany",
+      "born": 2003,
+      "ratings": {
+        "fifa22": {
+          "ovr": 76,
+          "club": "Bayern Munich"
+        },
+        "fifa23": {
+          "ovr": 82,
+          "club": "Bayern Munich"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Bayern Munich"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Bayern Munich"
+        },
+        "fc26": {
+          "ovr": 88,
+          "club": "Bayern Munich"
+        }
+      },
+      "photo": {
+        "file": "musiala.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Jamal_Musiala"
+      }
+    },
+    {
+      "id": "wirtz",
+      "name": "Florian Wirtz",
+      "pos": "CAM",
+      "nation": "Germany",
+      "born": 2003,
+      "ratings": {
+        "fifa22": {
+          "ovr": 78,
+          "club": "Bayer Leverkusen"
+        },
+        "fifa23": {
+          "ovr": 82,
+          "club": "Bayer Leverkusen"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Bayer Leverkusen"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Bayer Leverkusen"
+        },
+        "fc26": {
+          "ovr": 89,
+          "club": "Liverpool"
+        }
+      },
+      "photo": {
+        "file": "wirtz.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Florian_Wirtz"
+      }
+    },
+    {
+      "id": "griezmann",
+      "name": "Antoine Griezmann",
+      "pos": "CF",
+      "nation": "France",
+      "born": 1991,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Atlético Madrid"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Atlético Madrid"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Atlético Madrid"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Atlético Madrid"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Atlético Madrid"
+        }
+      },
+      "photo": {
+        "file": "griezmann.jpg",
+        "by": "Антон Зайцев",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://en.wikipedia.org/wiki/Antoine_Griezmann"
+      }
+    },
+    {
+      "id": "debruyne",
+      "name": "Kevin De Bruyne",
+      "pos": "CM",
+      "nation": "Belgium",
+      "born": 1991,
+      "ratings": {
+        "fifa22": {
+          "ovr": 91,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 91,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 91,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 88,
+          "club": "Manchester City"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Napoli"
+        }
+      },
+      "photo": {
+        "file": "debruyne.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne"
+      }
+    },
+    {
+      "id": "rashford",
+      "name": "Marcus Rashford",
+      "pos": "LW",
+      "nation": "England",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Manchester United"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Manchester United"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Manchester United"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Manchester United"
+        },
+        "fc26": {
+          "ovr": 82,
+          "club": "Barcelona"
+        }
+      },
+      "photo": {
+        "file": "rashford.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Marcus_Rashford"
+      }
+    },
+    {
+      "id": "nunez",
+      "name": "Darwin Núñez",
+      "pos": "ST",
+      "nation": "Uruguay",
+      "born": 1999,
+      "ratings": {
+        "fifa22": {
+          "ovr": 78,
+          "club": "Benfica"
+        },
+        "fifa23": {
+          "ovr": 82,
+          "club": "Liverpool"
+        },
+        "fc24": {
+          "ovr": 82,
+          "club": "Liverpool"
+        },
+        "fc25": {
+          "ovr": 82,
+          "club": "Liverpool"
+        },
+        "fc26": {
+          "ovr": 81,
+          "club": "Al Hilal"
+        }
+      },
+      "photo": {
+        "file": "nunez.jpg",
+        "by": "Steffen Prößdorf",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Darwin_N%C3%BA%C3%B1ez"
+      }
+    },
+    {
+      "id": "kvaratskhelia",
+      "name": "Khvicha Kvaratskhelia",
+      "pos": "LW",
+      "nation": "Georgia",
+      "born": 2001,
+      "ratings": {
+        "fifa23": {
+          "ovr": 78,
+          "club": "Napoli"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Napoli"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Napoli"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Paris Saint-Germain"
+        }
+      },
+      "photo": {
+        "file": "kvaratskhelia.png",
+        "by": "Paté kroute",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://en.wikipedia.org/wiki/Khvicha_Kvaratskhelia"
+      }
+    },
+    {
+      "id": "dembele",
+      "name": "Ousmane Dembélé",
+      "pos": "RW",
+      "nation": "France",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 83,
+          "club": "Barcelona"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Barcelona"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Paris Saint-Germain"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Paris Saint-Germain"
+        },
+        "fc26": {
+          "ovr": 88,
+          "club": "Paris Saint-Germain"
+        }
+      },
+      "photo": {
+        "file": "dembele.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Ousmane_Demb%C3%A9l%C3%A9"
+      }
+    },
+    {
+      "id": "julian-alvarez",
+      "name": "Julián Álvarez",
+      "pos": "ST",
+      "nation": "Argentina",
+      "born": 2000,
+      "ratings": {
+        "fifa22": {
+          "ovr": 75,
+          "club": "River Plate"
+        },
+        "fifa23": {
+          "ovr": 79,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 83,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Atlético Madrid"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Atlético Madrid"
+        }
+      },
+      "photo": {
+        "file": "julian-alvarez.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Juli%C3%A1n_Alvarez"
+      }
+    },
+    {
+      "id": "vlahovic",
+      "name": "Dušan Vlahović",
+      "pos": "ST",
+      "nation": "Serbia",
+      "born": 2000,
+      "ratings": {
+        "fifa22": {
+          "ovr": 79,
+          "club": "Fiorentina"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Juventus"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Juventus"
+        },
+        "fc25": {
+          "ovr": 83,
+          "club": "Juventus"
+        },
+        "fc26": {
+          "ovr": 82,
+          "club": "Juventus"
+        }
+      },
+      "photo": {
+        "file": "vlahovic.jpg",
+        "by": "Quirinale",
+        "license": "Attribution",
+        "licenseUrl": "",
+        "source": "https://en.wikipedia.org/wiki/Du%C5%A1an_Vlahovi%C4%87"
+      }
+    },
+    {
+      "id": "dybala",
+      "name": "Paulo Dybala",
+      "pos": "CAM",
+      "nation": "Argentina",
+      "born": 1993,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Juventus"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Roma"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Roma"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Roma"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Roma"
+        }
+      },
+      "photo": {
+        "file": "dybala.jpg",
+        "by": "Olga Shcherbytska",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Paulo_Dybala"
+      }
+    },
+    {
+      "id": "sterling",
+      "name": "Raheem Sterling",
+      "pos": "LW",
+      "nation": "England",
+      "born": 1994,
+      "ratings": {
+        "fifa22": {
+          "ovr": 88,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Chelsea"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Chelsea"
+        },
+        "fc25": {
+          "ovr": 83,
+          "club": "Chelsea"
+        },
+        "fc26": {
+          "ovr": 80,
+          "club": "Chelsea"
+        }
+      },
+      "photo": {
+        "file": "sterling.jpg",
+        "by": "Hossein Zohrevand",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://en.wikipedia.org/wiki/Raheem_Sterling"
+      }
+    },
+    {
+      "id": "havertz",
+      "name": "Kai Havertz",
+      "pos": "ST",
+      "nation": "Germany",
+      "born": 1999,
+      "ratings": {
+        "fifa22": {
+          "ovr": 84,
+          "club": "Chelsea"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Chelsea"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Arsenal"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Arsenal"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Arsenal"
+        }
+      },
+      "photo": {
+        "file": "havertz.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Kai_Havertz"
+      }
+    },
+    {
+      "id": "rodri",
+      "name": "Rodri",
+      "pos": "CDM",
+      "nation": "Spain",
+      "born": 1996,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 91,
+          "club": "Manchester City"
+        },
+        "fc26": {
+          "ovr": 90,
+          "club": "Manchester City"
+        }
+      },
+      "photo": {
+        "file": "rodri.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Rodri"
+      }
+    },
+    {
+      "id": "modric",
+      "name": "Luka Modrić",
+      "pos": "CM",
+      "nation": "Croatia",
+      "born": 1985,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Real Madrid"
+        },
+        "fifa23": {
+          "ovr": 88,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 82,
+          "club": "AC Milan"
+        }
+      },
+      "photo": {
+        "file": "modric.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Luka_Modri%C4%87"
+      }
+    },
+    {
+      "id": "kroos",
+      "name": "Toni Kroos",
+      "pos": "CM",
+      "nation": "Germany",
+      "born": 1990,
+      "ratings": {
+        "fifa22": {
+          "ovr": 88,
+          "club": "Real Madrid"
+        },
+        "fifa23": {
+          "ovr": 88,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "kroos.jpg",
+        "by": "https://www.youtube.com/@realmadrid",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://en.wikipedia.org/wiki/Toni_Kroos"
+      }
+    },
+    {
+      "id": "bruno-fernandes",
+      "name": "Bruno Fernandes",
+      "pos": "CAM",
+      "nation": "Portugal",
+      "born": 1994,
+      "ratings": {
+        "fifa22": {
+          "ovr": 88,
+          "club": "Manchester United"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Manchester United"
+        },
+        "fc24": {
+          "ovr": 88,
+          "club": "Manchester United"
+        },
+        "fc25": {
+          "ovr": 88,
+          "club": "Manchester United"
+        },
+        "fc26": {
+          "ovr": 88,
+          "club": "Manchester United"
+        }
+      },
+      "photo": {
+        "file": "bruno-fernandes.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Bruno_Fernandes"
+      }
+    },
+    {
+      "id": "kimmich",
+      "name": "Joshua Kimmich",
+      "pos": "CDM",
+      "nation": "Germany",
+      "born": 1995,
+      "ratings": {
+        "fifa22": {
+          "ovr": 89,
+          "club": "Bayern Munich"
+        },
+        "fifa23": {
+          "ovr": 89,
+          "club": "Bayern Munich"
+        },
+        "fc24": {
+          "ovr": 88,
+          "club": "Bayern Munich"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Bayern Munich"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Bayern Munich"
+        }
+      },
+      "photo": {
+        "file": "kimmich.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Joshua_Kimmich"
+      }
+    },
+    {
+      "id": "pedri",
+      "name": "Pedri",
+      "pos": "CM",
+      "nation": "Spain",
+      "born": 2002,
+      "ratings": {
+        "fifa22": {
+          "ovr": 81,
+          "club": "Barcelona"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Barcelona"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Barcelona"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Barcelona"
+        },
+        "fc26": {
+          "ovr": 88,
+          "club": "Barcelona"
+        }
+      },
+      "photo": {
+        "file": "pedri.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Pedri"
+      }
+    },
+    {
+      "id": "gavi",
+      "name": "Gavi",
+      "pos": "CM",
+      "nation": "Spain",
+      "born": 2004,
+      "ratings": {
+        "fifa22": {
+          "ovr": 71,
+          "club": "Barcelona"
+        },
+        "fifa23": {
+          "ovr": 79,
+          "club": "Barcelona"
+        },
+        "fc24": {
+          "ovr": 82,
+          "club": "Barcelona"
+        },
+        "fc25": {
+          "ovr": 83,
+          "club": "Barcelona"
+        },
+        "fc26": {
+          "ovr": 82,
+          "club": "Barcelona"
+        }
+      },
+      "search": "Gavi (footballer)",
+      "photo": {
+        "file": "gavi.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Gavi_(footballer)"
+      }
+    },
+    {
+      "id": "valverde",
+      "name": "Federico Valverde",
+      "pos": "CM",
+      "nation": "Uruguay",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 82,
+          "club": "Real Madrid"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 88,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 89,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "valverde.jpg",
+        "by": "Real Madrid",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://en.wikipedia.org/wiki/Federico_Valverde"
+      }
+    },
+    {
+      "id": "camavinga",
+      "name": "Eduardo Camavinga",
+      "pos": "CM",
+      "nation": "France",
+      "born": 2002,
+      "ratings": {
+        "fifa22": {
+          "ovr": 76,
+          "club": "Real Madrid"
+        },
+        "fifa23": {
+          "ovr": 81,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "camavinga.jpg",
+        "by": "Fotografías Archimadrid.es",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://en.wikipedia.org/wiki/Eduardo_Camavinga"
+      }
+    },
+    {
+      "id": "tchouameni",
+      "name": "Aurélien Tchouaméni",
+      "pos": "CDM",
+      "nation": "France",
+      "born": 2000,
+      "ratings": {
+        "fifa22": {
+          "ovr": 79,
+          "club": "Monaco"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "tchouameni.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Aur%C3%A9lien_Tchouam%C3%A9ni"
+      }
+    },
+    {
+      "id": "rice",
+      "name": "Declan Rice",
+      "pos": "CDM",
+      "nation": "England",
+      "born": 1999,
+      "ratings": {
+        "fifa22": {
+          "ovr": 82,
+          "club": "West Ham United"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "West Ham United"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Arsenal"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Arsenal"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Arsenal"
+        }
+      },
+      "photo": {
+        "file": "rice.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Declan_Rice"
+      }
+    },
+    {
+      "id": "odegaard",
+      "name": "Martin Ødegaard",
+      "pos": "CAM",
+      "nation": "Norway",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 81,
+          "club": "Arsenal"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Arsenal"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Arsenal"
+        },
+        "fc25": {
+          "ovr": 88,
+          "club": "Arsenal"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Arsenal"
+        }
+      },
+      "photo": {
+        "file": "odegaard.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Martin_%C3%98degaard"
+      }
+    },
+    {
+      "id": "bernardo-silva",
+      "name": "Bernardo Silva",
+      "pos": "CAM",
+      "nation": "Portugal",
+      "born": 1994,
+      "ratings": {
+        "fifa22": {
+          "ovr": 86,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 87,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 88,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Manchester City"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Manchester City"
+        }
+      },
+      "photo": {
+        "file": "bernardo-silva.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Bernardo_Silva"
+      }
+    },
+    {
+      "id": "gundogan",
+      "name": "İlkay Gündoğan",
+      "pos": "CM",
+      "nation": "Germany",
+      "born": 1990,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Barcelona"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Manchester City"
+        }
+      },
+      "photo": {
+        "file": "gundogan.jpg",
+        "by": "Granada",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/%C4%B0lkay_G%C3%BCndo%C4%9Fan"
+      }
+    },
+    {
+      "id": "casemiro",
+      "name": "Casemiro",
+      "pos": "CDM",
+      "nation": "Brazil",
+      "born": 1992,
+      "ratings": {
+        "fifa22": {
+          "ovr": 89,
+          "club": "Real Madrid"
+        },
+        "fifa23": {
+          "ovr": 89,
+          "club": "Manchester United"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Manchester United"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Manchester United"
+        },
+        "fc26": {
+          "ovr": 82,
+          "club": "Manchester United"
+        }
+      },
+      "photo": {
+        "file": "casemiro.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Casemiro"
+      }
+    },
+    {
+      "id": "barella",
+      "name": "Nicolò Barella",
+      "pos": "CM",
+      "nation": "Italy",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Inter"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Inter"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Inter"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Inter"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Inter"
+        }
+      },
+      "photo": {
+        "file": "barella.jpg",
+        "by": "Biser Todorov",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://en.wikipedia.org/wiki/Nicol%C3%B2_Barella"
+      }
+    },
+    {
+      "id": "de-jong",
+      "name": "Frenkie de Jong",
+      "pos": "CM",
+      "nation": "Netherlands",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Barcelona"
+        },
+        "fifa23": {
+          "ovr": 87,
+          "club": "Barcelona"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Barcelona"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Barcelona"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Barcelona"
+        }
+      },
+      "photo": {
+        "file": "de-jong.jpg",
+        "by": "Yuliia Perekopaiko",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Frenkie_de_Jong"
+      }
+    },
+    {
+      "id": "grealish",
+      "name": "Jack Grealish",
+      "pos": "LW",
+      "nation": "England",
+      "born": 1995,
+      "ratings": {
+        "fifa22": {
+          "ovr": 82,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 83,
+          "club": "Manchester City"
+        },
+        "fc26": {
+          "ovr": 81,
+          "club": "Everton"
+        }
+      },
+      "photo": {
+        "file": "grealish.jpg",
+        "by": "Hameltion",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Jack_Grealish"
+      }
+    },
+    {
+      "id": "verratti",
+      "name": "Marco Verratti",
+      "pos": "CM",
+      "nation": "Italy",
+      "born": 1992,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Paris Saint-Germain"
+        },
+        "fifa23": {
+          "ovr": 87,
+          "club": "Paris Saint-Germain"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Al Arabi"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Al Arabi"
+        }
+      },
+      "photo": {
+        "file": "verratti.jpg",
+        "by": "Sandro Halank, Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Marco_Verratti"
+      }
+    },
+    {
+      "id": "milinkovic-savic",
+      "name": "Sergej Milinković-Savić",
+      "pos": "CM",
+      "nation": "Serbia",
+      "born": 1995,
+      "ratings": {
+        "fifa22": {
+          "ovr": 86,
+          "club": "Lazio"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Lazio"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Al Hilal"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Al Hilal"
+        }
+      },
+      "photo": {
+        "file": "milinkovic-savic.jpg",
+        "by": "Эдгар Брещанов",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://en.wikipedia.org/wiki/Sergej_Milinkovi%C4%87-Savi%C4%87"
+      }
+    },
+    {
+      "id": "van-dijk",
+      "name": "Virgil van Dijk",
+      "pos": "CB",
+      "nation": "Netherlands",
+      "born": 1991,
+      "ratings": {
+        "fifa22": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fifa23": {
+          "ovr": 90,
+          "club": "Liverpool"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fc25": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fc26": {
+          "ovr": 88,
+          "club": "Liverpool"
+        }
+      },
+      "photo": {
+        "file": "van-dijk.jpg",
+        "by": "Ailura",
+        "license": "CC BY-SA 3.0 at",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+        "source": "https://en.wikipedia.org/wiki/Virgil_van_Dijk"
+      }
+    },
+    {
+      "id": "ruben-dias",
+      "name": "Rúben Dias",
+      "pos": "CB",
+      "nation": "Portugal",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 88,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 89,
+          "club": "Manchester City"
+        },
+        "fc26": {
+          "ovr": 88,
+          "club": "Manchester City"
+        }
+      },
+      "photo": {
+        "file": "ruben-dias.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/R%C3%BAben_Dias"
+      }
+    },
+    {
+      "id": "marquinhos",
+      "name": "Marquinhos",
+      "pos": "CB",
+      "nation": "Brazil",
+      "born": 1994,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Paris Saint-Germain"
+        },
+        "fifa23": {
+          "ovr": 88,
+          "club": "Paris Saint-Germain"
+        },
+        "fc24": {
+          "ovr": 88,
+          "club": "Paris Saint-Germain"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Paris Saint-Germain"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Paris Saint-Germain"
+        }
+      },
+      "photo": {
+        "file": "marquinhos.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Marquinhos"
+      }
+    },
+    {
+      "id": "rudiger",
+      "name": "Antonio Rüdiger",
+      "pos": "CB",
+      "nation": "Germany",
+      "born": 1993,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Chelsea"
+        },
+        "fifa23": {
+          "ovr": 87,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "rudiger.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Antonio_R%C3%BCdiger"
+      }
+    },
+    {
+      "id": "saliba",
+      "name": "William Saliba",
+      "pos": "CB",
+      "nation": "France",
+      "born": 2001,
+      "ratings": {
+        "fifa22": {
+          "ovr": 75,
+          "club": "Marseille"
+        },
+        "fifa23": {
+          "ovr": 79,
+          "club": "Arsenal"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Arsenal"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Arsenal"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Arsenal"
+        }
+      },
+      "photo": {
+        "file": "saliba.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/William_Saliba"
+      }
+    },
+    {
+      "id": "de-ligt",
+      "name": "Matthijs de Ligt",
+      "pos": "CB",
+      "nation": "Netherlands",
+      "born": 1999,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Juventus"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Bayern Munich"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Manchester United"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Manchester United"
+        }
+      },
+      "photo": {
+        "file": "de-ligt.jpg",
+        "by": "Derivative work: MajorPrince",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Matthijs_de_Ligt"
+      }
+    },
+    {
+      "id": "militao",
+      "name": "Éder Militão",
+      "pos": "CB",
+      "nation": "Brazil",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 84,
+          "club": "Real Madrid"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "militao.jpg",
+        "by": "Real Madrid",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://en.wikipedia.org/wiki/%C3%89der_Milit%C3%A3o"
+      }
+    },
+    {
+      "id": "araujo",
+      "name": "Ronald Araújo",
+      "pos": "CB",
+      "nation": "Uruguay",
+      "born": 1999,
+      "ratings": {
+        "fifa22": {
+          "ovr": 77,
+          "club": "Barcelona"
+        },
+        "fifa23": {
+          "ovr": 83,
+          "club": "Barcelona"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Barcelona"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Barcelona"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Barcelona"
+        }
+      },
+      "photo": {
+        "file": "araujo.jpg",
+        "by": "Werner100359",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://en.wikipedia.org/wiki/Ronald_Ara%C3%BAjo"
+      }
+    },
+    {
+      "id": "gvardiol",
+      "name": "Joško Gvardiol",
+      "pos": "CB",
+      "nation": "Croatia",
+      "born": 2002,
+      "ratings": {
+        "fifa22": {
+          "ovr": 76,
+          "club": "RB Leipzig"
+        },
+        "fifa23": {
+          "ovr": 81,
+          "club": "RB Leipzig"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Manchester City"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Manchester City"
+        }
+      },
+      "photo": {
+        "file": "gvardiol.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Jo%C5%A1ko_Gvardiol"
+      }
+    },
+    {
+      "id": "gabriel",
+      "name": "Gabriel Magalhães",
+      "pos": "CB",
+      "nation": "Brazil",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 79,
+          "club": "Arsenal"
+        },
+        "fifa23": {
+          "ovr": 81,
+          "club": "Arsenal"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Arsenal"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Arsenal"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Arsenal"
+        }
+      },
+      "photo": {
+        "file": "gabriel.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Gabriel_Magalh%C3%A3es"
+      }
+    },
+    {
+      "id": "bastoni",
+      "name": "Alessandro Bastoni",
+      "pos": "CB",
+      "nation": "Italy",
+      "born": 1999,
+      "ratings": {
+        "fifa22": {
+          "ovr": 82,
+          "club": "Inter"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Inter"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Inter"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Inter"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Inter"
+        }
+      },
+      "photo": {
+        "file": "bastoni.jpg",
+        "by": "MichaelEmilio",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://en.wikipedia.org/wiki/Alessandro_Bastoni"
+      }
+    },
+    {
+      "id": "upamecano",
+      "name": "Dayot Upamecano",
+      "pos": "CB",
+      "nation": "France",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 82,
+          "club": "Bayern Munich"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Bayern Munich"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Bayern Munich"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Bayern Munich"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        }
+      },
+      "photo": {
+        "file": "upamecano.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Dayot_Upamecano"
+      }
+    },
+    {
+      "id": "kounde",
+      "name": "Jules Koundé",
+      "pos": "CB",
+      "nation": "France",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 84,
+          "club": "Sevilla"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Barcelona"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Barcelona"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Barcelona"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Barcelona"
+        }
+      },
+      "photo": {
+        "file": "kounde.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Jules_Kound%C3%A9"
+      }
+    },
+    {
+      "id": "thiago-silva",
+      "name": "Thiago Silva",
+      "pos": "CB",
+      "nation": "Brazil",
+      "born": 1984,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Chelsea"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Chelsea"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Chelsea"
+        },
+        "fc25": {
+          "ovr": 82,
+          "club": "Fluminense"
+        }
+      },
+      "photo": {
+        "file": "thiago-silva.jpg",
+        "by": "Granada",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Thiago_Silva"
+      }
+    },
+    {
+      "id": "sergio-ramos",
+      "name": "Sergio Ramos",
+      "pos": "CB",
+      "nation": "Spain",
+      "born": 1986,
+      "ratings": {
+        "fifa22": {
+          "ovr": 88,
+          "club": "Paris Saint-Germain"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Paris Saint-Germain"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Sevilla"
+        }
+      },
+      "photo": {
+        "file": "sergio-ramos.jpg",
+        "by": "Real Madrid",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://en.wikipedia.org/wiki/Sergio_Ramos"
+      }
+    },
+    {
+      "id": "koulibaly",
+      "name": "Kalidou Koulibaly",
+      "pos": "CB",
+      "nation": "Senegal",
+      "born": 1991,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Napoli"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Chelsea"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Al Hilal"
+        },
+        "fc25": {
+          "ovr": 83,
+          "club": "Al Hilal"
+        }
+      },
+      "photo": {
+        "file": "koulibaly.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Kalidou_Koulibaly"
+      }
+    },
+    {
+      "id": "cubarsi",
+      "name": "Pau Cubarsí",
+      "pos": "CB",
+      "nation": "Spain",
+      "born": 2007,
+      "ratings": {
+        "fc25": {
+          "ovr": 76,
+          "club": "Barcelona"
+        },
+        "fc26": {
+          "ovr": 82,
+          "club": "Barcelona"
+        }
+      },
+      "photo": {
+        "file": "cubarsi.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Pau_Cubars%C3%AD"
+      }
+    },
+    {
+      "id": "trent",
+      "name": "Trent Alexander-Arnold",
+      "pos": "RB",
+      "nation": "England",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Liverpool"
+        },
+        "fifa23": {
+          "ovr": 87,
+          "club": "Liverpool"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Liverpool"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Liverpool"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "trent.jpg",
+        "by": "Антон Зайцев",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://en.wikipedia.org/wiki/Trent_Alexander-Arnold"
+      }
+    },
+    {
+      "id": "robertson",
+      "name": "Andrew Robertson",
+      "pos": "LB",
+      "nation": "Scotland",
+      "born": 1994,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Liverpool"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Liverpool"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Liverpool"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Liverpool"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Liverpool"
+        }
+      },
+      "photo": {
+        "file": "robertson.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Andy_Robertson"
+      }
+    },
+    {
+      "id": "theo",
+      "name": "Theo Hernández",
+      "pos": "LB",
+      "nation": "France",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 84,
+          "club": "AC Milan"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "AC Milan"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "AC Milan"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "AC Milan"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Al Hilal"
+        }
+      },
+      "photo": {
+        "file": "theo.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Th%C3%A9o_Hernandez"
+      }
+    },
+    {
+      "id": "hakimi",
+      "name": "Achraf Hakimi",
+      "pos": "RB",
+      "nation": "Morocco",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 84,
+          "club": "Paris Saint-Germain"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Paris Saint-Germain"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Paris Saint-Germain"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Paris Saint-Germain"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Paris Saint-Germain"
+        }
+      },
+      "photo": {
+        "file": "hakimi.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Achraf_Hakimi"
+      }
+    },
+    {
+      "id": "cancelo",
+      "name": "João Cancelo",
+      "pos": "RB",
+      "nation": "Portugal",
+      "born": 1994,
+      "ratings": {
+        "fifa22": {
+          "ovr": 86,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 88,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Barcelona"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Al Hilal"
+        },
+        "fc26": {
+          "ovr": 83,
+          "club": "Al Hilal"
+        }
+      },
+      "photo": {
+        "file": "cancelo.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Cancelo"
+      }
+    },
+    {
+      "id": "davies",
+      "name": "Alphonso Davies",
+      "pos": "LB",
+      "nation": "Canada",
+      "born": 2000,
+      "ratings": {
+        "fifa22": {
+          "ovr": 81,
+          "club": "Bayern Munich"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Bayern Munich"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Bayern Munich"
+        }
+      },
+      "photo": {
+        "file": "davies.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Alphonso_Davies"
+      }
+    },
+    {
+      "id": "kyle-walker",
+      "name": "Kyle Walker",
+      "pos": "RB",
+      "nation": "England",
+      "born": 1990,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 83,
+          "club": "Manchester City"
+        }
+      },
+      "photo": {
+        "file": "kyle-walker.jpg",
+        "by": "Кирилл Венедиктов",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://en.wikipedia.org/wiki/Kyle_Walker"
+      }
+    },
+    {
+      "id": "nuno-mendes",
+      "name": "Nuno Mendes",
+      "pos": "LB",
+      "nation": "Portugal",
+      "born": 2002,
+      "ratings": {
+        "fifa22": {
+          "ovr": 78,
+          "club": "Paris Saint-Germain"
+        },
+        "fifa23": {
+          "ovr": 82,
+          "club": "Paris Saint-Germain"
+        },
+        "fc24": {
+          "ovr": 83,
+          "club": "Paris Saint-Germain"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Paris Saint-Germain"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Paris Saint-Germain"
+        }
+      },
+      "search": "Nuno Mendes (footballer, born 2002)",
+      "photo": {
+        "file": "nuno-mendes.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Nuno_Mendes_(footballer%2C_born_2002)"
+      }
+    },
+    {
+      "id": "trippier",
+      "name": "Kieran Trippier",
+      "pos": "RB",
+      "nation": "England",
+      "born": 1990,
+      "ratings": {
+        "fifa22": {
+          "ovr": 84,
+          "club": "Atlético Madrid"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Newcastle United"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Newcastle United"
+        },
+        "fc25": {
+          "ovr": 83,
+          "club": "Newcastle United"
+        }
+      },
+      "photo": {
+        "file": "trippier.jpg",
+        "by": "Кирилл Венедиктов",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://en.wikipedia.org/wiki/Kieran_Trippier"
+      }
+    },
+    {
+      "id": "courtois",
+      "name": "Thibaut Courtois",
+      "pos": "GK",
+      "nation": "Belgium",
+      "born": 1992,
+      "ratings": {
+        "fifa22": {
+          "ovr": 89,
+          "club": "Real Madrid"
+        },
+        "fifa23": {
+          "ovr": 90,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 90,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 89,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 88,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "courtois.jpg",
+        "by": "Кирилл Венедиктов",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://en.wikipedia.org/wiki/Thibaut_Courtois"
+      }
+    },
+    {
+      "id": "alisson",
+      "name": "Alisson",
+      "pos": "GK",
+      "nation": "Brazil",
+      "born": 1992,
+      "ratings": {
+        "fifa22": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fifa23": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fc25": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fc26": {
+          "ovr": 88,
+          "club": "Liverpool"
+        }
+      },
+      "photo": {
+        "file": "alisson.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Alisson_Becker"
+      }
+    },
+    {
+      "id": "neuer",
+      "name": "Manuel Neuer",
+      "pos": "GK",
+      "nation": "Germany",
+      "born": 1986,
+      "ratings": {
+        "fifa22": {
+          "ovr": 90,
+          "club": "Bayern Munich"
+        },
+        "fifa23": {
+          "ovr": 90,
+          "club": "Bayern Munich"
+        },
+        "fc24": {
+          "ovr": 87,
+          "club": "Bayern Munich"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Bayern Munich"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        }
+      },
+      "photo": {
+        "file": "neuer.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Manuel_Neuer"
+      }
+    },
+    {
+      "id": "ter-stegen",
+      "name": "Marc-André ter Stegen",
+      "pos": "GK",
+      "nation": "Germany",
+      "born": 1992,
+      "ratings": {
+        "fifa22": {
+          "ovr": 90,
+          "club": "Barcelona"
+        },
+        "fifa23": {
+          "ovr": 90,
+          "club": "Barcelona"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Barcelona"
+        },
+        "fc25": {
+          "ovr": 88,
+          "club": "Barcelona"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Barcelona"
+        }
+      },
+      "photo": {
+        "file": "ter-stegen.jpg",
+        "by": "Government of Catalonia",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://en.wikipedia.org/wiki/Marc-Andr%C3%A9_ter_Stegen"
+      }
+    },
+    {
+      "id": "ederson",
+      "name": "Ederson",
+      "pos": "GK",
+      "nation": "Brazil",
+      "born": 1993,
+      "ratings": {
+        "fifa22": {
+          "ovr": 89,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 90,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Manchester City"
+        },
+        "fc25": {
+          "ovr": 88,
+          "club": "Manchester City"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Fenerbahçe"
+        }
+      },
+      "search": "Ederson (footballer, born 1993)",
+      "photo": {
+        "file": "ederson.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Ederson_(footballer%2C_born_1993)"
+      }
+    },
+    {
+      "id": "donnarumma",
+      "name": "Gianluigi Donnarumma",
+      "pos": "GK",
+      "nation": "Italy",
+      "born": 1999,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Paris Saint-Germain"
+        },
+        "fifa23": {
+          "ovr": 88,
+          "club": "Paris Saint-Germain"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Paris Saint-Germain"
+        },
+        "fc25": {
+          "ovr": 89,
+          "club": "Paris Saint-Germain"
+        },
+        "fc26": {
+          "ovr": 89,
+          "club": "Paris Saint-Germain"
+        }
+      },
+      "photo": {
+        "file": "donnarumma.jpg",
+        "by": "MichaelEmilio",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://en.wikipedia.org/wiki/Gianluigi_Donnarumma"
+      }
+    },
+    {
+      "id": "oblak",
+      "name": "Jan Oblak",
+      "pos": "GK",
+      "nation": "Slovenia",
+      "born": 1993,
+      "ratings": {
+        "fifa22": {
+          "ovr": 91,
+          "club": "Atlético Madrid"
+        },
+        "fifa23": {
+          "ovr": 91,
+          "club": "Atlético Madrid"
+        },
+        "fc24": {
+          "ovr": 89,
+          "club": "Atlético Madrid"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Atlético Madrid"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Atlético Madrid"
+        }
+      },
+      "photo": {
+        "file": "oblak.jpg",
+        "by": "Анна Нэсси",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://en.wikipedia.org/wiki/Jan_Oblak"
+      }
+    },
+    {
+      "id": "maignan",
+      "name": "Mike Maignan",
+      "pos": "GK",
+      "nation": "France",
+      "born": 1995,
+      "ratings": {
+        "fifa22": {
+          "ovr": 84,
+          "club": "AC Milan"
+        },
+        "fifa23": {
+          "ovr": 87,
+          "club": "AC Milan"
+        },
+        "fc24": {
+          "ovr": 88,
+          "club": "AC Milan"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "AC Milan"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "AC Milan"
+        }
+      },
+      "photo": {
+        "file": "maignan.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Mike_Maignan"
+      }
+    },
+    {
+      "id": "emi-martinez",
+      "name": "Emiliano Martínez",
+      "pos": "GK",
+      "nation": "Argentina",
+      "born": 1992,
+      "ratings": {
+        "fifa22": {
+          "ovr": 84,
+          "club": "Aston Villa"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Aston Villa"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Aston Villa"
+        },
+        "fc25": {
+          "ovr": 87,
+          "club": "Aston Villa"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Aston Villa"
+        }
+      },
+      "photo": {
+        "file": "emi-martinez.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Emiliano_Mart%C3%ADnez"
+      }
+    },
+    {
+      "id": "de-gea",
+      "name": "David de Gea",
+      "pos": "GK",
+      "nation": "Spain",
+      "born": 1990,
+      "ratings": {
+        "fifa22": {
+          "ovr": 84,
+          "club": "Manchester United"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Manchester United"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Fiorentina"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Fiorentina"
+        }
+      },
+      "photo": {
+        "file": "de-gea.jpg",
+        "by": "Кирилл Венедиктов",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://en.wikipedia.org/wiki/David_de_Gea"
+      }
+    },
+    {
+      "id": "szczesny",
+      "name": "Wojciech Szczęsny",
+      "pos": "GK",
+      "nation": "Poland",
+      "born": 1990,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Juventus"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Juventus"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Juventus"
+        },
+        "fc26": {
+          "ovr": 83,
+          "club": "Barcelona"
+        }
+      },
+      "photo": {
+        "file": "szczesny.png",
+        "by": "La Gazzetta dello Sport",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://en.wikipedia.org/wiki/Wojciech_Szcz%C4%99sny"
+      }
+    },
+    {
+      "id": "mane",
+      "name": "Sadio Mané",
+      "pos": "LW",
+      "nation": "Senegal",
+      "born": 1992,
+      "ratings": {
+        "fifa22": {
+          "ovr": 89,
+          "club": "Liverpool"
+        },
+        "fifa23": {
+          "ovr": 89,
+          "club": "Bayern Munich"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Al Nassr"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Al Nassr"
+        },
+        "fc26": {
+          "ovr": 83,
+          "club": "Al Nassr"
+        }
+      },
+      "photo": {
+        "file": "mane.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9"
+      }
+    },
+    {
+      "id": "firmino",
+      "name": "Roberto Firmino",
+      "pos": "CF",
+      "nation": "Brazil",
+      "born": 1991,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Liverpool"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Liverpool"
+        },
+        "fc24": {
+          "ovr": 83,
+          "club": "Al Ahli"
+        },
+        "fc25": {
+          "ovr": 81,
+          "club": "Al Ahli"
+        }
+      },
+      "photo": {
+        "file": "firmino.jpg",
+        "by": "Granada",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Roberto_Firmino"
+      }
+    },
+    {
+      "id": "di-maria",
+      "name": "Ángel Di María",
+      "pos": "RW",
+      "nation": "Argentina",
+      "born": 1988,
+      "ratings": {
+        "fifa22": {
+          "ovr": 86,
+          "club": "Paris Saint-Germain"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Juventus"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Benfica"
+        },
+        "fc25": {
+          "ovr": 82,
+          "club": "Benfica"
+        }
+      },
+      "photo": {
+        "file": "di-maria.jpg",
+        "by": "Кирилл Венедиктов",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://en.wikipedia.org/wiki/%C3%81ngel_Di_Mar%C3%ADa"
+      }
+    },
+    {
+      "id": "mahrez",
+      "name": "Riyad Mahrez",
+      "pos": "RW",
+      "nation": "Algeria",
+      "born": 1991,
+      "ratings": {
+        "fifa22": {
+          "ovr": 86,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 85,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Al Ahli"
+        },
+        "fc25": {
+          "ovr": 83,
+          "club": "Al Ahli"
+        }
+      },
+      "photo": {
+        "file": "mahrez.jpg",
+        "by": "Jeanpierrekepseu",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Riyad_Mahrez"
+      }
+    },
+    {
+      "id": "immobile",
+      "name": "Ciro Immobile",
+      "pos": "ST",
+      "nation": "Italy",
+      "born": 1990,
+      "ratings": {
+        "fifa22": {
+          "ovr": 86,
+          "club": "Lazio"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Lazio"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Lazio"
+        },
+        "fc25": {
+          "ovr": 82,
+          "club": "Beşiktaş"
+        }
+      },
+      "photo": {
+        "file": "immobile.jpg",
+        "by": "Unknown",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://en.wikipedia.org/wiki/Ciro_Immobile"
+      }
+    },
+    {
+      "id": "insigne",
+      "name": "Lorenzo Insigne",
+      "pos": "LW",
+      "nation": "Italy",
+      "born": 1991,
+      "ratings": {
+        "fifa22": {
+          "ovr": 86,
+          "club": "Napoli"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Toronto FC"
+        },
+        "fc24": {
+          "ovr": 82,
+          "club": "Toronto FC"
+        }
+      },
+      "photo": {
+        "file": "insigne.jpg",
+        "by": "Presidenza della Repubblica",
+        "license": "Attribution",
+        "licenseUrl": "",
+        "source": "https://en.wikipedia.org/wiki/Lorenzo_Insigne"
+      }
+    },
+    {
+      "id": "nkunku",
+      "name": "Christopher Nkunku",
+      "pos": "CAM",
+      "nation": "France",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 81,
+          "club": "RB Leipzig"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "RB Leipzig"
+        },
+        "fc24": {
+          "ovr": 86,
+          "club": "Chelsea"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Chelsea"
+        },
+        "fc26": {
+          "ovr": 83,
+          "club": "AC Milan"
+        }
+      },
+      "photo": {
+        "file": "nkunku.jpg",
+        "by": "Steffen Prößdorf",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Christopher_Nkunku"
+      }
+    },
+    {
+      "id": "gnabry",
+      "name": "Serge Gnabry",
+      "pos": "RW",
+      "nation": "Germany",
+      "born": 1995,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Bayern Munich"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Bayern Munich"
+        },
+        "fc26": {
+          "ovr": 83,
+          "club": "Bayern Munich"
+        }
+      },
+      "photo": {
+        "file": "gnabry.jpg",
+        "by": "حسین ظهروند",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Serge_Gnabry"
+      }
+    },
+    {
+      "id": "sane",
+      "name": "Leroy Sané",
+      "pos": "RW",
+      "nation": "Germany",
+      "born": 1996,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        },
+        "fifa23": {
+          "ovr": 86,
+          "club": "Bayern Munich"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Galatasaray"
+        }
+      },
+      "photo": {
+        "file": "sane.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Leroy_San%C3%A9"
+      }
+    },
+    {
+      "id": "muller",
+      "name": "Thomas Müller",
+      "pos": "CAM",
+      "nation": "Germany",
+      "born": 1989,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Bayern Munich"
+        },
+        "fifa23": {
+          "ovr": 87,
+          "club": "Bayern Munich"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Bayern Munich"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Bayern Munich"
+        }
+      },
+      "photo": {
+        "file": "muller.jpg",
+        "by": "Werner100359",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Thomas_M%C3%BCller"
+      }
+    },
+    {
+      "id": "pulisic",
+      "name": "Christian Pulisic",
+      "pos": "RW",
+      "nation": "United States",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 82,
+          "club": "Chelsea"
+        },
+        "fifa23": {
+          "ovr": 82,
+          "club": "Chelsea"
+        },
+        "fc24": {
+          "ovr": 82,
+          "club": "AC Milan"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "AC Milan"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "AC Milan"
+        }
+      },
+      "photo": {
+        "file": "pulisic.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Christian_Pulisic"
+      }
+    },
+    {
+      "id": "mckennie",
+      "name": "Weston McKennie",
+      "pos": "CM",
+      "nation": "United States",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 79,
+          "club": "Juventus"
+        },
+        "fifa23": {
+          "ovr": 79,
+          "club": "Juventus"
+        },
+        "fc24": {
+          "ovr": 79,
+          "club": "Juventus"
+        },
+        "fc25": {
+          "ovr": 80,
+          "club": "Juventus"
+        }
+      },
+      "photo": {
+        "file": "mckennie.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Weston_McKennie"
+      }
+    },
+    {
+      "id": "mac-allister",
+      "name": "Alexis Mac Allister",
+      "pos": "CM",
+      "nation": "Argentina",
+      "born": 1998,
+      "ratings": {
+        "fifa22": {
+          "ovr": 75,
+          "club": "Brighton"
+        },
+        "fifa23": {
+          "ovr": 78,
+          "club": "Brighton"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Liverpool"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Liverpool"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Liverpool"
+        }
+      },
+      "photo": {
+        "file": "mac-allister.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Alexis_Mac_Allister"
+      }
+    },
+    {
+      "id": "enzo",
+      "name": "Enzo Fernández",
+      "pos": "CM",
+      "nation": "Argentina",
+      "born": 2001,
+      "ratings": {
+        "fifa23": {
+          "ovr": 79,
+          "club": "Benfica"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Chelsea"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Chelsea"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Chelsea"
+        }
+      },
+      "photo": {
+        "file": "enzo.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Enzo_Fern%C3%A1ndez"
+      }
+    },
+    {
+      "id": "caicedo",
+      "name": "Moisés Caicedo",
+      "pos": "CDM",
+      "nation": "Ecuador",
+      "born": 2001,
+      "ratings": {
+        "fifa22": {
+          "ovr": 71,
+          "club": "Brighton"
+        },
+        "fifa23": {
+          "ovr": 78,
+          "club": "Brighton"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Chelsea"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Chelsea"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Chelsea"
+        }
+      },
+      "photo": {
+        "file": "caicedo.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Mois%C3%A9s_Caicedo"
+      }
+    },
+    {
+      "id": "palmer",
+      "name": "Cole Palmer",
+      "pos": "CAM",
+      "nation": "England",
+      "born": 2002,
+      "ratings": {
+        "fifa23": {
+          "ovr": 71,
+          "club": "Manchester City"
+        },
+        "fc24": {
+          "ovr": 76,
+          "club": "Chelsea"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Chelsea"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Chelsea"
+        }
+      },
+      "photo": {
+        "file": "palmer.jpg",
+        "by": "The White House",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "source": "https://en.wikipedia.org/wiki/Cole_Palmer"
+      }
+    },
+    {
+      "id": "jackson",
+      "name": "Nicolas Jackson",
+      "pos": "ST",
+      "nation": "Senegal",
+      "born": 2001,
+      "ratings": {
+        "fc24": {
+          "ovr": 78,
+          "club": "Chelsea"
+        },
+        "fc25": {
+          "ovr": 80,
+          "club": "Chelsea"
+        },
+        "fc26": {
+          "ovr": 81,
+          "club": "Chelsea"
+        }
+      },
+      "photo": {
+        "file": "jackson.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Nicolas_Jackson"
+      }
+    },
+    {
+      "id": "rodrygo",
+      "name": "Rodrygo",
+      "pos": "RW",
+      "nation": "Brazil",
+      "born": 2001,
+      "ratings": {
+        "fifa22": {
+          "ovr": 80,
+          "club": "Real Madrid"
+        },
+        "fifa23": {
+          "ovr": 83,
+          "club": "Real Madrid"
+        },
+        "fc24": {
+          "ovr": 85,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 86,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "rodrygo.jpg",
+        "by": "Junta de Andalucía",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "source": "https://en.wikipedia.org/wiki/Rodrygo"
+      }
+    },
+    {
+      "id": "gabriel-jesus",
+      "name": "Gabriel Jesus",
+      "pos": "ST",
+      "nation": "Brazil",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 83,
+          "club": "Manchester City"
+        },
+        "fifa23": {
+          "ovr": 83,
+          "club": "Arsenal"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Arsenal"
+        },
+        "fc25": {
+          "ovr": 83,
+          "club": "Arsenal"
+        },
+        "fc26": {
+          "ovr": 82,
+          "club": "Arsenal"
+        }
+      },
+      "photo": {
+        "file": "gabriel-jesus.jpg",
+        "by": "Granada",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Gabriel_Jesus"
+      }
+    },
+    {
+      "id": "szoboszlai",
+      "name": "Dominik Szoboszlai",
+      "pos": "CM",
+      "nation": "Hungary",
+      "born": 2000,
+      "ratings": {
+        "fifa22": {
+          "ovr": 80,
+          "club": "RB Leipzig"
+        },
+        "fifa23": {
+          "ovr": 82,
+          "club": "RB Leipzig"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Liverpool"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Liverpool"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Liverpool"
+        }
+      },
+      "photo": {
+        "file": "szoboszlai.jpg",
+        "by": "Timmy96",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://en.wikipedia.org/wiki/Dominik_Szoboszlai"
+      }
+    },
+    {
+      "id": "ruben-neves",
+      "name": "Rúben Neves",
+      "pos": "CDM",
+      "nation": "Portugal",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 83,
+          "club": "Wolverhampton"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Wolverhampton"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Al Hilal"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Al Hilal"
+        }
+      },
+      "photo": {
+        "file": "ruben-neves.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/R%C3%BAben_Neves"
+      }
+    },
+    {
+      "id": "bruno-guimaraes",
+      "name": "Bruno Guimarães",
+      "pos": "CM",
+      "nation": "Brazil",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 79,
+          "club": "Lyon"
+        },
+        "fifa23": {
+          "ovr": 82,
+          "club": "Newcastle United"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Newcastle United"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Newcastle United"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Newcastle United"
+        }
+      },
+      "photo": {
+        "file": "bruno-guimaraes.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Bruno_Guimar%C3%A3es"
+      }
+    },
+    {
+      "id": "isak",
+      "name": "Alexander Isak",
+      "pos": "ST",
+      "nation": "Sweden",
+      "born": 1999,
+      "ratings": {
+        "fifa22": {
+          "ovr": 80,
+          "club": "Real Sociedad"
+        },
+        "fifa23": {
+          "ovr": 81,
+          "club": "Newcastle United"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Newcastle United"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Newcastle United"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Liverpool"
+        }
+      },
+      "photo": {
+        "file": "isak.jpg",
+        "by": "Mikael Hervestad",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Alexander_Isak"
+      }
+    },
+    {
+      "id": "watkins",
+      "name": "Ollie Watkins",
+      "pos": "ST",
+      "nation": "England",
+      "born": 1995,
+      "ratings": {
+        "fifa22": {
+          "ovr": 80,
+          "club": "Aston Villa"
+        },
+        "fifa23": {
+          "ovr": 80,
+          "club": "Aston Villa"
+        },
+        "fc24": {
+          "ovr": 82,
+          "club": "Aston Villa"
+        },
+        "fc25": {
+          "ovr": 85,
+          "club": "Aston Villa"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Aston Villa"
+        }
+      },
+      "photo": {
+        "file": "watkins.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Ollie_Watkins"
+      }
+    },
+    {
+      "id": "maddison",
+      "name": "James Maddison",
+      "pos": "CAM",
+      "nation": "England",
+      "born": 1996,
+      "ratings": {
+        "fifa22": {
+          "ovr": 82,
+          "club": "Leicester City"
+        },
+        "fifa23": {
+          "ovr": 83,
+          "club": "Leicester City"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Tottenham Hotspur"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Tottenham Hotspur"
+        }
+      },
+      "photo": {
+        "file": "maddison.jpg",
+        "by": "KrispyKrumpets",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://en.wikipedia.org/wiki/James_Maddison"
+      }
+    },
+    {
+      "id": "chiesa",
+      "name": "Federico Chiesa",
+      "pos": "RW",
+      "nation": "Italy",
+      "born": 1997,
+      "ratings": {
+        "fifa22": {
+          "ovr": 85,
+          "club": "Juventus"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Juventus"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Juventus"
+        },
+        "fc25": {
+          "ovr": 82,
+          "club": "Liverpool"
+        }
+      },
+      "photo": {
+        "file": "chiesa.jpg",
+        "by": "Kirill Venediktov",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://en.wikipedia.org/wiki/Federico_Chiesa"
+      }
+    },
+    {
+      "id": "nico-williams",
+      "name": "Nico Williams",
+      "pos": "LW",
+      "nation": "Spain",
+      "born": 2002,
+      "ratings": {
+        "fifa23": {
+          "ovr": 72,
+          "club": "Athletic Club"
+        },
+        "fc24": {
+          "ovr": 79,
+          "club": "Athletic Club"
+        },
+        "fc25": {
+          "ovr": 83,
+          "club": "Athletic Club"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Athletic Club"
+        }
+      },
+      "photo": {
+        "file": "nico-williams.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Nico_Williams"
+      }
+    },
+    {
+      "id": "yamal",
+      "name": "Lamine Yamal",
+      "pos": "RW",
+      "nation": "Spain",
+      "born": 2007,
+      "ratings": {
+        "fc24": {
+          "ovr": 68,
+          "club": "Barcelona"
+        },
+        "fc25": {
+          "ovr": 81,
+          "club": "Barcelona"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Barcelona"
+        }
+      },
+      "photo": {
+        "file": "yamal.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Lamine_Yamal"
+      }
+    },
+    {
+      "id": "arda-guler",
+      "name": "Arda Güler",
+      "pos": "CAM",
+      "nation": "Turkey",
+      "born": 2005,
+      "ratings": {
+        "fc24": {
+          "ovr": 73,
+          "club": "Real Madrid"
+        },
+        "fc25": {
+          "ovr": 76,
+          "club": "Real Madrid"
+        },
+        "fc26": {
+          "ovr": 81,
+          "club": "Real Madrid"
+        }
+      },
+      "photo": {
+        "file": "arda-guler.jpg",
+        "by": "LawEnthusiast",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Arda_G%C3%BCler"
+      }
+    },
+    {
+      "id": "mainoo",
+      "name": "Kobbie Mainoo",
+      "pos": "CM",
+      "nation": "England",
+      "born": 2005,
+      "ratings": {
+        "fc24": {
+          "ovr": 66,
+          "club": "Manchester United"
+        },
+        "fc25": {
+          "ovr": 78,
+          "club": "Manchester United"
+        },
+        "fc26": {
+          "ovr": 79,
+          "club": "Manchester United"
+        }
+      },
+      "photo": {
+        "file": "mainoo.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Kobbie_Mainoo"
+      }
+    },
+    {
+      "id": "hojlund",
+      "name": "Rasmus Højlund",
+      "pos": "ST",
+      "nation": "Denmark",
+      "born": 2003,
+      "ratings": {
+        "fifa23": {
+          "ovr": 70,
+          "club": "Atalanta"
+        },
+        "fc24": {
+          "ovr": 78,
+          "club": "Manchester United"
+        },
+        "fc25": {
+          "ovr": 79,
+          "club": "Manchester United"
+        },
+        "fc26": {
+          "ovr": 78,
+          "club": "Napoli"
+        }
+      },
+      "photo": {
+        "file": "hojlund.jpg",
+        "by": "VietnamJ25",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://en.wikipedia.org/wiki/Rasmus_H%C3%B8jlund"
+      }
+    },
+    {
+      "id": "mount",
+      "name": "Mason Mount",
+      "pos": "CAM",
+      "nation": "England",
+      "born": 1999,
+      "ratings": {
+        "fifa22": {
+          "ovr": 82,
+          "club": "Chelsea"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Chelsea"
+        },
+        "fc24": {
+          "ovr": 84,
+          "club": "Manchester United"
+        },
+        "fc25": {
+          "ovr": 82,
+          "club": "Manchester United"
+        },
+        "fc26": {
+          "ovr": 81,
+          "club": "Manchester United"
+        }
+      },
+      "photo": {
+        "file": "mount.jpg",
+        "by": "Voltmetro",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Mason_Mount"
+      }
+    },
+    {
+      "id": "sancho",
+      "name": "Jadon Sancho",
+      "pos": "LW",
+      "nation": "England",
+      "born": 2000,
+      "ratings": {
+        "fifa22": {
+          "ovr": 87,
+          "club": "Manchester United"
+        },
+        "fifa23": {
+          "ovr": 84,
+          "club": "Manchester United"
+        },
+        "fc24": {
+          "ovr": 83,
+          "club": "Manchester United"
+        },
+        "fc25": {
+          "ovr": 81,
+          "club": "Manchester United"
+        }
+      },
+      "photo": {
+        "file": "sancho.jpg",
+        "by": "Ardfern",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Jadon_Sancho"
+      }
+    },
+    {
+      "id": "garnacho",
+      "name": "Alejandro Garnacho",
+      "pos": "LW",
+      "nation": "Argentina",
+      "born": 2004,
+      "ratings": {
+        "fc24": {
+          "ovr": 72,
+          "club": "Manchester United"
+        },
+        "fc25": {
+          "ovr": 79,
+          "club": "Manchester United"
+        },
+        "fc26": {
+          "ovr": 80,
+          "club": "Chelsea"
+        }
+      },
+      "photo": {
+        "file": "garnacho.jpg",
+        "by": "Ardfern",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Alejandro_Garnacho"
+      }
+    },
+    {
+      "id": "olise",
+      "name": "Michael Olise",
+      "pos": "RW",
+      "nation": "France",
+      "born": 2001,
+      "ratings": {
+        "fifa22": {
+          "ovr": 73,
+          "club": "Crystal Palace"
+        },
+        "fifa23": {
+          "ovr": 78,
+          "club": "Crystal Palace"
+        },
+        "fc24": {
+          "ovr": 81,
+          "club": "Crystal Palace"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Bayern Munich"
+        },
+        "fc26": {
+          "ovr": 86,
+          "club": "Bayern Munich"
+        }
+      },
+      "photo": {
+        "file": "olise.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Michael_Olise"
+      }
+    },
+    {
+      "id": "barcola",
+      "name": "Bradley Barcola",
+      "pos": "LW",
+      "nation": "France",
+      "born": 2002,
+      "ratings": {
+        "fc24": {
+          "ovr": 76,
+          "club": "Paris Saint-Germain"
+        },
+        "fc25": {
+          "ovr": 81,
+          "club": "Paris Saint-Germain"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Paris Saint-Germain"
+        }
+      },
+      "photo": {
+        "file": "barcola.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Bradley_Barcola"
+      }
+    },
+    {
+      "id": "vitinha",
+      "name": "Vitinha",
+      "pos": "CM",
+      "nation": "Portugal",
+      "born": 2000,
+      "ratings": {
+        "fifa22": {
+          "ovr": 76,
+          "club": "Porto"
+        },
+        "fifa23": {
+          "ovr": 81,
+          "club": "Paris Saint-Germain"
+        },
+        "fc24": {
+          "ovr": 83,
+          "club": "Paris Saint-Germain"
+        },
+        "fc25": {
+          "ovr": 84,
+          "club": "Paris Saint-Germain"
+        },
+        "fc26": {
+          "ovr": 87,
+          "club": "Paris Saint-Germain"
+        }
+      },
+      "photo": {
+        "file": "vitinha.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Vitinha"
+      }
+    },
+    {
+      "id": "doue",
+      "name": "Désiré Doué",
+      "pos": "CAM",
+      "nation": "France",
+      "born": 2005,
+      "ratings": {
+        "fc25": {
+          "ovr": 77,
+          "club": "Paris Saint-Germain"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Paris Saint-Germain"
+        }
+      },
+      "photo": {
+        "file": "doue.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/D%C3%A9sir%C3%A9_Dou%C3%A9"
+      }
+    },
+    {
+      "id": "joao-neves",
+      "name": "João Neves",
+      "pos": "CDM",
+      "nation": "Portugal",
+      "born": 2004,
+      "ratings": {
+        "fc24": {
+          "ovr": 74,
+          "club": "Benfica"
+        },
+        "fc25": {
+          "ovr": 82,
+          "club": "Paris Saint-Germain"
+        },
+        "fc26": {
+          "ovr": 85,
+          "club": "Paris Saint-Germain"
+        }
+      },
+      "photo": {
+        "file": "joao-neves.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Neves"
+      }
+    },
+    {
+      "id": "mctominay",
+      "name": "Scott McTominay",
+      "pos": "CM",
+      "nation": "Scotland",
+      "born": 1996,
+      "ratings": {
+        "fifa22": {
+          "ovr": 79,
+          "club": "Manchester United"
+        },
+        "fifa23": {
+          "ovr": 79,
+          "club": "Manchester United"
+        },
+        "fc24": {
+          "ovr": 78,
+          "club": "Manchester United"
+        },
+        "fc25": {
+          "ovr": 79,
+          "club": "Napoli"
+        },
+        "fc26": {
+          "ovr": 84,
+          "club": "Napoli"
+        }
+      },
+      "photo": {
+        "file": "mctominay.jpg",
+        "by": "Bryan Berlin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://en.wikipedia.org/wiki/Scott_McTominay"
+      }
+    }
   ]
 }

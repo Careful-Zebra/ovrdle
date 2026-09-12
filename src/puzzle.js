@@ -142,6 +142,7 @@ function toItem(player, edition) {
     position: entry.pos || player.pos,
     club: entry.club,
     age: player.born ? edition.year - player.born : null,
+    photo: player.photo || null,
     edition,
     answer: entry.ovr,
   };

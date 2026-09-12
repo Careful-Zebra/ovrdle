@@ -339,14 +339,25 @@ function renderCard(item, slot, i) {
   const facts = [item.position, item.club, item.nation];
   if (item.age) facts.push(`age ${item.age}`);
 
+  const photoSrc = item.photo && item.photo.file ? `./data/img/${item.photo.file}` : '';
+
   li.innerHTML =
+    `<div class="card-top">` +
+    `<div class="card-avatar">${photoSrc ? `<img src="${escapeHtml(photoSrc)}" alt="" loading="lazy" />` : ''}</div>` +
+    `<div class="card-info">` +
     `<div class="card-head">` +
     `<div class="card-name">${escapeHtml(item.name)}</div>` +
     `<div class="card-index">${i + 1}/${PLAYERS_PER_PUZZLE}</div>` +
     `</div>` +
     `<div class="card-sub"><span class="badge">${escapeHtml(item.edition.label)}</span>` +
     facts.map((f) => `<span>${escapeHtml(f)}</span>`).join('<span class="dot">·</span>') +
+    `</div>` +
+    `</div>` +
     `</div>`;
+
+  // If a referenced photo 404s, drop the <img> so the silhouette shows through.
+  const avatarImg = li.querySelector('.card-avatar img');
+  if (avatarImg) avatarImg.addEventListener('error', () => avatarImg.remove());
 
   li.appendChild(renderGuesses(item, slot, isActive));
 
@@ -467,8 +478,40 @@ function showHelp() {
       `<div class="example">${tileHtml('90', 'is-miss', '▼')}<span>Too high, go lower.</span></div>` +
       `<div class="example">${tileHtml('89', 'is-hit')}<span>Nailed it. On to the next.</span></div>` +
       `<div class="example">${tileHtml('89', 'is-answer')}<span>Out of tries, here's the answer.</span></div>` +
-      `<p class="note">These are base overalls, not in-form or special cards.</p>`
+      `<p class="note">These are base overalls, not in-form or special cards.</p>` +
+      `<p class="note">Photos from Wikimedia Commons. <button type="button" class="linkish" id="show-credits">Photo credits</button></p>`
   );
+  const credits = document.getElementById('show-credits');
+  if (credits) credits.addEventListener('click', showCredits);
+}
+
+function showCredits() {
+  const players = (state.data?.players || [])
+    .filter((p) => p.photo)
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  const rows = players
+    .map((p) => {
+      const ph = p.photo;
+      const who = ph.source
+        ? `<a href="${escapeHtml(ph.source)}" target="_blank" rel="noopener">${escapeHtml(p.name)}</a>`
+        : escapeHtml(p.name);
+      const lic = ph.licenseUrl
+        ? `<a href="${escapeHtml(ph.licenseUrl)}" target="_blank" rel="noopener">${escapeHtml(ph.license)}</a>`
+        : escapeHtml(ph.license);
+      return `<li>${who}: ${escapeHtml(ph.by)} (${lic})</li>`;
+    })
+    .join('');
+
+  openModal(
+    `<h2 id="modal-title">Photo credits</h2>` +
+      `<p>Player photos come from <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>, used under Creative Commons or public-domain licences. Thanks to the photographers.</p>` +
+      `<ul class="credits">${rows}</ul>` +
+      `<button class="btn btn-ghost" id="btn-back-help">BACK</button>`
+  );
+  const back = document.getElementById('btn-back-help');
+  if (back) back.addEventListener('click', showHelp);
 }
 
 function showStats() {
