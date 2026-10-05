@@ -15,7 +15,7 @@ export function buildShareText(puzzleNo, slots) {
     return WRONG.repeat(misses) + RIGHT + BLANK.repeat(MAX_TRIES - misses - 1);
   });
 
-  return [`OVRdle #${puzzleNo}: ${solved}/5`, '', ...rows].join('\n');
+  return [`OVRdle #${puzzleNo}: ${solved}/5`, '', ...rows, '', 'ovrdle.com'].join('\n');
 }
 
 /** Native share sheet where available, clipboard otherwise. Returns a status word. */
