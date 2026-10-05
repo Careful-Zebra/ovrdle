@@ -605,7 +605,7 @@ function showDailyResults() {
   });
 
   document.getElementById('btn-copy').addEventListener('click', async () => {
-    const result = await shareCopyf(buildShareText(state.puzzleNo, state.slots));
+    const result = await shareCopy(buildShareText(state.puzzleNo, state.slots));
     if (result === 'copied') toast('Copied, go paste it');
     else if (result === 'failed') toast("Couldn't copy that");
   });
