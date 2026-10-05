@@ -17,7 +17,7 @@ import {
   loadPracticeStats,
   recordPracticeResult,
 } from './storage.js';
-import { buildShareText, share } from './share.js';
+import { buildShareText, share, shareCopy } from './share.js';
 
 const MODE_KEY = 'ovrdle:mode';
 
@@ -594,11 +594,18 @@ function showDailyResults() {
       `<ul class="recap">${recapHtml()}</ul>` +
       statsHtml(stats, solved) +
       `<button class="btn" id="btn-share">SHARE RESULT</button>` +
+      `<button class="btn" id="btn-copy">COPY RESULT TO CLIPBOARD</button>` +
       `<div class="countdown">Next puzzle in <b id="countdown">--:--:--</b></div>`
   );
 
   document.getElementById('btn-share').addEventListener('click', async () => {
     const result = await share(buildShareText(state.puzzleNo, state.slots));
+    if (result === 'copied') toast('Copied, go paste it');
+    else if (result === 'failed') toast("Couldn't copy that");
+  });
+
+  document.getElementById('btn-copy').addEventListener('click', async () => {
+    const result = await shareCopyf(buildShareText(state.puzzleNo, state.slots));
     if (result === 'copied') toast('Copied, go paste it');
     else if (result === 'failed') toast("Couldn't copy that");
   });

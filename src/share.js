@@ -29,10 +29,15 @@ export async function share(text) {
       // Fall through to the clipboard.
     }
   }
+  return shareCopy(text);
+}
+
+/** Clipboard sharing without involving native share sheet at all. Returns a status word. */
+export async function shareCopy(text) {
   try {
     await navigator.clipboard.writeText(text);
     return 'copied';
   } catch {
-    return 'failed';
+    return 'failed'
   }
 }
