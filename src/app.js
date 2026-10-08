@@ -323,7 +323,7 @@ function render() {
     state.done || state.typed.length < 2 || !active;
 
   const activeCard = el.board.querySelector('.is-active');
-  if (activeCard) activeCard.scrollIntoView({ block: 'nearest' });
+  if (activeCard && window.self === window.top) activeCard.scrollIntoView({ block: 'nearest' });
 }
 
 function renderCard(item, slot, i) {
