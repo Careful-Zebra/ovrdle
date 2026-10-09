@@ -23,22 +23,31 @@ import { parseCsv, pick } from './lib/csv.mjs';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const DATA = join(ROOT, 'data', 'players.json');
 
+// Column names across the layouts we've seen: the SoFIFA-style Kaggle dumps
+// and FUTBIN's Ultimate Team export (PlayerName, Rating, Card, ...).
 const COLUMNS = {
   id: ['sofifa_id', 'player_id', 'id'],
-  short: ['short_name', 'name'],
+  short: ['short_name', 'playername', 'name'],
   long: ['long_name'],
-  ovr: ['overall'],
+  ovr: ['overall', 'rating'],
   club: ['club_name', 'club'],
-  nation: ['nationality_name', 'nationality'],
+  nation: ['nationality_name', 'nationality', 'nation'],
   dob: ['dob', 'birth_date'],
   age: ['age'],
   update: ['fifa_update', 'update_as_of', 'fifa_update_date'],
+  card: ['card'],
 };
+
+// Ultimate Team exports list every card a player has (in-forms, promos, World
+// Cup...), each with a different rating. Only plain base cards count, e.g.
+// "fut23 gold rare" or "fut23 silver common".
+const BASE_CARD = /^fut\d+ (gold|silver|bronze) (rare|common)$/;
 
 // When a player is reported "not found" or "ambiguous", pin them to the
 // dataset's player id here: { playerId: { editionId: sofifaId } }.
 const OVERRIDES = {
-  // gavi: { fifa22: 264240 },
+  gavi: { fifa23: 1821 }, // FUTBIN: "Páez Gavira"
+  gabriel: { fifa23: 1451 }, // FUTBIN: just "Gabriel"; Gabriel Jesus shares his year, nation and club
 };
 
 // Country names that differ between our data and SoFIFA's.
@@ -218,6 +227,12 @@ function nameScore(ourName, ours, row) {
     const at = [0, ours.length - 1].find((i) => ours[i] === surname);
     if (at !== undefined && ours.some((t, i) => i !== at && t[0] === initial)) return 2;
   }
+  // "Camavinga", "ter Stegen": the dataset uses only the end of our name.
+  // Deliberately no matching on first names alone ("Gabriel" would also fit
+  // Gabriel Jesus) - pin those in OVERRIDES instead.
+  const tail = ours.slice(ours.length - short.length);
+  if (short.length && short.length < ours.length && short.every((t, i) => t === tail[i])) return 2;
+
   if (ours.every((t) => row.longSet.has(t) || row.shortSet.has(t))) return 2;
   return 0;
 }
@@ -251,7 +266,13 @@ function loadRows(csvPath) {
     process.exit(1);
   }
 
-  const rows = raw
+  let source = raw;
+  if (has(COLUMNS.card)) {
+    source = raw.filter((r) => BASE_CARD.test(pick(r, COLUMNS.card).toLowerCase()));
+    console.log(`Card types: kept ${source.length.toLocaleString()} base cards, skipped ${(raw.length - source.length).toLocaleString()} special cards`);
+  }
+
+  const rows = source
     .map((r) => {
       const short = pick(r, COLUMNS.short);
       const long = pick(r, COLUMNS.long) || short;
