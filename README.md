@@ -32,7 +32,7 @@ data/img/              player photos
 
 - FIFA 22 ratings were checked against the
   [FIFA Players dataset](https://www.kaggle.com/datasets/luisfucros/fifa-players)
-  by Luis (luisfucros) on Kaggle, MIT licensed, which is SoFIFA data.
+  by Luis (luisfucros) on Kaggle, MIT licensed.
 - FIFA 23 ratings were checked against base cards in the
   [spreadsheet of all FIFA 23 FUT player data](https://www.reddit.com/r/fut/comments/zwb6tz/spreadsheet_of_all_fifa_23_fut_player_data/)
   shared on r/fut.
