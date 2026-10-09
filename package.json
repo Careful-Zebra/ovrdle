@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "python -m http.server 5173",
     "validate": "node scripts/validate-data.mjs",
-    "import": "node scripts/import-csv.mjs"
+    "import": "node scripts/import-csv.mjs",
+    "check-ratings": "node scripts/check-ratings.mjs"
   }
 }
