@@ -23,16 +23,20 @@ import { parseCsv, pick } from './lib/csv.mjs';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const DATA = join(ROOT, 'data', 'players.json');
 
-// Column names across the layouts we've seen: the SoFIFA-style Kaggle dumps
-// and FUTBIN's Ultimate Team export (PlayerName, Rating, Card, ...).
+// Column names across the layouts we've seen: SoFIFA-style Kaggle dumps,
+// FUTBIN's Ultimate Team export (PlayerName, Rating, Card), and scrapes of
+// EA's ratings site (Name/OVR/Team/url, or firstName/lastName/commonName).
 const COLUMNS = {
   id: ['sofifa_id', 'player_id', 'id'],
-  short: ['short_name', 'playername', 'name'],
+  url: ['url', 'playerurl', 'player_url'],
+  short: ['short_name', 'playername', 'name', 'commonname'],
   long: ['long_name'],
-  ovr: ['overall', 'rating'],
-  club: ['club_name', 'club'],
+  first: ['firstname'],
+  last: ['lastname'],
+  ovr: ['overall', 'rating', 'ovr', 'overallrating'],
+  club: ['club_name', 'club', 'team'],
   nation: ['nationality_name', 'nationality', 'nation'],
-  dob: ['dob', 'birth_date'],
+  dob: ['dob', 'birth_date', 'birthdate'],
   age: ['age'],
   update: ['fifa_update', 'update_as_of', 'fifa_update_date'],
   card: ['card'],
@@ -43,11 +47,19 @@ const COLUMNS = {
 // "fut23 gold rare" or "fut23 silver common".
 const BASE_CARD = /^fut\d+ (gold|silver|bronze) (rare|common)$/;
 
-// When a player is reported "not found" or "ambiguous", pin them to the
-// dataset's player id here: { playerId: { editionId: sofifaId } }.
+// When a player is reported "not found" or "ambiguous", pin them to a row id
+// in one specific file: { 'file.csv': { playerId: rowId } }. Keyed by file
+// because ids differ between sources (a FUTBIN id means nothing in a SoFIFA
+// dump, and could even collide with a different player there).
 const OVERRIDES = {
-  gavi: { fifa23: 1821 }, // FUTBIN: "Páez Gavira"
-  gabriel: { fifa23: 1451 }, // FUTBIN: just "Gabriel"; Gabriel Jesus shares his year, nation and club
+  'fifa23.csv': {
+    gavi: 1821, // FUTBIN: "Páez Gavira"
+    gabriel: 1451, // FUTBIN: just "Gabriel"; Gabriel Jesus shares his year, nation and club
+  },
+  'fc25.csv': {
+    vinicius: 238794, // EA: "Vini Jr." (this file has no full names)
+    gabriel: 232580, // EA: just "Gabriel"
+  },
 };
 
 // Country names that differ between our data and SoFIFA's.
@@ -57,11 +69,20 @@ const NATION_ALIASES = {
   'ivory coast': 'cote d ivoire',
   turkey: 'turkiye',
   czechia: 'czech republic',
+  holland: 'netherlands',
 };
 
 // Club-name words that carry no meaning ("FC Barcelona" == "Barcelona").
 const CLUB_NOISE = new Set(['fc', 'cf', 'ac', 'afc', 'sc', 'ssc', 'as', 'club', 'de', 'the', 'calcio', 'football']);
-const CLUB_ALIASES = { munchen: 'munich', milano: 'milan' };
+const CLUB_ALIASES = { munchen: 'munich', milano: 'milan', utd: 'united' };
+// Whole short names EA and FUTBIN use ("Paris SG", "Man Utd", "Spurs").
+const CLUB_NAMES = {
+  'paris sg': 'paris saint germain',
+  'man utd': 'manchester united',
+  'man city': 'manchester city',
+  spurs: 'tottenham hotspur',
+  wolves: 'wolverhampton wanderers',
+};
 
 // Letters NFD can't split into a base letter plus an accent.
 const SPECIAL = { ø: 'o', ł: 'l', đ: 'd', ß: 'ss', æ: 'ae', œ: 'oe', ı: 'i', ð: 'd', þ: 'th' };
@@ -105,10 +126,12 @@ if (APPLY && applied) {
 
 /** Returns the number of fixes applied to `data`. */
 function checkEdition(edition, csvPath) {
-  const rows = loadRows(csvPath);
+  const rows = loadRows(csvPath, edition);
   const ours = data.players.filter((p) => p.ratings[edition.id]);
+  const fileName = csvPath.split(/[\\/]/).pop();
+  const pins = OVERRIDES[fileName] || {};
 
-  console.log(`\n=== ${edition.label}: ${ours.length} players vs ${csvPath.split(/[\\/]/).pop()} (${rows.length.toLocaleString()} rows) ===`);
+  console.log(`\n=== ${edition.label}: ${ours.length} players vs ${fileName} (${rows.length.toLocaleString()} rows) ===`);
   describeSnapshot(rows);
 
   const agree = [];
@@ -119,7 +142,7 @@ function checkEdition(edition, csvPath) {
 
   for (const player of ours) {
     const entry = player.ratings[edition.id];
-    const m = matchPlayer(player, entry, edition, rows);
+    const m = matchPlayer(player, entry, rows, pins);
 
     if (m.status === 'not-found') { notFound.push(player); continue; }
     if (m.status === 'ambiguous') { ambiguous.push({ player, candidates: m.candidates }); continue; }
@@ -178,8 +201,8 @@ function checkEdition(edition, csvPath) {
  * nationality and club break ties. A match is confident only if it clearly
  * beats the runner-up and either the birth year or the club lines up.
  */
-function matchPlayer(player, entry, edition, rows) {
-  const pinned = OVERRIDES[player.id]?.[edition.id];
+function matchPlayer(player, entry, rows, pins) {
+  const pinned = pins[player.id];
   if (pinned !== undefined) {
     const row = rows.find((r) => r.id === String(pinned));
     return row ? { status: 'ok', row } : { status: 'not-found' };
@@ -193,7 +216,8 @@ function matchPlayer(player, entry, edition, rows) {
 
     let score = name;
     const birthGap = player.born && row.born ? Math.abs(player.born - row.born) : null;
-    if (birthGap === 0) score += 3;
+    if (row.bornApprox) score += birthGap <= 1 ? 2 : -3; // age-derived: 0 and 1 are equally likely
+    else if (birthGap === 0) score += 3;
     else if (birthGap === 1) score += 1;
     else if (birthGap !== null) score -= 3;
     if (nation(player.nation) === nation(row.nation)) score += 2;
@@ -257,11 +281,12 @@ function findCsv(editionId) {
   return null;
 }
 
-function loadRows(csvPath) {
+function loadRows(csvPath, edition) {
   const raw = parseCsv(readFileSync(csvPath, 'utf8'));
   const header = Object.keys(raw[0] || {});
   const has = (names) => names.some((n) => header.includes(n));
-  if (!has(COLUMNS.ovr) || (!has(COLUMNS.short) && !has(COLUMNS.long))) {
+  const hasName = has(COLUMNS.short) || has(COLUMNS.long) || has(COLUMNS.last);
+  if (!has(COLUMNS.ovr) || !hasName) {
     console.error(`${csvPath} is missing a name or "overall" column. Columns found:\n  ${header.join(', ')}`);
     process.exit(1);
   }
@@ -274,11 +299,19 @@ function loadRows(csvPath) {
 
   const rows = source
     .map((r) => {
-      const short = pick(r, COLUMNS.short);
-      const long = pick(r, COLUMNS.long) || short;
+      // EA's own export splits names: commonName ("Vini Jr.") is often blank,
+      // firstName + lastName is the full name.
+      const full = [pick(r, COLUMNS.first), pick(r, COLUMNS.last)].filter(Boolean).join(' ');
+      const short = pick(r, COLUMNS.short) || full;
+      const long = pick(r, COLUMNS.long) || full || short;
       const dob = pick(r, COLUMNS.dob);
+      // Birth year from any date format ("1992-06-15", "6/15/1992 12:00:00 AM").
+      // Without a date, estimate it from age: off by up to a year, so flag it.
+      const year = Number(dob.match(/\b(19|20)\d{2}\b/)?.[0]) || null;
+      const age = Number(pick(r, COLUMNS.age));
+      const bornApprox = !year && age > 0;
       return {
-        id: pick(r, COLUMNS.id),
+        id: pick(r, COLUMNS.id) || pick(r, COLUMNS.url).match(/(\d+)\/?$/)?.[1] || '',
         short,
         long,
         shortTokens: tokens(short),
@@ -288,7 +321,8 @@ function loadRows(csvPath) {
         club: pick(r, COLUMNS.club),
         nation: pick(r, COLUMNS.nation),
         dob,
-        born: dob ? Number(dob.slice(0, 4)) || null : null,
+        born: year || (bornApprox ? edition.year - age : null),
+        bornApprox,
         update: pick(r, COLUMNS.update),
       };
     })
@@ -342,7 +376,8 @@ function nation(s) {
 }
 
 function clubTokens(s) {
-  return tokens(s)
+  const whole = tokens(s).join(' ');
+  return tokens(CLUB_NAMES[whole] || whole)
     .map((t) => CLUB_ALIASES[t] || t)
     .filter((t) => !CLUB_NOISE.has(t) && !/^\d+$/.test(t));
 }

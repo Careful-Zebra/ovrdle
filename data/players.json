@@ -84,11 +84,11 @@
           "club": "Al Nassr"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Al Nassr"
         },
         "fc26": {
-          "ovr": 82,
+          "ovr": 85,
           "club": "Al Nassr"
         }
       },
@@ -124,7 +124,7 @@
           "club": "Barcelona"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 88,
           "club": "Barcelona"
         }
       },
@@ -196,7 +196,7 @@
           "club": "Manchester City"
         },
         "fc26": {
-          "ovr": 91,
+          "ovr": 90,
           "club": "Manchester City"
         }
       },
@@ -232,7 +232,7 @@
           "club": "Al Ittihad"
         },
         "fc26": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Al Ittihad"
         }
       },
@@ -264,7 +264,7 @@
           "club": "Al Hilal"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 87,
           "club": "Al Hilal"
         },
         "fc26": {
@@ -304,7 +304,7 @@
           "club": "Liverpool"
         },
         "fc26": {
-          "ovr": 89,
+          "ovr": 91,
           "club": "Liverpool"
         }
       },
@@ -340,7 +340,7 @@
           "club": "Bayern Munich"
         },
         "fc26": {
-          "ovr": 90,
+          "ovr": 89,
           "club": "Bayern Munich"
         }
       },
@@ -376,7 +376,7 @@
           "club": "Real Madrid"
         },
         "fc26": {
-          "ovr": 90,
+          "ovr": 89,
           "club": "Real Madrid"
         }
       },
@@ -408,7 +408,7 @@
           "club": "Tottenham Hotspur"
         },
         "fc25": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Tottenham Hotspur"
         }
       },
@@ -516,7 +516,7 @@
           "club": "AC Milan"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "AC Milan"
         }
       },
@@ -552,7 +552,7 @@
           "club": "Arsenal"
         },
         "fc26": {
-          "ovr": 87,
+          "ovr": 88,
           "club": "Arsenal"
         }
       },
@@ -580,7 +580,7 @@
           "club": "Manchester City"
         },
         "fc24": {
-          "ovr": 86,
+          "ovr": 85,
           "club": "Manchester City"
         },
         "fc25": {
@@ -588,7 +588,7 @@
           "club": "Manchester City"
         },
         "fc26": {
-          "ovr": 87,
+          "ovr": 85,
           "club": "Manchester City"
         }
       },
@@ -652,11 +652,11 @@
           "club": "Bayern Munich"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 86,
           "club": "Bayern Munich"
         },
         "fc25": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Bayern Munich"
         },
         "fc26": {
@@ -692,7 +692,7 @@
           "club": "Bayer Leverkusen"
         },
         "fc25": {
-          "ovr": 87,
+          "ovr": 88,
           "club": "Bayer Leverkusen"
         },
         "fc26": {
@@ -724,11 +724,11 @@
           "club": "Atlético Madrid"
         },
         "fc24": {
-          "ovr": 86,
+          "ovr": 88,
           "club": "Atlético Madrid"
         },
         "fc25": {
-          "ovr": 86,
+          "ovr": 88,
           "club": "Atlético Madrid"
         },
         "fc26": {
@@ -764,11 +764,11 @@
           "club": "Manchester City"
         },
         "fc25": {
-          "ovr": 88,
+          "ovr": 90,
           "club": "Manchester City"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Napoli"
         }
       },
@@ -800,11 +800,11 @@
           "club": "Manchester United"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 81,
           "club": "Manchester United"
         },
         "fc26": {
-          "ovr": 82,
+          "ovr": 80,
           "club": "Barcelona"
         }
       },
@@ -840,7 +840,7 @@
           "club": "Liverpool"
         },
         "fc26": {
-          "ovr": 81,
+          "ovr": 79,
           "club": "Al Hilal"
         }
       },
@@ -868,11 +868,11 @@
           "club": "Napoli"
         },
         "fc25": {
-          "ovr": 86,
+          "ovr": 85,
           "club": "Napoli"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Paris Saint-Germain"
         }
       },
@@ -904,11 +904,11 @@
           "club": "Paris Saint-Germain"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Paris Saint-Germain"
         },
         "fc26": {
-          "ovr": 88,
+          "ovr": 90,
           "club": "Paris Saint-Germain"
         }
       },
@@ -936,15 +936,15 @@
           "club": "Manchester City"
         },
         "fc24": {
-          "ovr": 83,
+          "ovr": 80,
           "club": "Manchester City"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Atlético Madrid"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Atlético Madrid"
         }
       },
@@ -972,11 +972,11 @@
           "club": "Juventus"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 83,
           "club": "Juventus"
         },
         "fc25": {
-          "ovr": 83,
+          "ovr": 84,
           "club": "Juventus"
         },
         "fc26": {
@@ -1012,11 +1012,11 @@
           "club": "Roma"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 87,
           "club": "Roma"
         },
         "fc26": {
-          "ovr": 84,
+          "ovr": 86,
           "club": "Roma"
         }
       },
@@ -1044,15 +1044,15 @@
           "club": "Chelsea"
         },
         "fc24": {
-          "ovr": 84,
-          "club": "Chelsea"
-        },
-        "fc25": {
           "ovr": 83,
           "club": "Chelsea"
         },
+        "fc25": {
+          "ovr": 81,
+          "club": "Arsenal"
+        },
         "fc26": {
-          "ovr": 80,
+          "ovr": 78,
           "club": "Chelsea"
         }
       },
@@ -1080,15 +1080,15 @@
           "club": "Chelsea"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Arsenal"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 83,
           "club": "Arsenal"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 82,
           "club": "Arsenal"
         }
       },
@@ -1156,11 +1156,11 @@
           "club": "Real Madrid"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Real Madrid"
         },
         "fc26": {
-          "ovr": 82,
+          "ovr": 83,
           "club": "AC Milan"
         }
       },
@@ -1188,7 +1188,7 @@
           "club": "Real Madrid"
         },
         "fc24": {
-          "ovr": 87,
+          "ovr": 86,
           "club": "Real Madrid"
         }
       },
@@ -1220,11 +1220,11 @@
           "club": "Manchester United"
         },
         "fc25": {
-          "ovr": 88,
+          "ovr": 87,
           "club": "Manchester United"
         },
         "fc26": {
-          "ovr": 88,
+          "ovr": 87,
           "club": "Manchester United"
         }
       },
@@ -1256,11 +1256,11 @@
           "club": "Bayern Munich"
         },
         "fc25": {
-          "ovr": 87,
+          "ovr": 86,
           "club": "Bayern Munich"
         },
         "fc26": {
-          "ovr": 87,
+          "ovr": 89,
           "club": "Bayern Munich"
         }
       },
@@ -1296,7 +1296,7 @@
           "club": "Barcelona"
         },
         "fc26": {
-          "ovr": 88,
+          "ovr": 89,
           "club": "Barcelona"
         }
       },
@@ -1324,7 +1324,7 @@
           "club": "Barcelona"
         },
         "fc24": {
-          "ovr": 82,
+          "ovr": 83,
           "club": "Barcelona"
         },
         "fc25": {
@@ -1332,7 +1332,7 @@
           "club": "Barcelona"
         },
         "fc26": {
-          "ovr": 82,
+          "ovr": 83,
           "club": "Barcelona"
         }
       },
@@ -1361,7 +1361,7 @@
           "club": "Real Madrid"
         },
         "fc24": {
-          "ovr": 87,
+          "ovr": 88,
           "club": "Real Madrid"
         },
         "fc25": {
@@ -1397,15 +1397,15 @@
           "club": "Real Madrid"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Real Madrid"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 83,
           "club": "Real Madrid"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 83,
           "club": "Real Madrid"
         }
       },
@@ -1433,7 +1433,7 @@
           "club": "Real Madrid"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Real Madrid"
         },
         "fc25": {
@@ -1441,7 +1441,7 @@
           "club": "Real Madrid"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Real Madrid"
         }
       },
@@ -1509,7 +1509,7 @@
           "club": "Arsenal"
         },
         "fc25": {
-          "ovr": 88,
+          "ovr": 89,
           "club": "Arsenal"
         },
         "fc26": {
@@ -1545,11 +1545,11 @@
           "club": "Manchester City"
         },
         "fc25": {
-          "ovr": 87,
+          "ovr": 88,
           "club": "Manchester City"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 84,
           "club": "Manchester City"
         }
       },
@@ -1581,7 +1581,7 @@
           "club": "Barcelona"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 87,
           "club": "Manchester City"
         }
       },
@@ -1609,7 +1609,7 @@
           "club": "Manchester United"
         },
         "fc24": {
-          "ovr": 87,
+          "ovr": 89,
           "club": "Manchester United"
         },
         "fc25": {
@@ -1617,7 +1617,7 @@
           "club": "Manchester United"
         },
         "fc26": {
-          "ovr": 82,
+          "ovr": 80,
           "club": "Manchester United"
         }
       },
@@ -1649,11 +1649,11 @@
           "club": "Inter"
         },
         "fc25": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Inter"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 87,
           "club": "Inter"
         }
       },
@@ -1685,11 +1685,11 @@
           "club": "Barcelona"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 87,
           "club": "Barcelona"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 87,
           "club": "Barcelona"
         }
       },
@@ -1721,11 +1721,11 @@
           "club": "Manchester City"
         },
         "fc25": {
-          "ovr": 83,
+          "ovr": 84,
           "club": "Manchester City"
         },
         "fc26": {
-          "ovr": 81,
+          "ovr": 80,
           "club": "Everton"
         }
       },
@@ -1754,11 +1754,7 @@
         },
         "fc24": {
           "ovr": 86,
-          "club": "Al Arabi"
-        },
-        "fc25": {
-          "ovr": 84,
-          "club": "Al Arabi"
+          "club": "Paris Saint-Germain"
         }
       },
       "photo": {
@@ -1785,11 +1781,11 @@
           "club": "Lazio"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Al Hilal"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Al Hilal"
         }
       },
@@ -1825,7 +1821,7 @@
           "club": "Liverpool"
         },
         "fc26": {
-          "ovr": 88,
+          "ovr": 90,
           "club": "Liverpool"
         }
       },
@@ -1857,11 +1853,11 @@
           "club": "Manchester City"
         },
         "fc25": {
-          "ovr": 89,
+          "ovr": 88,
           "club": "Manchester City"
         },
         "fc26": {
-          "ovr": 88,
+          "ovr": 86,
           "club": "Manchester City"
         }
       },
@@ -1889,7 +1885,7 @@
           "club": "Paris Saint-Germain"
         },
         "fc24": {
-          "ovr": 88,
+          "ovr": 87,
           "club": "Paris Saint-Germain"
         },
         "fc25": {
@@ -1897,7 +1893,7 @@
           "club": "Paris Saint-Germain"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Paris Saint-Germain"
         }
       },
@@ -1925,15 +1921,15 @@
           "club": "Real Madrid"
         },
         "fc24": {
-          "ovr": 87,
+          "ovr": 85,
           "club": "Real Madrid"
         },
         "fc25": {
-          "ovr": 86,
+          "ovr": 88,
           "club": "Real Madrid"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Real Madrid"
         }
       },
@@ -1961,7 +1957,7 @@
           "club": "Arsenal"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 83,
           "club": "Arsenal"
         },
         "fc25": {
@@ -1997,15 +1993,15 @@
           "club": "Bayern Munich"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Bayern Munich"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Manchester United"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 82,
           "club": "Manchester United"
         }
       },
@@ -2069,7 +2065,7 @@
           "club": "Barcelona"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Barcelona"
         },
         "fc25": {
@@ -2077,7 +2073,7 @@
           "club": "Barcelona"
         },
         "fc26": {
-          "ovr": 84,
+          "ovr": 83,
           "club": "Barcelona"
         }
       },
@@ -2105,15 +2101,15 @@
           "club": "RB Leipzig"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Manchester City"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 83,
           "club": "Manchester City"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 84,
           "club": "Manchester City"
         }
       },
@@ -2149,7 +2145,7 @@
           "club": "Arsenal"
         },
         "fc26": {
-          "ovr": 87,
+          "ovr": 88,
           "club": "Arsenal"
         }
       },
@@ -2177,15 +2173,15 @@
           "club": "Inter"
         },
         "fc24": {
-          "ovr": 86,
+          "ovr": 85,
           "club": "Inter"
         },
         "fc25": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Inter"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Inter"
         }
       },
@@ -2213,11 +2209,11 @@
           "club": "Bayern Munich"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Bayern Munich"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Bayern Munich"
         },
         "fc26": {
@@ -2253,11 +2249,11 @@
           "club": "Barcelona"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Barcelona"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 87,
           "club": "Barcelona"
         }
       },
@@ -2287,10 +2283,6 @@
         "fc24": {
           "ovr": 84,
           "club": "Chelsea"
-        },
-        "fc25": {
-          "ovr": 82,
-          "club": "Fluminense"
         }
       },
       "photo": {
@@ -2317,7 +2309,7 @@
           "club": "Paris Saint-Germain"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 83,
           "club": "Sevilla"
         }
       },
@@ -2349,7 +2341,7 @@
           "club": "Al Hilal"
         },
         "fc25": {
-          "ovr": 83,
+          "ovr": 84,
           "club": "Al Hilal"
         }
       },
@@ -2369,7 +2361,7 @@
       "born": 2007,
       "ratings": {
         "fc25": {
-          "ovr": 76,
+          "ovr": 72,
           "club": "Barcelona"
         },
         "fc26": {
@@ -2401,7 +2393,7 @@
           "club": "Liverpool"
         },
         "fc24": {
-          "ovr": 87,
+          "ovr": 86,
           "club": "Liverpool"
         },
         "fc25": {
@@ -2445,7 +2437,7 @@
           "club": "Liverpool"
         },
         "fc26": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Liverpool"
         }
       },
@@ -2477,7 +2469,7 @@
           "club": "AC Milan"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 87,
           "club": "AC Milan"
         },
         "fc26": {
@@ -2509,15 +2501,15 @@
           "club": "Paris Saint-Germain"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Paris Saint-Germain"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Paris Saint-Germain"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 89,
           "club": "Paris Saint-Germain"
         }
       },
@@ -2549,11 +2541,11 @@
           "club": "Barcelona"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 86,
           "club": "Al Hilal"
         },
         "fc26": {
-          "ovr": 83,
+          "ovr": 84,
           "club": "Al Hilal"
         }
       },
@@ -2581,11 +2573,11 @@
           "club": "Bayern Munich"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 83,
           "club": "Bayern Munich"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 82,
           "club": "Bayern Munich"
         },
         "fc26": {
@@ -2621,7 +2613,7 @@
           "club": "Manchester City"
         },
         "fc25": {
-          "ovr": 83,
+          "ovr": 84,
           "club": "Manchester City"
         }
       },
@@ -2649,11 +2641,11 @@
           "club": "Paris Saint-Germain"
         },
         "fc24": {
-          "ovr": 83,
+          "ovr": 82,
           "club": "Paris Saint-Germain"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 83,
           "club": "Paris Saint-Germain"
         },
         "fc26": {
@@ -2686,7 +2678,7 @@
           "club": "Newcastle United"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Newcastle United"
         },
         "fc25": {
@@ -2726,7 +2718,7 @@
           "club": "Real Madrid"
         },
         "fc26": {
-          "ovr": 88,
+          "ovr": 89,
           "club": "Real Madrid"
         }
       },
@@ -2762,7 +2754,7 @@
           "club": "Liverpool"
         },
         "fc26": {
-          "ovr": 88,
+          "ovr": 89,
           "club": "Liverpool"
         }
       },
@@ -2794,11 +2786,11 @@
           "club": "Bayern Munich"
         },
         "fc25": {
-          "ovr": 87,
+          "ovr": 86,
           "club": "Bayern Munich"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Bayern Munich"
         }
       },
@@ -2830,11 +2822,11 @@
           "club": "Barcelona"
         },
         "fc25": {
-          "ovr": 88,
+          "ovr": 89,
           "club": "Barcelona"
         },
         "fc26": {
-          "ovr": 87,
+          "ovr": 86,
           "club": "Barcelona"
         }
       },
@@ -2862,7 +2854,7 @@
           "club": "Manchester City"
         },
         "fc24": {
-          "ovr": 89,
+          "ovr": 88,
           "club": "Manchester City"
         },
         "fc25": {
@@ -2870,7 +2862,7 @@
           "club": "Manchester City"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 85,
           "club": "Fenerbahçe"
         }
       },
@@ -2899,7 +2891,7 @@
           "club": "Paris Saint-Germain"
         },
         "fc24": {
-          "ovr": 89,
+          "ovr": 87,
           "club": "Paris Saint-Germain"
         },
         "fc25": {
@@ -2908,7 +2900,7 @@
         },
         "fc26": {
           "ovr": 89,
-          "club": "Paris Saint-Germain"
+          "club": "Manchester City"
         }
       },
       "photo": {
@@ -2935,15 +2927,15 @@
           "club": "Atlético Madrid"
         },
         "fc24": {
-          "ovr": 89,
+          "ovr": 88,
           "club": "Atlético Madrid"
         },
         "fc25": {
-          "ovr": 87,
+          "ovr": 88,
           "club": "Atlético Madrid"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 88,
           "club": "Atlético Madrid"
         }
       },
@@ -2971,7 +2963,7 @@
           "club": "AC Milan"
         },
         "fc24": {
-          "ovr": 88,
+          "ovr": 87,
           "club": "AC Milan"
         },
         "fc25": {
@@ -2979,7 +2971,7 @@
           "club": "AC Milan"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "AC Milan"
         }
       },
@@ -3015,7 +3007,7 @@
           "club": "Aston Villa"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 85,
           "club": "Aston Villa"
         }
       },
@@ -3047,7 +3039,7 @@
           "club": "Fiorentina"
         },
         "fc26": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Fiorentina"
         }
       },
@@ -3075,11 +3067,11 @@
           "club": "Juventus"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Juventus"
         },
         "fc26": {
-          "ovr": 83,
+          "ovr": 84,
           "club": "Barcelona"
         }
       },
@@ -3107,7 +3099,7 @@
           "club": "Bayern Munich"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Al Nassr"
         },
         "fc25": {
@@ -3143,11 +3135,11 @@
           "club": "Liverpool"
         },
         "fc24": {
-          "ovr": 83,
+          "ovr": 82,
           "club": "Al Ahli"
         },
         "fc25": {
-          "ovr": 81,
+          "ovr": 80,
           "club": "Al Ahli"
         }
       },
@@ -3175,11 +3167,11 @@
           "club": "Juventus"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 83,
           "club": "Benfica"
         },
         "fc25": {
-          "ovr": 82,
+          "ovr": 83,
           "club": "Benfica"
         }
       },
@@ -3207,11 +3199,11 @@
           "club": "Manchester City"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 86,
           "club": "Al Ahli"
         },
         "fc25": {
-          "ovr": 83,
+          "ovr": 85,
           "club": "Al Ahli"
         }
       },
@@ -3239,7 +3231,7 @@
           "club": "Lazio"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Lazio"
         },
         "fc25": {
@@ -3271,7 +3263,7 @@
           "club": "Toronto FC"
         },
         "fc24": {
-          "ovr": 82,
+          "ovr": 81,
           "club": "Toronto FC"
         }
       },
@@ -3303,11 +3295,11 @@
           "club": "Chelsea"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Chelsea"
         },
         "fc26": {
-          "ovr": 83,
+          "ovr": 81,
           "club": "AC Milan"
         }
       },
@@ -3335,15 +3327,15 @@
           "club": "Bayern Munich"
         },
         "fc24": {
-          "ovr": 85,
-          "club": "Bayern Munich"
-        },
-        "fc25": {
           "ovr": 84,
           "club": "Bayern Munich"
         },
+        "fc25": {
+          "ovr": 82,
+          "club": "Bayern Munich"
+        },
         "fc26": {
-          "ovr": 83,
+          "ovr": 82,
           "club": "Bayern Munich"
         }
       },
@@ -3371,7 +3363,7 @@
           "club": "Bayern Munich"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Bayern Munich"
         },
         "fc25": {
@@ -3379,7 +3371,7 @@
           "club": "Bayern Munich"
         },
         "fc26": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Galatasaray"
         }
       },
@@ -3407,11 +3399,11 @@
           "club": "Bayern Munich"
         },
         "fc24": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Bayern Munich"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Bayern Munich"
         }
       },
@@ -3439,15 +3431,15 @@
           "club": "Chelsea"
         },
         "fc24": {
-          "ovr": 82,
+          "ovr": 79,
           "club": "AC Milan"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 83,
           "club": "AC Milan"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "AC Milan"
         }
       },
@@ -3475,11 +3467,11 @@
           "club": "Juventus"
         },
         "fc24": {
-          "ovr": 79,
+          "ovr": 76,
           "club": "Juventus"
         },
         "fc25": {
-          "ovr": 80,
+          "ovr": 78,
           "club": "Juventus"
         }
       },
@@ -3507,15 +3499,15 @@
           "club": "Brighton"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Liverpool"
         },
         "fc25": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Liverpool"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Liverpool"
         }
       },
@@ -3539,15 +3531,15 @@
           "club": "Benfica"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 83,
           "club": "Chelsea"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Chelsea"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 84,
           "club": "Chelsea"
         }
       },
@@ -3575,15 +3567,15 @@
           "club": "Brighton"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 80,
           "club": "Chelsea"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Chelsea"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Chelsea"
         }
       },
@@ -3607,15 +3599,15 @@
           "club": "Manchester City"
         },
         "fc24": {
-          "ovr": 76,
+          "ovr": 67,
           "club": "Chelsea"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Chelsea"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 87,
           "club": "Chelsea"
         }
       },
@@ -3639,12 +3631,12 @@
           "club": "Chelsea"
         },
         "fc25": {
-          "ovr": 80,
+          "ovr": 79,
           "club": "Chelsea"
         },
         "fc26": {
-          "ovr": 81,
-          "club": "Chelsea"
+          "ovr": 80,
+          "club": "Bayern Munich"
         }
       },
       "photo": {
@@ -3679,7 +3671,7 @@
           "club": "Real Madrid"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 85,
           "club": "Real Madrid"
         }
       },
@@ -3711,11 +3703,11 @@
           "club": "Arsenal"
         },
         "fc25": {
-          "ovr": 83,
+          "ovr": 82,
           "club": "Arsenal"
         },
         "fc26": {
-          "ovr": 82,
+          "ovr": 80,
           "club": "Arsenal"
         }
       },
@@ -3743,15 +3735,15 @@
           "club": "RB Leipzig"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Liverpool"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 81,
           "club": "Liverpool"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 83,
           "club": "Liverpool"
         }
       },
@@ -3819,7 +3811,7 @@
           "club": "Newcastle United"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Newcastle United"
         }
       },
@@ -3847,7 +3839,7 @@
           "club": "Newcastle United"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 81,
           "club": "Newcastle United"
         },
         "fc25": {
@@ -3855,7 +3847,7 @@
           "club": "Newcastle United"
         },
         "fc26": {
-          "ovr": 86,
+          "ovr": 88,
           "club": "Liverpool"
         }
       },
@@ -3883,7 +3875,7 @@
           "club": "Aston Villa"
         },
         "fc24": {
-          "ovr": 82,
+          "ovr": 80,
           "club": "Aston Villa"
         },
         "fc25": {
@@ -3923,7 +3915,7 @@
           "club": "Tottenham Hotspur"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Tottenham Hotspur"
         }
       },
@@ -3955,7 +3947,7 @@
           "club": "Juventus"
         },
         "fc25": {
-          "ovr": 82,
+          "ovr": 84,
           "club": "Liverpool"
         }
       },
@@ -3983,11 +3975,11 @@
           "club": "Athletic Club"
         },
         "fc25": {
-          "ovr": 83,
+          "ovr": 85,
           "club": "Athletic Club"
         },
         "fc26": {
-          "ovr": 85,
+          "ovr": 86,
           "club": "Athletic Club"
         }
       },
@@ -4006,16 +3998,12 @@
       "nation": "Spain",
       "born": 2007,
       "ratings": {
-        "fc24": {
-          "ovr": 68,
-          "club": "Barcelona"
-        },
         "fc25": {
           "ovr": 81,
           "club": "Barcelona"
         },
         "fc26": {
-          "ovr": 87,
+          "ovr": 89,
           "club": "Barcelona"
         }
       },
@@ -4035,11 +4023,11 @@
       "born": 2005,
       "ratings": {
         "fc24": {
-          "ovr": 73,
+          "ovr": 77,
           "club": "Real Madrid"
         },
         "fc25": {
-          "ovr": 76,
+          "ovr": 78,
           "club": "Real Madrid"
         },
         "fc26": {
@@ -4063,15 +4051,15 @@
       "born": 2005,
       "ratings": {
         "fc24": {
-          "ovr": 66,
+          "ovr": 62,
           "club": "Manchester United"
         },
         "fc25": {
-          "ovr": 78,
+          "ovr": 77,
           "club": "Manchester United"
         },
         "fc26": {
-          "ovr": 79,
+          "ovr": 77,
           "club": "Manchester United"
         }
       },
@@ -4095,15 +4083,15 @@
           "club": "Atalanta"
         },
         "fc24": {
-          "ovr": 78,
+          "ovr": 76,
           "club": "Manchester United"
         },
         "fc25": {
-          "ovr": 79,
+          "ovr": 78,
           "club": "Manchester United"
         },
         "fc26": {
-          "ovr": 78,
+          "ovr": 76,
           "club": "Napoli"
         }
       },
@@ -4131,15 +4119,15 @@
           "club": "Chelsea"
         },
         "fc24": {
-          "ovr": 84,
+          "ovr": 81,
           "club": "Manchester United"
         },
         "fc25": {
-          "ovr": 82,
+          "ovr": 78,
           "club": "Manchester United"
         },
         "fc26": {
-          "ovr": 81,
+          "ovr": 77,
           "club": "Manchester United"
         }
       },
@@ -4167,12 +4155,12 @@
           "club": "Manchester United"
         },
         "fc24": {
-          "ovr": 83,
+          "ovr": 82,
           "club": "Manchester United"
         },
         "fc25": {
-          "ovr": 81,
-          "club": "Manchester United"
+          "ovr": 82,
+          "club": "Chelsea"
         }
       },
       "photo": {
@@ -4191,7 +4179,7 @@
       "born": 2004,
       "ratings": {
         "fc24": {
-          "ovr": 72,
+          "ovr": 75,
           "club": "Manchester United"
         },
         "fc25": {
@@ -4199,7 +4187,7 @@
           "club": "Manchester United"
         },
         "fc26": {
-          "ovr": 80,
+          "ovr": 77,
           "club": "Chelsea"
         }
       },
@@ -4227,11 +4215,11 @@
           "club": "Crystal Palace"
         },
         "fc24": {
-          "ovr": 81,
+          "ovr": 78,
           "club": "Crystal Palace"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 82,
           "club": "Bayern Munich"
         },
         "fc26": {
@@ -4259,7 +4247,7 @@
           "club": "Paris Saint-Germain"
         },
         "fc25": {
-          "ovr": 81,
+          "ovr": 80,
           "club": "Paris Saint-Germain"
         },
         "fc26": {
@@ -4291,15 +4279,15 @@
           "club": "Paris Saint-Germain"
         },
         "fc24": {
-          "ovr": 83,
+          "ovr": 80,
           "club": "Paris Saint-Germain"
         },
         "fc25": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Paris Saint-Germain"
         },
         "fc26": {
-          "ovr": 87,
+          "ovr": 89,
           "club": "Paris Saint-Germain"
         }
       },
@@ -4319,11 +4307,11 @@
       "born": 2005,
       "ratings": {
         "fc25": {
-          "ovr": 77,
+          "ovr": 76,
           "club": "Paris Saint-Germain"
         },
         "fc26": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Paris Saint-Germain"
         }
       },
@@ -4343,11 +4331,11 @@
       "born": 2004,
       "ratings": {
         "fc24": {
-          "ovr": 74,
+          "ovr": 69,
           "club": "Benfica"
         },
         "fc25": {
-          "ovr": 82,
+          "ovr": 79,
           "club": "Paris Saint-Germain"
         },
         "fc26": {
@@ -4379,15 +4367,15 @@
           "club": "Manchester United"
         },
         "fc24": {
-          "ovr": 78,
+          "ovr": 79,
           "club": "Manchester United"
         },
         "fc25": {
-          "ovr": 79,
+          "ovr": 78,
           "club": "Napoli"
         },
         "fc26": {
-          "ovr": 84,
+          "ovr": 85,
           "club": "Napoli"
         }
       },

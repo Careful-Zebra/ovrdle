@@ -36,7 +36,20 @@ data/img/              player photos
 - FIFA 23 ratings were checked against base cards in the
   [spreadsheet of all FIFA 23 FUT player data](https://www.reddit.com/r/fut/comments/zwb6tz/spreadsheet_of_all_fifa_23_fut_player_data/)
   shared on r/fut.
-- EA FC 24, 25 and 26 ratings are hand-compiled and not yet verified.
+- EA FC 24 ratings were checked against launch ratings in the
+  [EA Sports FC 24 complete player dataset](https://www.kaggle.com/datasets/stefanoleone992/ea-sports-fc-24-complete-player-dataset)
+  by Stefano Leone on Kaggle, CC0. Lamine Yamal is left out of FC 24: he was
+  added late and had no Ultimate Team card that year.
+- EA FC 25 ratings were checked against the
+  [EA SPORTS FC 25 Database, Ratings and Stats](https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats)
+  by Davis Nyagami on Kaggle, Apache 2.0, scraped from EA's official ratings
+  site at launch.
+- EA FC 26 ratings were checked against
+  [EA Sports FC 26 Player Ratings](https://www.kaggle.com/datasets/justdhia/ea-sports-fc-26-player-ratings)
+  by Dhia (justdhia) on Kaggle, CC0, scraped from EA's official ratings site.
+- A few players missing from those snapshots (Verratti in FC 24, de Gea in
+  FC 25, Neymar in FC 26) and some club moves were checked against their base
+  cards on [FUTBIN](https://www.futbin.com).
 - Player photos come from Wikimedia Commons; each photographer and licence is
   listed in the in-game Photo credits.
 
