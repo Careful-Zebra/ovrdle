@@ -613,12 +613,28 @@ function showDailyResults() {
   startCountdown();
 }
 
+/** Days this week (Monday to Sunday) with 0, 1, ... 5 players solved. */
+function weekDistribution(stats) {
+  const today = new Date();
+  const sinceMonday = (today.getDay() + 6) % 7; // Mon = 0 ... Sun = 6
+  const monday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - sinceMonday);
+  const first = puzzleNumber(dateKey(monday));
+
+  const counts = [0, 0, 0, 0, 0, 0];
+  for (const [puzzleNo, solved] of Object.entries(stats.history || {})) {
+    const n = Number(puzzleNo);
+    if (n >= first && n <= first + 6) counts[solved] += 1;
+  }
+  return counts;
+}
+
 function statsHtml(stats, todaySolved) {
   const avg = stats.played ? (stats.solvedTotal / stats.played).toFixed(1) : '0.0';
-  const max = Math.max(1, ...stats.distribution);
+  const week = weekDistribution(stats);
+  const max = Math.max(1, ...week);
 
-  const rows = stats.distribution
-    .map((count, solved) => {
+  const rows = week    
+  .map((count, solved) => {
       const width = Math.max(8, Math.round((count / max) * 100));
       const today = todaySolved === solved ? ' is-today' : '';
       return (
@@ -636,7 +652,7 @@ function statsHtml(stats, todaySolved) {
     `<div class="stat"><b>${stats.streak}</b><span>Streak</span></div>` +
     `<div class="stat"><b>${stats.maxStreak}</b><span>Best</span></div>` +
     `</div>` +
-    `<h3>Players solved per day</h3>` +
+    `<h3>Players solved this week</h3>` +
     `<div class="dist">${rows}</div>`
   );
 }

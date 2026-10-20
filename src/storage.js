@@ -44,6 +44,7 @@ export const emptyStats = () => ({
   maxStreak: 0,
   lastPuzzle: null,
   distribution: [0, 0, 0, 0, 0, 0], // index = players solved that day (0-5)
+  history: {}, // puzzle number -> players solved that day
 });
 
 export function loadStats() {
@@ -66,7 +67,8 @@ export function recordResult(puzzleNo, solvedCount) {
   stats.streak = solvedCount > 0 ? (continued ? stats.streak : 0) + 1 : 0;
   stats.maxStreak = Math.max(stats.maxStreak, stats.streak);
   stats.lastPuzzle = puzzleNo;
-
+  stats.history[puzzleNo] = solvedCount;
+  
   write(STATS_KEY, stats);
   return stats;
 }
