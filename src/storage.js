@@ -51,6 +51,16 @@ export function loadStats() {
   return { ...emptyStats(), ...read(STATS_KEY, {}) };
 }
 
+export function clientId() {
+  try {
+    let id = localStorage.getItem('ovrdle:client-id');
+    if (!id) localStorage.setItem('ovrdle:client-id', (id = crypto.randomUUID()));
+    return id;
+  } catch {
+    return crypto.randomUUID();
+  }
+}
+
 /** Record a finished puzzle. Idempotent - replaying the same day will not double-count. */
 export function recordResult(puzzleNo, solvedCount) {
   const stats = loadStats();

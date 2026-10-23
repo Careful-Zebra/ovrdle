@@ -18,6 +18,7 @@ import {
   recordPracticeResult,
 } from './storage.js';
 import { buildShareText, share, shareCopy } from './share.js';
+import { submitResult, loadWeek } from './global.js';
 
 const MODE_KEY = 'ovrdle:mode';
 
@@ -286,7 +287,10 @@ function finish() {
   state.done = true;
   const solved = state.slots.filter((s) => s.solved).length;
   if (state.mode === 'practice') recordPracticeResult(solved);
-  else recordResult(state.puzzleNo, solved);
+  else {
+    recordResult(state.puzzleNo, solved);
+    state.submitting = submitResult(state.puzzleNo, solved);
+  }
 }
 
 function persist() {
@@ -592,7 +596,8 @@ function showDailyResults() {
   openModal(
     `<h2 id="modal-title">${solved}/5 correct</h2>` +
       `<ul class="recap">${recapHtml()}</ul>` +
-      statsHtml(stats, solved) +
+      recordHtml(stats) +
+      `<h3>Everyone this week</h3><div class="dist" id="global-week">Loading…</div>` +
       `<button class="btn" id="btn-share">SHARE RESULT</button>` +
       `<button class="btn" id="btn-copy">COPY RESULT TO CLIPBOARD</button>` +
       `<div class="countdown">Next puzzle in <b id="countdown">--:--:--</b></div>`
@@ -609,16 +614,30 @@ function showDailyResults() {
     if (result === 'copied') toast('Copied, go paste it');
     else if (result === 'failed') toast("Couldn't copy that");
   });
-
+  async function loadGlobalWeek(todaySolved) {
+    const box = document.getElementById('global-week');
+    try {
+      await state.submitting; // make sure our own result is counted first
+      const counts = await loadWeek(weekStart());
+      if (box.isConnected) box.innerHTML = distHtml(counts, todaySolved);
+    } catch {
+      if (box.isConnected) box.textContent = "Couldn't load this week's results.";
+    }
+  }
   startCountdown();
 }
 
 /** Days this week (Monday to Sunday) with 0, 1, ... 5 players solved. */
-function weekDistribution(stats) {
+function weekStart() {
   const today = new Date();
-  const sinceMonday = (today.getDay() + 6) % 7; // Mon = 0 ... Sun = 6
+  const sinceMonday = (today.getDay() + 6) % 7;
   const monday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - sinceMonday);
-  const first = puzzleNumber(dateKey(monday));
+  return puzzleNumber(dateKey(monday));
+}
+
+function weekDistribution(stats) {
+
+  const first = weekStart();
 
   const counts = [0, 0, 0, 0, 0, 0];
   for (const [puzzleNo, solved] of Object.entries(stats.history || {})) {
@@ -628,11 +647,22 @@ function weekDistribution(stats) {
   return counts;
 }
 
-function statsHtml(stats, todaySolved) {
+function recordHtml(stats) {
   const avg = stats.played ? (stats.solvedTotal / stats.played).toFixed(1) : '0.0';
   const week = weekDistribution(stats);
-  const max = Math.max(1, ...week);
+  return (
+    `<h3>Your record</h3>` +
+    `<div class="stat-grid">` +
+    `<div class="stat"><b>${stats.played}</b><span>Played</span></div>` +
+    `<div class="stat"><b>${avg}</b><span>Avg /5</span></div>` +
+    `<div class="stat"><b>${stats.streak}</b><span>Streak</span></div>` +
+    `<div class="stat"><b>${stats.maxStreak}</b><span>Best</span></div>` +
+    `</div>`
+  )
+}
 
+function distHtml(counts, highlight) {
+  const max = Math.max(1, ...week);
   const rows = week    
   .map((count, solved) => {
       const width = Math.max(8, Math.round((count / max) * 100));
@@ -643,18 +673,13 @@ function statsHtml(stats, todaySolved) {
       );
     })
     .join('');
+  return rows;
+}
 
-  return (
-    `<h3>Your record</h3>` +
-    `<div class="stat-grid">` +
-    `<div class="stat"><b>${stats.played}</b><span>Played</span></div>` +
-    `<div class="stat"><b>${avg}</b><span>Avg /5</span></div>` +
-    `<div class="stat"><b>${stats.streak}</b><span>Streak</span></div>` +
-    `<div class="stat"><b>${stats.maxStreak}</b><span>Best</span></div>` +
-    `</div>` +
+function statsHtml(stats, todaySolved) {
+  return recordHtml(stats) +
     `<h3>Players solved this week</h3>` +
-    `<div class="dist">${rows}</div>`
-  );
+    `<div class="dist">${distHtml(weekDistribution(stats), todaySolved)}</div>`;
 }
 
 function startCountdown() {
