@@ -624,6 +624,7 @@ function showDailyResults() {
       if (box.isConnected) box.textContent = "Couldn't load this week's results.";
     }
   }
+  loadGlobalWeek(solved);
   startCountdown();
 }
 
@@ -649,7 +650,6 @@ function weekDistribution(stats) {
 
 function recordHtml(stats) {
   const avg = stats.played ? (stats.solvedTotal / stats.played).toFixed(1) : '0.0';
-  const week = weekDistribution(stats);
   return (
     `<h3>Your record</h3>` +
     `<div class="stat-grid">` +
@@ -662,11 +662,11 @@ function recordHtml(stats) {
 }
 
 function distHtml(counts, highlight) {
-  const max = Math.max(1, ...week);
-  const rows = week    
-  .map((count, solved) => {
+  const max = Math.max(1, ...counts);
+  const rows = counts
+    .map((count, solved) => {
       const width = Math.max(8, Math.round((count / max) * 100));
-      const today = todaySolved === solved ? ' is-today' : '';
+      const today = highlight === solved ? ' is-today' : '';
       return (
         `<div class="dist-row"><span>${solved}</span>` +
         `<span class="dist-bar${today}" style="width:${width}%">${count}</span></div>`
